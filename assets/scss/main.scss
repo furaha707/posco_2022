@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// main
+@import 'main/visual';
+@import 'sub/company-list';
+@import 'sub/product-list';
+@import 'sub/category';
+
+/* S : 최하단 광고배너 */
+.ad-swiper {
+	.swiper-slide {
+		border-radius: 20px;
+		overflow: hidden;
+		.link {
+			.img-bx {
+				@include img-to-bg(percentage(230/1260));
+				@include mdq-max(md) {
+					@include img-to-bg(percentage(140/320));
+				}
+			}
+		}
+	}
+}
+/* E : 최하단 광고배너 */
+
+.title-bx {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include mdq-max(lg) {
+		align-items: flex-end;
+		margin-bottom: 1em;
+	}
+	.inner {
+		display: flex;
+		align-items: center;
+		@include mdq-max(lg) {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+		}
+	}
+}
+
+.title-bx2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include mdq-max(lg) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.company-list-page {
+	.swiper-control {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: flex;
+		z-index: 50;
+		.swiper-button {
+			position: relative !important;
+			background-color: transparent;
+			border-radius: 0;
+			box-shadow: none;
+			border: 1px solid #ddd;
+			width: 30px;
+			height: 30px;
+		}
+		.swiper-button--prev {
+			margin-right: 3px;
+		}
+		@include mdq-max(lg) {
+			display: none;
+		}
+	}
+}
+
+/* S : 양쪽 날개배너 */
+.container2 {
+	max-width: 1560px;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+
+	.container {
+		@media screen and (max-width: 1500px) {
+			width: 81.333333%;
+		}
+		@include mdq-max(xl) {
+			width: 78%;
+		}
+		@include mdq-max(lg) {
+			width: 100%;
+		}
+	}
+
+	.wing-wrap {
+		width: 100%;
+		height: 100%;
+
+		&__left {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: em(120);
+			width: 100%;
+			height: 100%;
+			padding-top: 5rem;
+			.left-item {
+				display: block;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+		}
+		&__right {
+			position: absolute;
+			top: 0;
+			right: 0;
+			max-width: em(120);
+			width: 100%;
+			height: 100%;
+			padding-top: 5rem;
+			.right-item {
+				display: block;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+		}
+		.wing-wrap__rightbtm {
+			padding-top: 30rem;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			z-index: 0;
+			.remote-bx {
+				position: absolute;
+				top: 0;
+				right: 0;
+				.quick-menu {
+					background-color: white;
+					border: 1px solid #ddd;
+					border-radius: 10px;
+					width: 100%;
+					.inner {
+						padding-top: 1em;
+						padding-bottom: 1em;
+						text-align: center;
+						.menu-item {
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							&:hover {
+								color: $color-1;
+							}
+							&:not(:last-of-type) {
+								margin-bottom: 1em;
+							}
+							&__img {
+								margin-bottom: 0.5em;
+							}
+							&__txt {
+								font-size: em(12.5);
+								letter-spacing: letterSpacing(-20);
+								font-weight: 400;
+							}
+						}
+					}
+					.top-btn {
+						display: block;
+						border-radius: 0px 0px 10px 10px;
+						background-color: black;
+						color: white;
+						font-size: em(12);
+						font-weight: 500;
+						text-align: center;
+						padding-top: 1em;
+						padding-bottom: 1em;
+					}
+				}
+				.quick-kakao {
+					display: block;
+					background-color: #f9e200;
+					color: #391b1b;
+					font-size: em(12.5);
+					font-weight: 600;
+					text-align: center;
+					border-radius: 50%;
+					width: em(120);
+					height: em(120);
+					margin: 0 auto;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				&.start {
+					top: 0 !important;
+					bottom: unset !important;
+				}
+
+				&.end {
+					bottom: 0 !important;
+					top: unset !important;
+				}
+			}
+		}
+
+		@include mdq-max(lg) {
+			display: none;
+		}
+	}
+}
+/* E : 양쪽 날개배너 */
+
+/* S : 모바일 때 날개배너 노출 */
+.mobile-ad-wrap {
+	background-color: #edf3f5;
+	padding-top: em(80);
+	padding-bottom: em(40);
+	.wing-wrap {
+		&__left {
+			.left-item {
+				display: block;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+		}
+		&__right {
+			display: flex;
+			justify-content: space-between;
+			gap: 1em;
+			.right-item {
+				display: block;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+/* E : 모바일 때 날개배너 노출 */

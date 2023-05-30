@@ -1,0 +1,174 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/main.min.css" />
+
+    <style>
+      .layout .section,
+      .layout .container,
+      .layout .wrap,
+      .layout .box,
+      .layout .item,
+      .layout .inner {
+        position: relative;
+        padding: 60px 20px;
+        border: 2px solid #000;
+      }
+
+      .layout .title {
+        display: inline-block;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 30px;
+        z-index: 100;
+        border: 2px solid #000;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .layout .section {
+        background-color: darkslategray;
+      }
+
+      .layout .container {
+        background-color: dodgerblue;
+      }
+
+      .layout .wrap {
+        display: flex;
+        justify-content: space-between;
+        background-color: darksalmon;
+      }
+
+      .layout .wrap + .wrap {
+        margin-top: 60px;
+      }
+
+      .layout .box {
+        flex: 1 0 49%;
+        max-width: 49%;
+        background-color: khaki;
+      }
+
+      .layout .item {
+        background-color: lightgreen;
+      }
+
+      .layout .item + .item {
+        margin-top: 40px;
+      }
+
+      .layout .inner {
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Sub visual -->
+    <? include "../include/sub-visual.html" ?>
+    <!-- E : Sub visual -->
+
+    <!-- S : Sub navigation -->
+    <? include "../include/sub-nav.html" ?>
+    <!-- E : Sub navigation -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+      <!-- S : Section -->
+      <div class="layout">
+        <section class="section">
+          <div class="title">.section</div>
+          <div class="container">
+            <div class="title">.container</div>
+            <div class="wrap">
+              <div class="title">.wrap</div>
+              <div class="box">
+                <div class="title">.box</div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="title">.box</div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wrap">
+              <div class="title">.wrap</div>
+              <div class="box">
+                <div class="title">.box</div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="title">.box</div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="title">.item</div>
+                  <div class="inner">
+                    <div class="title">.inner</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+
+    <? include "../include/js.html" ?>
+  </body>
+</html>

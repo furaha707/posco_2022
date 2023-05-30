@@ -1,0 +1,297 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '1';
+    $P_dp2 = '7';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/main.min.css" />
+
+  <style>    
+    .hover-effect .img-bx {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .hover-effect .img-bx::after {
+      content: "";
+      display: block;
+      padding-bottom: 60%;
+    }
+    .hover-effect .img-bx > img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+      min-width: 1000%;
+      min-height: 1000%;
+      max-width: none;
+      max-height: none;
+      transform: translate(-50%, -50%) scale(0.1);
+    }
+  </style>
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Sub visual -->
+    <? include "../include/sub-visual.html" ?>
+    <!-- E : Sub visual -->
+
+    <!-- S : Sub navigation -->
+    <? include "../include/sub-nav.html" ?>
+    <!-- E : Sub navigation -->
+
+    <!-- S : Main -->
+    <main class="main py-20" id="contents">
+
+      <!-- S : Section -->
+      <section class="section mb-15 pb-15 border-bottom">
+        <div class="container-fluid overflow-hidden">
+          <h2 class="mb-8">Hover Effects</h2>
+          <ul class="row mt-n10 mx-lg-n6">
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--zoomIn">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">zoomIn
+                  </h4>
+                  <p>zoomIn 사용 시 
+                    .hover-effect__wrap 에 
+                    <span class="d-inline-block text-color-1">@img-to-bg($value)</span> 정의 해야합니다.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--zoomOut">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">zoomOut
+                  </h4>
+                  <p>zoomOut 사용 시 
+                    .hover-effect__wrap 에 
+                    <span class="d-inline-block text-color-1">@img-to-bg($value)</span> 정의 해야합니다.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--dimmed">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">dimmed
+                  </h4>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--icon">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                  <i class="hover-effect__icon xi-play-circle-o"></i>
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">icon (기본 dimmed)
+                  </h4>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--border">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">border
+                  </h4>
+                </div>
+              </a>
+            </li>
+
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--outline hover-effect--outline--1">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">outline--1
+                  </h4>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--outline hover-effect--outline--2">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">outline--2
+                  </h4>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-3 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--outline hover-effect--outline--3">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="mt-4">
+                  <h4 class="common-title">outline--3
+                  </h4>
+                </div>
+              </a>
+            </li>
+          </ul>
+          
+          
+
+          <h2 class="mb-8 pt-8 mt-30 border-top">mixed example</h2>
+          <ul class="row mt-n10 mx-lg-n6">
+            <li class="col col-12 col-lg-4 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--zoomIn hover-effect--dimmed">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="txt-bx p-6 border">
+                  <h5 class="common-title">zoomIn <i class="xi-plus-circle-o"></i> hover-effect--dimmed
+                  </h5>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-4 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--outline hover-effect--outline--2">
+                <div class="hover-effect__wrap hover-effect hover-effect--icon  hover-effect--zoomOut">
+                  <!-- // 효과 수용하면서 내부 정의 -->
+                  <div class="img-bx hover-effect__wrap">
+                    <img src="https://picsum.photos/500/500" alt="">
+                    <i class="hover-effect__icon xi-play-circle-o"></i>
+                  </div>
+                  <div class="txt-bx p-6 border">
+                    <h5 class="common-title">                      
+                      wrap 에 준 효과 : outline--2<br>
+                      wrap>wrap 에 준 효과 : icon , zoomOut
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col col-12 col-lg-4 mt-10 px-lg-6">
+              <a href="#" class="hover-effect hover-effect--outline hover-effect--outline--3 hover-effect--dimmed">
+                <div class="hover-effect__wrap img-bx">
+                  <img src="https://picsum.photos/500/500" alt="">
+                </div>
+                <div class="txt-bx p-6 border">
+                  <h5 class="common-title">
+                    outline--3 <i class="xi-plus-circle-o"></i> dimmed        
+                  </h5>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- E : Section -->
+
+      <!-- S : Section (설명섹션) -->
+      <section class="section mb-15 pb-15 border-bottom">
+        <div class="container">
+<div class="p-4 mb-8 bg-light border">
+  <hr>
+  <div class="">
+    <h5 class="mb-1">기본 구조</h5>
+<pre class="pl-4 text-gray-4" style="font-family: inherit;">&lt;a href="#" class="hover-effect"&gt; 
+  &lt;!-- 마우스오버/포커스 영역. 효과이름 정의 --&gt;
+  &lt;div class="hover-effect__wrap"&gt; 
+  &lt;!-- 효과가 나타나는 영역 --&gt;
+    &lt;img src="..." alt=""&gt; 
+    &lt;!-- 이미지에 효과가 적용되는 zoom, dimmed, icon : hover-effect__wrap 의 자식으로 img를 넣어줘야 합니다. --&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+</pre>
+<hr>
+<h5 class="mb-1">icon 효과 사용하는  경우</h5>
+<pre class="pl-4 text-gray-4" style="font-family: inherit;">
+&lt;a href="#" class="hover-effect"&gt;
+  &lt;div class="hover-effect__wrap"&gt;
+    &lt;img src="..." alt=""&gt;
+    &lt;i class="hover-effect__icon xi-play-circle-o"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+</pre>
+<hr>
+<h5 class="mb-1">outline 효과 사용하는 경우 </h5>
+<h6>1. html </h6>
+<pre class="pl-4 text-gray-4" style="font-family: inherit;">
+&lt;div class="hover-effect hover-effect--outline"&gt;
+  &lt;div class="hover-effect__wrap"&gt;
+    &lt;span class="outline outline--t"&gt;&lt;/span&gt;
+    &lt;span class="outline outline--r"&gt;&lt;/span&gt;
+    &lt;span class="outline outline--b"&gt;&lt;/span&gt;
+    &lt;span class="outline outline--l"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h6>2. 스크립트 처리</h6>
+<pre class="pl-4 text-gray-4" style="font-family: inherit;">
+&lt;script&gt;
+  // hover-effect-outline : border append
+  $('.hover-effect--outline').each(function(){
+    $(this).children('.hover-effect__wrap').append(
+    "" +
+    "&lt;span class='outline outline--t'&gt;&lt;/span&gt;"+
+    "&lt;span class='outline outline--r'&gt;&lt;/span&gt;"+
+    "&lt;span class='outline outline--b'&gt;&lt;/span&gt;"+
+    "&lt;span class='outline outline--l'&gt;&lt;/span&gt;"
+    )
+  })
+&lt;/script&gt;
+</pre>
+
+  </div>
+  <hr>
+  <div>
+    <h5 class="mb-1">연관파일</h5>
+    <p class="pl-4 text-gray-4">
+      assets\scss\mixins\_hover-effect.scss<br>
+      assets\scss\components\_hover-effect.scss
+    </p>
+  </div>
+  <hr>
+</div>
+        </div>
+      </section>
+<!-- E : Section (설명섹션) -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+
+    <? include "../include/js.html" ?>
+
+    <script>
+      // hover-effect-outline : border append
+      $('.hover-effect--outline').each(function(){
+        $(this).children('.hover-effect__wrap').append(
+        "" +
+        "<span class='outline outline--t'></span>"+
+        "<span class='outline outline--r'></span>"+
+        "<span class='outline outline--b'></span>"+
+        "<span class='outline outline--l'></span>"
+        )
+      })
+    </script>
+  </body>
+</html>

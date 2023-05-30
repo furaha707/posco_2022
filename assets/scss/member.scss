@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+@import 'mixins';
+@import 'sub/business-popup';
+
+/* S : 로그인 */
+.login__wrap {
+	max-width: 450px;
+	width: 100%;
+	margin: 0 auto;
+
+	.login__check {
+		position: relative;
+		display: inline-block;
+		a {
+			&:not(:first-of-type):after {
+				content: '';
+				left: -1px;
+				height: 0.8em;
+				top: 50%;
+				margin-top: -0.4em;
+				position: absolute;
+				border-left: 1px solid lighten(#999, 10%);
+			}
+		}
+	}
+
+	.tab-header {
+		display: flex;
+		justify-content: between;
+		border-radius: 10px;
+		border: 1px solid #ddd;
+		.tab-item {
+			width: 100%;
+			.link {
+				width: 100%;
+				text-align: center;
+				cursor: pointer;
+				background-color: white;
+				color: #666;
+				display: inline-block;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+				position: relative;
+				&.on {
+					background-color: $color-1;
+					color: white;
+					&:after {
+						border-top: 10px solid $color-1;
+						border-left: 10px solid transparent;
+						border-right: 10px solid transparent;
+						border-bottom: 0px solid transparent;
+						content: '';
+						position: absolute;
+						bottom: -10px;
+						left: 50%;
+						transform: translate(-50%, 0);
+					}
+				}
+			}
+			&:nth-of-type(1) {
+				.link {
+					border-radius: 10px 0px 0px 10px;
+					border-color: $color-1;
+				}
+			}
+			&:nth-of-type(2) {
+				.link {
+					border-radius: 0px 10px 10px 0px;
+					border-color: $color-1;
+				}
+			}
+		}
+	}
+
+	.login__find {
+		border-radius: 10px;
+		border: 1px solid #ddd;
+		padding: 1.5em 2em;
+
+		.login__icon {
+			width: 33px;
+			height: 33px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-size: 20px;
+		}
+
+		.find__input {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+		.arrow-btn {
+			.xi-angle-up-thin {
+				display: none;
+			}
+			&.active {
+				.xi-angle-up-thin {
+					display: block;
+				}
+				.xi-angle-down-thin {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.complete-icon {
+		background-color: $color-1;
+		width: em(70);
+		height: em(70);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		img {
+			width: em(25);
+		}
+	}
+}
+/* E : 로그인 */
+
+/* S : 회원가입 */
+.join__wrap {
+	.join__inner1 {
+		max-width: 900px;
+		width: 100%;
+		margin: 0 auto;
+		.join__item {
+			background-color: white;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			.join__icon {
+				background-color: #f7f7f7;
+				border-radius: 50%;
+				width: em(120);
+				height: em(120);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+				img {
+					width: em(35);
+				}
+			}
+		}
+	}
+
+	.table-form-01 {
+		td {
+			text-align: left;
+		}
+		.select-btn {
+			min-width: em(170);
+			max-width: em(170);
+			width: 100%;
+			color: white;
+			padding: 0.5em 1.5em;
+		}
+
+		.plus-btn {
+			background-color: #666;
+			color: white;
+			padding: 0.5em 1.1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.table-btn-01 {
+			background-color: #666;
+			color: white;
+			width: 25%;
+			margin-left: 0.5em;
+		}
+		.radio__wrap {
+			.input-label--checkbox {
+				position: relative;
+				margin-right: 5px;
+				margin-bottom: 5px;
+				input[type='checkbox'] {
+					position: absolute;
+					width: 1px;
+					height: 1px;
+					padding: 0;
+					margin: -1px;
+					overflow: hidden;
+					clip: rect(0, 0, 0, 0);
+					border: 0;
+				}
+				.input-label__txt {
+					display: inline-block;
+					position: relative;
+					padding-left: 0;
+					cursor: pointer;
+					width: 100%;
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+					height: 37px;
+					line-height: 35px;
+					text-align: center;
+					border: 1px solid #ddd;
+					background-color: #f7f7f7;
+					box-sizing: border-box;
+					border-radius: 30px;
+					font-size: 14px;
+				}
+			}
+			.input-label--checkbox input[type='checkbox']:checked + .input-label__txt {
+				background: $color-1;
+				border-color: $color-1;
+				color: #fff;
+				-ms-background: $color-1;
+				-ms-border-color: $color-1;
+				-ms-color: #fff;
+			}
+		}
+	}
+	.qna {
+		font-size: em(16);
+		.qna-wrapper {
+			.qna-header {
+				position: relative;
+				padding: 15px 10px;
+				position: relative;
+				border-bottom: solid 1px #ddd;
+				&__tit {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: em(16);
+					position: absolute;
+					right: 1%;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				.xi-angle-up {
+					display: none;
+				}
+			}
+			&.open {
+				.qna-header {
+					.xi-angle-down {
+						display: none;
+					}
+					.xi-angle-up {
+						display: block;
+					}
+				}
+			}
+			.qna-body {
+				padding: 20px;
+				line-height: 1.5;
+				color: #333;
+				border-bottom: solid 1px #ddd;
+				position: relative;
+				background: #f6f6f6;
+				.qna-table {
+					th,
+					td {
+						padding: 8px 10px;
+					}
+					th {
+						width: 10%;
+						font-weight: 500;
+						font-size: em(16);
+						color: #333;
+					}
+					td {
+						color: #666;
+						font-size: em(16);
+					}
+				}
+			}
+		}
+	}
+}
+/* E : 회원가입 */

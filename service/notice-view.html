@@ -1,0 +1,109 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'service';
+  $P_dp2 = '2';
+  $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_2_href?>" class="current">
+            <?=$nav_service_1_2?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <div class="service-wrap">
+          <? include "./service_lnb.html" ?>
+          <div class="service-wrap__contents">
+
+            <div class="common-text--22 font-weight-bold mb-5">공지사항</div>
+            <table class="table-view-01 txt-mt">
+              <caption><span class="hidden">상세 입니다.</span></caption>
+              <colgroup>
+                <col width="90px">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="2" class="clearfix tit_box">
+                    <p class="tit">제목 노출 <span class="text-danger common-text--12">NEW</span></p>
+                    <p class="tbl_detail_span mt_05">
+                      <span class="date">2018.04.04</span>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <!-- 개발 시, bg-ligth와 p-5는 삭제해주세요!-->
+                    <div class="board-box bg-light p-5">
+                      공지사항 내용 출력
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="border-list-type mt_30">
+              <ul>
+                <li>
+                  <a href="/news/news_010100.html?bmain=view&amp;uid=16" title="이전">
+                    <div class="clearfix">
+                      <div class="left list-up-bg list-title">이전</div>
+                      <div class="left w-con">
+                        이전글 입니다. 이전글 입니다. 이전글 입니다. 이전글 입니다. 이전글 입니다. 이전글 입니다. 이전글 입니다.
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="border-none">
+                  <a href="#" title="다음">
+                    <div class="clearfix">
+                      <div class="left list-down-bg list-title">다음</div>
+                      <div class="left w-con">
+                        다음 글이 없습니다.
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt_40 text_right board_view_btn_box">
+              <a href="JavaScript:history.go(-1);" class="btn-type-01">목록</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+
+</body>
+
+</html>

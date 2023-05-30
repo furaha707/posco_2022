@@ -1,0 +1,177 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '4';
+  $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+            <div class="contents-body mt-10">
+              <p class="common-text--18 font-weight-medium text-left pb-5 border-bottom">회원정보 수정</p>
+              <form action="">
+                <table class="table-form-01 type_e border-bottom">
+                  <div class="d-flex justify-content-between pb-3 border-bottom2 align-items-end my-5">
+                    <p class="common-text--16 font-weight-bold">기본 정보</p>
+                    <a href="" class="badge">기업회원 정보 수정</a>
+                  </div>
+                  <colgroup>
+                    <col class="w_150">
+                    <col width="*">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>이름</th>
+                      <td>
+                        홍길동
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>아이디 <span class="text-danger">*</span></th>
+                      <td>
+                        gildong
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>기존비밀번호 <span class="text-danger">*</span></th>
+                      <td>
+                        <input type="text" id="upw" name="upw" class="input_50" placeholder="기존 비밀번호">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>신규 비밀번호</th>
+                      <td>
+                        <input type="text" id="newpw" name="newpw" class="input_50"
+                          placeholder="신규 비밀번호 (공백 없는 영문대소문자/숫자/특수문자 포함 6~15자)">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>비밀번호 확인</th>
+                      <td>
+                        <input type="text" id="newpw" name="newpw" class="input_50">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>휴대폰번호 <span class="text-danger">*</span></th>
+                      <td>
+                        <div class="d-flex">
+                          <input type="text" id="tel" name="tel" class="input_30">
+                          <button type="button" class="table-btn-01">취소</button>
+                          <button type="button" class="table-btn-02">변경</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이메일 <span class="text-danger">*</span></th>
+                      <td>
+                        <div class="d-flex">
+                          <input type="text" id="email" name="email" class="input_30 bg-gray-e"
+                            placeholder="123@abc.com">
+                          <button type="button" class="table-btn-03">변경</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>닉네임 <span class="text-danger">*</span></th>
+                      <td>
+                        <input type="text" id="nickname" name="nickname" class="input_50">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="align-top">
+                        사업분야 선택 </th>
+                      <td>
+                        <div>
+                          <a href="../pop/business.html"
+                            class="select-btn d-block bg-color-1 color-white popup-link">사업분야
+                            선택
+                            <i class="xi-plus"></i></a>
+                          <div class="d-flex flex-wrap radio__wrap mt-5">
+
+                            <label class="input-label input-label--checkbox">
+                              <input type="checkbox" name="checkbox1">
+                              <span class="input-label__txt">재료별>철강재료>탄소강</span>
+                            </label>
+
+                            <label class="input-label input-label--checkbox">
+                              <input type="checkbox" name="checkbox1">
+                              <span class="input-label__txt">재료별>희소금속>희소금속</span>
+                            </label>
+
+                            <label class="input-label input-label--checkbox">
+                              <input type="checkbox" name="checkbox1">
+                              <span class="input-label__txt">공정/형태별>열처리</span>
+                            </label>
+
+                            <label class="input-label input-label--checkbox">
+                              <input type="checkbox" name="checkbox1">
+                              <span class="input-label__txt">공정/형태별>3D Printing</span>
+                            </label>
+
+                            <label class="input-label input-label--checkbox">
+                              <input type="checkbox" name="checkbox1">
+                              <span class="input-label__txt">산업별>자동차</span>
+                            </label>
+
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
+
+              <div class="mt-10">
+                <div class="common-text--16 font-weight-bold text-left pb-3">마케팅 활용 정보 수집 및 이용 동의 (선택)</div>
+                <div class="border-top2 border-bottom p-5">
+                  <input type="checkbox" id="yes" name="option" value="동의">
+                  <label for="yes" class="mb-1">SMS 수신</label>
+                  <input type="checkbox" id="no" name="option" value="동의 안함" class="ml-10">
+                  <label for="no" class="mb-1">이메일 수신</label>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center mt-10">
+                <button type="button" class="btn-type-02 px-10">취소</button>
+                <button type="button" class="btn-type-01 px-10 ml-3">정보수정</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+</body>
+
+</html>

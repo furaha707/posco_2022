@@ -1,0 +1,381 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+	<?
+    $P_dp1 = 'company';
+		$P_dp2 = '2';
+    include "../include/meta.html" 
+    ?>
+	<link rel="stylesheet" href="../assets/css/product.min.css" />
+	<link rel="stylesheet" href="../assets/css/company-home.min.css" />
+</head>
+
+<body class="sub-body company-home">
+	<? include "header.html" ?>
+
+	<main class="main sub-main pt-0" id="contents">
+		<section class="section product-list-page">
+			<div class="container">
+				<!-- S : breadcrumbs -->
+				<div class="breadcrumbs my-8">
+					<a href="" class="home">홈</a>
+
+					<i class="xi-angle-right-thin"></i>
+
+					<a href="" class="">
+						<?=${nav_.$P_dp1._.$P_dp2}?>
+					</a>
+
+					<i class="xi-angle-right-thin"></i>
+
+					<a href="" class="current">전체</a>
+				</div>
+				<!-- E : breadcrumbs -->
+
+				<div class="d-flex justify-content-between align-items-center">
+					<h2 class="product-list__title mb-6">제품소개</h2>
+					<!-- 기업 회원일 때 노출 -->
+					<!-- <a href="" class="btn-type-01 w-15">제품 등록</a> -->
+					<!-- 기업 회원일 때 노출 -->
+				</div>
+				<!-- S : tab -->
+				<div class="tab tab--box">
+					<div class="tab-header">
+						<div class="tab-item">
+							<a class="link on" href="">전체</a>
+						</div>
+						<div class="tab-item">
+							<a class="link" href="">철강 재료</a>
+						</div>
+						<div class="tab-item">
+							<a class="link" href="">비철 금속</a>
+						</div>
+						<div class="tab-item">
+							<a class="link" href="">설비·공정 기술</a>
+						</div>
+						<div class="tab-item">
+							<a class="link" href="">기타</a>
+						</div>
+					</div>
+				</div>
+				<!-- E : tab -->
+
+				<form class="filter-wrap">
+					<select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+						<option value="">시/도</option>
+						<option value="">군포시</option>
+						<option value="">성남시</option>
+						<option value="">안양시</option>
+						<option value="">서울특별시</option>
+						<option value="">대전광역시</option>
+					</select>
+					<select name="area2" id="area2" class="rounded-sm border area-select mr-2">
+						<option value="">시/구/군</option>
+						<option value="">All</option>
+						<option value="">San Antonio</option>
+						<option value="">Valparaiso</option>
+						<option value="">Lirquen</option>
+					</select>
+					<div class="search-area mr-2">
+						<button type="button" class="search__btn"><i class="xi-search"></i></button>
+						<input type="text" name="find_word" id="" class="search__txt w-100 h-100" placeholder="기업명, 제품명으로 검색하세요" />
+					</div>
+					<select name="" id="" class="rounded-sm border num-select">
+						<option value="">20개씩 보기</option>
+						<option value="">40개씩 보기</option>
+						<option value="">100개씩 보기</option>
+					</select>
+					</fo>
+
+					<div class="product-list row">
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro1.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro2.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro3.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro4.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro5.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro1.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro2.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro3.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro4.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro5.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro1.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro2.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro3.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro4.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro5.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro1.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro2.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro3.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro4.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item px-4">
+							<div class="inner">
+								<a href="./product-view.html" class="img-bx">
+									<img src="../assets/images/sub/pro5.png" alt="" />
+								</a>
+								<div class="txt-bx">
+									<a href="./product-view.html">
+										<p class="product-name">제품명</p>
+										<p class="product-des">제품 소개에 등록한 내용이 출력되는 영역입니다. 제품구성안이 확정되면 출력 내용 변경 예정입니다.</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center mt-12"><a href="javascript:void(0)" class="btn-type-02 w-15">더보기</a></div>
+
+					<!-- 기업 회원일 때, 위에 [더보기] 삭제 [제품 등록] 노출 -->
+					<!-- <div class="d-flex justify-content-end">
+					<a href="" class="btn-type-01 w-15">제품 등록</a>
+				</div> -->
+					<!-- 기업 회원일 때, 위에 [더보기] 삭제 [제품 등록] 노출 -->
+
+			</div>
+		</section>
+	</main>
+
+	<? include "../include/footer.html" ?>
+	<? include "../include/js.html" ?>
+
+	<script>
+		$('.share').on('click', function () {
+			$('.share-popup').show();
+		});
+
+		$('#close').on('click', function () {
+			$('.share-popup').hide();
+		});
+	</script>
+</body>
+
+</html>

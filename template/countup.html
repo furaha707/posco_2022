@@ -1,0 +1,72 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?
+			$P_dp1 = '';
+			$P_dp2 = '';
+			$P_dp3 = '';
+			include "../include/meta.html"
+    ?>
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Sub visual -->
+    <? include "../include/sub_visual.html" ?>
+    <!-- E : Sub visual -->
+
+    <!-- S : Main -->
+    <main class="main" data-track="scrTrack">
+      <!-- S : Section -->
+      <section class="section">
+        <div class="container">
+          <div class="countup">95.5</div>
+        </div>
+      </section>
+      <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+
+    <? include "../include/js.html" ?>
+
+    <script>
+      $('.countUp').each(function () {
+        var $this = $(this); // this
+        var onceBreak = true; // 한번만 실행되도록 변수 체크
+        var time = parseInt($(this).attr('data-counter-time')) !== undefined ? parseInt($(this).attr('data-counter-time')) : 1500;
+        // 카운트업에 걸리는 시간 ( ms 단위 / 기본값 1500ms )
+        var delay = parseInt($(this).attr('data-counter-delay')) !== undefined ? parseInt($(this).attr('data-counter-delay')) : 40;
+        // 카운트업 될 때의 딜레이 ( ms 단위이며 숫자가 낮을수록 여러번 카운팅됩니다. / 기본값 40ms )
+        var interval = time / delay; // 카운팅될 횟수
+        var start = 0; // 카운팅이 시작될 값
+        var end = parseFloat($this.text()); // 카운팅이 종료될 값 ( == 최초 입력되어있던 값 )
+
+        $(window).on('scroll', function () {
+          var offsetTop = $this.offset().top;
+          var scrollBottom = $(this).scrollTop() + $(this).outerHeight();
+
+          if (scrollBottom > offsetTop && onceBreak) {
+            onceBreak = false;
+
+            var inter = setInterval(function () {
+              start = start + end / interval;
+
+              if (start > end) {
+                clearInterval(inter);
+
+                $this.text(end);
+              } else {
+                $this.text(Math.floor(start));
+              }
+            }, delay);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

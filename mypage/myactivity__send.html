@@ -1,0 +1,454 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '3';
+  $P_dp3 = '5';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+
+            <div class="contents-body mt-10">
+              <div class="d-flex justify-content-start align-items-center pb-5">
+                <p class="common-text--18 font-weight-medium">보낸 문의</p>
+              </div>
+
+              <!-- S : tab -->
+              <div class='tab tab--box' data-tab='true' data-tab-order='0' data-tab-active='on' data-tab-index='0'
+                data-css='true'>
+                <div class='tab-header' data-tab-header=''>
+                  <div class='tab-item'>
+                    <a class='link on' data-tab-item=''>Metal Market</a>
+                  </div>
+                  <div class='tab-item'>
+                    <a class='link' data-tab-item=''>제품문의</a>
+                  </div>
+                  <div class='tab-item'>
+                    <a class='link' data-tab-item=''>1:1 문의</a>
+                  </div>
+                  <div class='tab-item'>
+                    <a class='link' data-tab-item=''>제휴문의</a>
+                  </div>
+                </div>
+                <div class='tab-body' data-tab-body=''>
+                  <div class='tab-content' data-tab-content=''>
+                    <div
+                      class="d-flex flex-column flex-lg-row justify-content-end align-items-start align-items-lg-end pt-2 pb-5">
+                      <!-- S : filter -->
+                      <div class="filter-wrap" id="mypage-filter">
+                        <select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">제목+내용</option>
+                        </select>
+                        <form class="search-area mr-2">
+                          <button type="button" class="search__btn"> <i class="xi-search"></i></button>
+                          <input type="text" name="find_word" id="" class="search__txt w-100 h-100"
+                            placeholder="검색어를 입력하세요">
+                        </form>
+                      </div>
+                      <!-- E : filter -->
+                    </div>
+                    <table class="table_board_for type_e text_center">
+                      <colgroup>
+                        <col width="10%">
+                        <col width="12%;">
+                        <col width="12%;">
+                        <col width="12%;">
+                        <col width="42%;">
+                        <col width="12%;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>번호</th>
+                          <th>구분</th>
+                          <th>제품명</th>
+                          <th>기업명</th>
+                          <th>제목</th>
+                          <th>날짜</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- S : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td class="no_data" colspan="6">검색조건에 맞는 게시물이 없습니다.</td>
+                        </tr>
+                        <!-- E : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">Metal Market</td>
+                          <td data-title="제품명">제품명</td>
+                          <td data-title="기업명">Abc기업</td>
+                          <td data-title="제목" class="text_left"><a href="../pop/send.html" class="popup-link">제품문의 제목이
+                              노출됩니다</a>
+                          </td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">Metal Market</td>
+                          <td data-title="제품명">제품명</td>
+                          <td data-title="기업명">Abc기업</td>
+                          <td data-title="제목" class="text_left"><a href="../pop/send.html" class="popup-link">제품문의 제목이
+                              노출됩니다</a>
+                          </td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                    <!-- <div class="paging-area mt-0">
+                          <ul>
+                            <li>
+                              <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="active">1<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">2<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">3<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next"><span>다음으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+                            </li>
+                          </ul>
+                        </div> -->
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                  </div>
+                  <div class='tab-content' data-tab-content=''>
+                    <div
+                      class="d-flex flex-column flex-lg-row justify-content-end align-items-start align-items-lg-end pt-2 pb-5">
+                      <!-- S : filter -->
+                      <div class="filter-wrap" id="mypage-filter">
+                        <select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">제목+내용</option>
+                        </select>
+                        <form class="search-area mr-2">
+                          <button type="button" class="search__btn"> <i class="xi-search"></i></button>
+                          <input type="text" name="find_word" id="" class="search__txt w-100 h-100"
+                            placeholder="검색어를 입력하세요">
+                        </form>
+                      </div>
+                      <!-- E : filter -->
+                    </div>
+                    <table class="table_board_for type_e text_center">
+                      <colgroup>
+                        <col width="10%">
+                        <col width="12%;">
+                        <col width="12%;">
+                        <col width="12%;">
+                        <col width="42%;">
+                        <col width="12%;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>번호</th>
+                          <th>구분</th>
+                          <th>제품명</th>
+                          <th>기업명</th>
+                          <th>제목</th>
+                          <th>날짜</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- S : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td class="no_data" colspan="6">검색조건에 맞는 게시물이 없습니다.</td>
+                        </tr>
+                        <!-- E : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">Metal Market</td>
+                          <td data-title="제품명">제품명</td>
+                          <td data-title="기업명"><a href="../pop/receive.html" class="popup-link">Abc기업</a></td>
+                          <td data-title="제목" class="text_left">제품문의 제목이 노출됩니다
+                          </td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">Metal Market</td>
+                          <td data-title="제품명">제품명</td>
+                          <td data-title="기업명"><a href="../pop/receive.html" class="popup-link">Abc기업</a></td>
+                          <td data-title="제목" class="text_left">제품문의 제목이 노출됩니다</td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                    <!-- <div class="paging-area mt-0">
+                          <ul>
+                            <li>
+                              <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="active">1<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">2<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">3<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next"><span>다음으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+                            </li>
+                          </ul>
+                        </div> -->
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                  </div>
+                  <div class='tab-content' data-tab-content=''>
+                    <div
+                      class="d-flex flex-column flex-lg-row justify-content-end align-items-start align-items-lg-end pt-2 pb-5">
+                      <!-- S : filter -->
+                      <div class="filter-wrap" id="mypage-filter">
+                        <select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">제목+내용</option>
+                        </select>
+                        <form class="search-area mr-2">
+                          <button type="button" class="search__btn"> <i class="xi-search"></i></button>
+                          <input type="text" name="find_word" id="" class="search__txt w-100 h-100"
+                            placeholder="검색어를 입력하세요">
+                        </form>
+                      </div>
+                      <!-- E : filter -->
+                    </div>
+                    <table class="table_board_for type_e text_center">
+                      <colgroup>
+                        <col width="8%">
+                        <col width="8%;">
+                        <col width="8%;">
+                        <col width="42%;">
+                        <col width="8%;">
+                        <col width="8%;">
+                        <col width="8%;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>번호</th>
+                          <th>구분</th>
+                          <th>문의유형</th>
+                          <th>제목</th>
+                          <th>첨부</th>
+                          <th>상태</th>
+                          <th>날짜</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- S : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td class="no_data" colspan="7">검색조건에 맞는 게시물이 없습니다.</td>
+                        </tr>
+                        <!-- E : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">1:1 문의</td>
+                          <td data-title="문의유형">회원</td>
+                          <td data-title="제목" class="text_left"><a href="./myactivity__send-view.html">제품문의 제목이
+                              노출됩니다</a></td>
+                          <td data-title="첨부"><i class="xi-download"></i></td>
+                          <td data-title="상태">답변대기</td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">1:1 문의</td>
+                          <td data-title="문의유형">기업</td>
+                          <td data-title="제목" class="text_left"><a href="./myactivity__send-view.html">제품문의 제목이
+                              노출됩니다</a></td>
+                          <td data-title="첨부"><i class="xi-download"></i></td>
+                          <td data-title="상태"><span class="text-color-1">답변완료</span></td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                    <!-- <div class="paging-area mt-0">
+                          <ul>
+                            <li>
+                              <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="active">1<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">2<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">3<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next"><span>다음으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+                            </li>
+                          </ul>
+                        </div> -->
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                  </div>
+                  <div class='tab-content' data-tab-content=''>
+                    <div
+                      class="d-flex flex-column flex-lg-row justify-content-end align-items-start align-items-lg-end pt-2 pb-5">
+                      <!-- S : filter -->
+                      <div class="filter-wrap" id="mypage-filter">
+                        <select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">제목+내용</option>
+                        </select>
+                        <form class="search-area mr-2">
+                          <button type="button" class="search__btn"> <i class="xi-search"></i></button>
+                          <input type="text" name="find_word" id="" class="search__txt w-100 h-100"
+                            placeholder="검색어를 입력하세요">
+                        </form>
+                      </div>
+                      <!-- E : filter -->
+                    </div>
+                    <table class="table_board_for type_e text_center">
+                      <colgroup>
+                        <col width="10%">
+                        <col width="15%;">
+                        <col width="45%;">
+                        <col width="15%;">
+                        <col width="15%;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>번호</th>
+                          <th>구분</th>
+                          <th>제목</th>
+                          <th>상태</th>
+                          <th>날짜</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- S : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td class="no_data" colspan="5">검색조건에 맞는 게시물이 없습니다.</td>
+                        </tr>
+                        <!-- E : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">제휴문의</td>
+                          <td data-title="제목" class="text_left"><a href="./myactivity__send-view2.html">제휴문의 내용 제목이
+                              노출됩니다.</a></td>
+                          <td data-title="상태">답변대기</td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                        <tr>
+                          <td data-title="번호">5</td>
+                          <td data-title="구분">제휴문의</td>
+                          <td data-title="제목" class="text_left"><a href="./myactivity__send-view2.html">제휴문의 내용 제목이
+                              노출됩니다.</a></td>
+                          <td data-title="상태"><span class="text-color-1">답변완료</span></td>
+                          <td data-title="날짜">2021.10.28</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                    <!-- <div class="paging-area mt-0">
+                          <ul>
+                            <li>
+                              <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="active">1<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">2<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">3<span></span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next"><span>다음으로</span></a>
+                            </li>
+                            <li>
+                              <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+                            </li>
+                          </ul>
+                        </div> -->
+                    <!-- 10개 넘어갈 경우 페이징 처리 -->
+                  </div>
+                </div>
+              </div>
+              <!-- E : tab -->
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

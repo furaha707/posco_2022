@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+@import 'mixins';
+@import 'sub/lnb';
+@import 'sub/breadcrumbs';
+@import 'sub/mypage-header';
+@import 'sub/filter';
+@import 'sub/business-popup';
+@import 'sub/product-list';
+@import 'sub/product-view';
+
+.mypage-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	&__contents {
+		flex: 1 1 auto;
+		width: 1%;
+		padding-left: 3.75em;
+		.contents-body {
+			.company-search {
+				position: relative;
+				button {
+					position: absolute;
+					right: 2%;
+					top: 50%;
+					transform: translateY(-50%);
+					font-size: em(18);
+				}
+				input {
+					padding-right: 2em;
+					min-width: em(400);
+					width: 100%;
+					border-radius: 5px;
+					height: 2.5em;
+				}
+			}
+			.badge {
+				background-color: #576673;
+				color: white;
+				padding: 0.5em 1em;
+				border-radius: 5px;
+				text-align: center;
+			}
+			.type_e {
+				td {
+					color: #666;
+					font-size: em(14);
+				}
+				.select-btn {
+					min-width: em(170);
+					max-width: em(170);
+					width: 100%;
+					color: white;
+					padding: 1em 1.5em;
+				}
+				.table-btn-01 {
+					background-color: white;
+					color: #666;
+					border: 1px solid #666;
+					width: 12%;
+					margin-left: 0.5em;
+					font-size: em(16);
+				}
+				.table-btn-02 {
+					background-color: $color-1;
+					color: white;
+					border: 1px solid $color-1;
+					width: 12%;
+					margin-left: 0.5em;
+					font-size: em(16);
+				}
+				.table-btn-03 {
+					background-color: #666;
+					color: white;
+					border: 1px solid #666;
+					width: 12%;
+					margin-left: 0.5em;
+					font-size: em(16);
+				}
+				.radio__wrap {
+					.input-label--checkbox {
+						position: relative;
+						margin-right: 5px;
+						margin-bottom: 5px;
+						input[type='checkbox'] {
+							position: absolute;
+							width: 1px;
+							height: 1px;
+							padding: 0;
+							margin: -1px;
+							overflow: hidden;
+							clip: rect(0, 0, 0, 0);
+							border: 0;
+						}
+						.input-label__txt {
+							display: inline-block;
+							position: relative;
+							padding-left: 0;
+							cursor: pointer;
+							width: 100%;
+							padding-left: 1.5rem;
+							padding-right: 1.5rem;
+							height: 37px;
+							line-height: 35px;
+							text-align: center;
+							border: 1px solid #ddd;
+							box-sizing: border-box;
+							border-radius: 30px;
+							font-size: 14px;
+						}
+					}
+					.input-label--checkbox input[type='checkbox']:checked + .input-label__txt {
+						background: $color-1;
+						border-color: $color-1;
+						color: #fff;
+						-ms-background: $color-1;
+						-ms-border-color: $color-1;
+						-ms-color: #fff;
+					}
+				}
+			}
+		}
+
+		.progress {
+			font-size: em(16);
+			font-weight: 300;
+			background-color: #103074;
+			color: white;
+			text-align: center;
+			border-radius: 20px;
+			width: em(100);
+			padding: 0.5em 0;
+		}
+
+		.complete {
+			font-size: em(16);
+			font-weight: 300;
+			background-color: white;
+			color: #333;
+			text-align: center;
+			border-radius: 20px;
+			width: em(100);
+			padding: 0.5em 0;
+			border: 1px solid #333;
+		}
+
+		.waiting {
+			font-size: em(16);
+			font-weight: 300;
+			background-color: #39baa6;
+			color: white;
+			text-align: center;
+			border-radius: 20px;
+			width: em(100);
+			padding: 0.5em 0;
+		}
+	}
+	@include mdq-max(lg) {
+		flex-direction: column-reverse;
+		&__contents {
+			flex: 1 1 100%;
+			width: 100%;
+			padding-left: 0;
+			.company-search {
+				input {
+					min-width: 100% !important;
+					width: 100%;
+				}
+			}
+			.badge {
+				width: 30% !important;
+			}
+		}
+	}
+}

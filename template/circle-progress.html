@@ -1,0 +1,203 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    include "../include/meta.html";
+		?>
+		<link rel="stylesheet" href="../assets/css/main.min.css" />
+		<style>
+			.circle-progress {
+				width: 7.5rem;
+				height: 7.5rem;
+				background: #fefcff;
+				border-radius: 50%;
+				border: 1px solid #cbbada;
+				position: relative;
+			}
+			.circle-progress .circle .mask,
+			.circle-progress .circle .fill {
+				width: calc(7.5rem - 2px);
+				height: calc(7.5rem - 2px);
+				position: absolute;
+				border-radius: 50%;
+			}
+			.circle-progress .circle .mask {
+				clip: rect(0px, 7.5rem, 7.5rem, calc(7.5rem / 2 - 1px));
+			}
+			.circle-progress .circle .fill {
+				clip: rect(0px, 3.75rem, 7.5rem, 0px);
+				background-color: #b8a0cc;
+			}
+			.circle-progress .inside-circle {
+				border-radius: 50%;
+				background: #f1ecf5;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				color: #b9a0cc;
+				position: absolute;
+				left: 0.875rem;
+				right: 0.875rem;
+				top: 0.875rem;
+				bottom: 0.875rem;
+				z-index: 10;
+				font-weight: 600;
+				font-size: 1.5em;
+			}
+			.circle-progress .circle-bar {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+			.circle-progress .circle-bar .bar {
+				width: 2px;
+				height: 100%;
+				background: #fff;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -1px;
+				z-index: 5;
+			}
+			.circle-progress .circle-bar .bar--2 {
+				transform: rotate(36deg);
+			}
+			.circle-progress .circle-bar .bar--3 {
+				transform: rotate(72deg);
+			}
+			.circle-progress .circle-bar .bar--4 {
+				transform: rotate(108deg);
+			}
+			.circle-progress .circle-bar .bar--5 {
+				transform: rotate(144deg);
+			}
+			.circle-progress .circle-bar .bar--6 {
+				transform: rotate(180deg);
+			}
+			.circle-progress .circle-bar .bar--7 {
+				transform: rotate(216deg);
+			}
+			.circle-progress .circle-bar .bar--8 {
+				transform: rotate(252deg);
+			}
+		</style>
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main py-20" id="contents">
+			<!-- S : Section -->
+			<section class="section mb-15 pb-15 border-bottom text-center">
+				<div class="container">
+					<h1 class="mb-15">circle progress</h1>
+
+					<!-- 
+            FIXME:
+            사용 시 위 style 삭제,
+            scss 위치 - /assets/scss/components/circle-progress
+          -->
+					<!--
+            TODO:
+            'inside-circle' 의 'data-percentage' 에 퍼센트 값을 넣어주면 됩니다.
+          -->
+					<div class="circle-progress d-inline-block mx-10">
+						<div class="circle">
+							<div class="mask full">
+								<div class="fill"></div>
+							</div>
+							<div class="mask half">
+								<div class="fill"></div>
+							</div>
+							<div class="inside-circle" data-percentage="82.5"></div>
+
+							<!--
+                TODO:
+                하단 'circle-bar' 는 칸을 10개로 나눠주는 디자인 용도로 사용되었음.
+                필요없을 시 삭제가능.
+              -->
+							<div class="circle-bar">
+								<div class="bar bar--1"></div>
+								<div class="bar bar--2"></div>
+								<div class="bar bar--3"></div>
+								<div class="bar bar--4"></div>
+								<div class="bar bar--5"></div>
+								<div class="bar bar--6"></div>
+								<div class="bar bar--7"></div>
+								<div class="bar bar--8"></div>
+								<div class="bar bar--9"></div>
+								<div class="bar bar--10"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="circle-progress d-inline-block mx-10">
+						<div class="circle">
+							<div class="mask full">
+								<div class="fill"></div>
+							</div>
+							<div class="mask half">
+								<div class="fill"></div>
+							</div>
+							<div class="inside-circle" data-percentage="50"></div>
+
+							<!--
+                TODO:
+                하단 'circle-bar' 는 칸을 10개로 나눠주는 디자인 용도로 사용되었음.
+                필요없을 시 삭제가능.
+              -->
+							<div class="circle-bar">
+								<div class="bar bar--1"></div>
+								<div class="bar bar--2"></div>
+								<div class="bar bar--3"></div>
+								<div class="bar bar--4"></div>
+								<div class="bar bar--5"></div>
+								<div class="bar bar--6"></div>
+								<div class="bar bar--7"></div>
+								<div class="bar bar--8"></div>
+								<div class="bar bar--9"></div>
+								<div class="bar bar--10"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+
+		<script>
+			$('.circle-progress').each(function () {
+				var data = $(this).find('.inside-circle').attr('data-percentage'); // 퍼센트값.
+				var dataPercent = (data * (18 / 5)) / 2; // 퍼센트값을 deg 값으로 계산.
+
+				$(this)
+					.find('.mask.full, .circle .fill')
+					.css('transform', 'rotate(' + dataPercent + 'deg');
+				$(this)
+					.find('.inside-circle')
+					.text(data + '%');
+			});
+		</script>
+	</body>
+</html>

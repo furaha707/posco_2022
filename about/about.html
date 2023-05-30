@@ -1,0 +1,196 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = '2';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/about.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section about-page mt-10 mb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./about.html" class="current">회사소개</a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <h2 class="common-text--40 font-weight-medium text-center mt-5 mb-9">회사소개</h2>
+        <!-- S : tab -->
+        <div class='tab tab--box' data-tab='true' data-tab-order='0' data-tab-active='on' data-tab-index='0'
+          data-css='true'>
+          <div class='tab-header' data-tab-header=''>
+            <div class='tab-item'>
+              <a class='link' data-tab-item=''>회사소개</a>
+            </div>
+            <div class='tab-item'>
+              <a class='link' data-tab-item=''>BI 소개</a>
+            </div>
+            <div class='tab-item'>
+              <a class='link' data-tab-item=''>찾아오시는 길</a>
+            </div>
+          </div>
+          <div class='tab-body' data-tab-body=''>
+            <div class='tab-content' data-tab-content=''>
+              <div class="img-bx">
+                <img src="../assets/images/sub/about-banner.jpg" alt="배너">
+                <div class="banner-txt">
+                  <img src="../assets/images/sub/metal-logo.png" alt="메탈플랫폼" class="banner-img">
+                  <p class="common-text--36 font-weight-medium text-white pt-2">메탈 플랫폼</p>
+                </div>
+              </div>
+              <div class="mt-10 txt-bx common-text--18 text-center font-weight-light">
+                저희는“금속 재료 제조기업 B2B 디지털(DB기반) 마케팅/영업 플랫폼”으로 금속 재료 제조기업들의 Supply Value chain의 모든 요소를 Digitization 하여,<br
+                  class="d-none d-lg-block">
+                기업들의 고객 영업/마케팅/서비스를 오프라인에서 온라인으로 옮겨왔습니다.<br class="d-none d-lg-block">
+                다양한 기업 정보 데이터를 자동 수집하여, Big-data 및 AI 분석 엔진을 기반으로 자동으로 고객 Analysis, Collection, Connection 통해 지속 소통하게
+                하며,<br class="d-none d-lg-block">
+                고객관계관리 서비스 또한 Digitization 하여 금속 재료 제조업을 하는 B2B기업을 Data로 초연결 하는 회사입니다.
+              </div>
+            </div>
+            <div class='tab-content' data-tab-content=''>
+              <div class="img-bx">
+                <img src="../assets/images/sub/grid-bg.jpg" alt="그리드 배경">
+                <div class="banner-txt">
+                  <img src="../assets/images/main/main-logo.png" alt="로고">
+                </div>
+              </div>
+              <div class="txt-bx">
+                <p class="common-text--26 font-weight-medium text-center mt-10">로고 소개</p>
+                <p class="txt-bx common-text--18 text-center font-weight-light mt-2">
+                  Metal Platform의 로고는 데이터, AI와 같은 첨단기술과 금속이 결합하여 융화하는 모습의 형상을 모티브 하여 P를 두 번 결합하여 M이 만들어지는 모양처럼<br
+                    class="d-none d-lg-block">
+                  저희가 가진 인프라를 결합하면 새로운 시너지를 낼 수 있다는 뜻을 담고 있습니다.<br class="d-none d-lg-block">
+                  모양은 엣지를 살려 입체감과 에너지를 나타내었고 철강을 나타내는 은색과 바다와 하늘은 나타내는 하늘색을 통해 대한민국 철강 시장을 바다와 하늘을 통해<br
+                    class="d-none d-lg-block">
+                  세상과 연결한다는 뜻을 담고 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class='tab-content' data-tab-content=''>
+              <div class="row">
+                <div class="col-12 col-lg-6 mb-10 mb-lg-0 ">
+                  <div class="map-inner border rounded-lg">
+                    <div class="map-img">
+                      <!-- * 카카오맵 - 지도퍼가기 -->
+                      <!-- 1. 지도 노드 -->
+                      <div id="daumRoughmapContainer1646635750964"
+                        class="map-content root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                      <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+                      <script charset="UTF-8" class="daum_roughmap_loader_script"
+                        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                      <!-- 3. 실행 스크립트 -->
+                      <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                          "timestamp": "1646635750964",
+                          "key": "29dsx",
+                          "mapWidth": "640",
+                          "mapHeight": "500"
+                        }).render();
+
+                        /* 지도 축소하기 */
+                        // var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                        //   mapOption = {
+                        //     center: new daum.maps.LatLng(37.5527658366683, 126.923975017598), // 지도의 중심좌표
+                        //     level: 5 // 지도의 확대 레벨
+                        //   };
+
+                        // var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                      </script>
+                    </div>
+                    <div class="map-txt">
+                      <div class="tit pt-5">
+                        <img src="../assets/images/icon/test.png" alt="">
+                        <p class="common-text--24 font-weight-medium pt-5">본사</p>
+                      </div>
+                      <div class="des text-center pt-15 pb-2">경남 진주시 동부로 169번길 12 윙스타워 B동 1602호</div>
+                      <div class="d-flex justify-content-center align-items-center text-center">
+                        <div class="des pr-5"><span class="des-blue">TEL</span> 055-752-9141</div>
+                        <span class="bar mr-5"></span>
+                        <div class="des"><span class="des-blue">FAX</span> 055-752-9142</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="map-inner border rounded-lg">
+                    <div class="map-img">
+                      <!-- * 카카오맵 - 지도퍼가기 -->
+                      <!-- 1. 지도 노드 -->
+                      <div id="daumRoughmapContainer1646636061967"
+                        class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                      <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+                      <script charset="UTF-8" class="daum_roughmap_loader_script"
+                        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                      <!-- 3. 실행 스크립트 -->
+                      <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                          "timestamp": "1646636061967",
+                          "key": "29dt7",
+                          "mapWidth": "640",
+                          "mapHeight": "500"
+                        }).render();
+                      </script>
+                    </div>
+                    <div class="map-txt">
+                      <div class="tit pt-5">
+                        <img src="../assets/images/icon/test.png" alt="">
+                        <p class="common-text--24 font-weight-medium pt-5">연구소</p>
+                      </div>
+                      <div class="des text-center pt-20 pb-2">경남 진주시 소호로 109, 2층 207호</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- E : tab -->
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+  <script>
+    var productSwiper = new Swiper('.section .swiper-container', {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+      loop: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 5,
+        },
+      },
+      navigation: {
+        nextEl: '.section .swiper-button--next',
+        prevEl: '.section .swiper-button--prev',
+      },
+    });
+  </script>
+</body>
+
+</html>

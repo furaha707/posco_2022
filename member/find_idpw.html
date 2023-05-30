@@ -1,0 +1,226 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'findid';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/member.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section py-20">
+      <div class="container">
+        <div class="login__wrap">
+          <h1 class="common-text--40 font-weight-medium mb-8 text-center">아이디/비밀번호 찾기</h1>
+          <!-- S :  -->
+
+          <div class='tab' data-tab='true' data-tab-order='0' data-tab-active='on' data-tab-index='0' data-css='true'>
+            <div class='tab-header' data-tab-header=''>
+              <div class='tab-item'>
+                <a class='link' data-tab-item=''>아이디 찾기</a>
+              </div>
+              <div class='tab-item'>
+                <a class='link' data-tab-item=''>비밀번호 찾기</a>
+              </div>
+            </div>
+            <div class='tab-body' data-tab-body=''>
+              <div class='tab-content' data-tab-content=''>
+                <p class="text-muted common-text--16 text-center pt-8 pb-5">아이디 찾는 방법을 선택해 주세요.</p>
+
+                <form name="signform" id="formInput" method="post" action="/member/find_idpw.html"
+                  enctype="multipart/form-data">
+                  <div class="login__find login__find--before">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center">
+                        <div class="login__icon rounded-circle bg-color-1"><i class="xi-mobile"></i></div>
+                        <p class="common-text--18 font-weight-medium ml-2">휴대폰 번호로 찾기</p>
+                      </div>
+                      <a href="javascript:void(0)" class="arrow-btn">
+                        <i class="xi-angle-down-thin"></i>
+                        <i class="xi-angle-up-thin"></i>
+                      </a>
+                    </div>
+                    <div class="find__input mt-5">
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="text" name="uname_1" id="uname_1" title="이름"
+                          placeholder="이름" required="" />
+                      </div>
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="tel" name="uptel" id="uptel" title="연락처"
+                          placeholder="휴대폰번호" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};"
+                          required="" />
+                      </div>
+                      <button type="button" class="btn-type-01 w-100" id="idfind_result">확인</button>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- S : 문자 발송 완료 메시지 -->
+                <!-- <div class="login__find--after text-center py-10">
+                  <div class="bg-light rounded-lg p-5 common-text--16 text-muted">
+                    회원 휴대폰(<span class="text-color-1">010-1*******</span>)으로 정보가 발송되었습니다.<br>SMS를 확인하시기 바랍니다.
+                  </div>
+                  <button type="button" class="btn-type-01 w-100 mt-8">로그인</button>
+                </div> -->
+                <!-- E : 문자 발송 완료 메시지 -->
+
+                <!-- S : 이메일 발송 완료 메시지 -->
+                <!-- <div class="login__find--after text-center py-10">
+                  <div class="bg-light rounded-lg p-5 common-text--16 text-muted">
+                    회원 이메일(<span class="text-color-1">hhy@********</span>)으로 정보가 발송되었습니다.<br>SMS를 확인하시기 바랍니다.
+                  </div>
+                  <button type="button" class="btn-type-01 w-100 mt-8">로그인</button>
+                </div> -->
+                <!-- E : 이메일 발송 완료 메시지 -->
+
+                <form name="signform" id="formInput" method="post" action="/member/find_idpw.html"
+                  enctype="multipart/form-data" class="mt-5">
+                  <div class="login__find login__find--before">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center">
+                        <div class="login__icon rounded-circle bg-color-1"><i class="xi-mail-o"></i></div>
+                        <p class="common-text--18 font-weight-medium ml-2">이메일 주소로 찾기</p>
+                      </div>
+                      <a href="javascript:void(0)" class="arrow-btn">
+                        <i class="xi-angle-down-thin"></i>
+                        <i class="xi-angle-up-thin"></i>
+                      </a>
+                    </div>
+                    <div class="find__input mt-5">
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="text" name="uname_1" id="uname_1" title="이름"
+                          placeholder="이름" required="" />
+                      </div>
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="tel" name="uptel" id="uptel" title="연락처"
+                          placeholder="이메일주소" required="" />
+                      </div>
+                      <button type="button" class="btn-type-01 w-100" id="idfind_result">확인</button>
+                    </div>
+                  </div>
+                </form>
+                <p class="common-text--16 text-muted mt-3 font-weight-light">* 회원가입 시 등록한 이름, 휴대폰번호, 이메일 정보를 입력해주세요.</p>
+              </div>
+              <div class='tab-content' data-tab-content=''>
+                <p class="text-muted common-text--16 text-center pt-8 pb-5">비밀번호 찾는 방법을 선택해 주세요.</p>
+                <form name="signform" id="formInput" method="post" action="/member/find_idpw.html"
+                  enctype="multipart/form-data">
+                  <div class="login__find login__find--before">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center">
+                        <div class="login__icon rounded-circle bg-color-1"><i class="xi-mobile"></i></div>
+                        <p class="common-text--18 font-weight-medium ml-2">휴대폰 번호로 찾기</p>
+                      </div>
+                      <a href="javascript:void(0)" class="arrow-btn">
+                        <i class="xi-angle-down-thin"></i>
+                        <i class="xi-angle-up-thin"></i>
+                      </a>
+                    </div>
+                    <div class="find__input mt-5">
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="text" name="uname_1" id="uname_1" title="이름"
+                          placeholder="이름" required="" />
+                      </div>
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="text" name="uid" id="uid" title="아이디"
+                          placeholder="아이디" required="" />
+                      </div>
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="tel" name="uptel" id="uptel" title="연락처"
+                          placeholder="휴대폰번호" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};"
+                          required="" />
+                      </div>
+                      <button type="button" class="btn-type-01 w-100" id="idfind_result">확인</button>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- S : 문자 발송 완료 메시지 -->
+                <!-- <div class="login__find--after text-center py-10">
+                <div class="bg-light rounded-lg p-5 common-text--16 text-muted">
+                  회원 휴대폰(<span class="text-color-1">010-1*******</span>)으로 정보가 발송되었습니다.<br>SMS를 확인하시기 바랍니다.
+                </div>
+                <button type="button" class="btn-type-01 w-100 mt-8">로그인</button>
+              </div> -->
+                <!-- E : 문자 발송 완료 메시지 -->
+
+                <!-- S : 이메일 발송 완료 메시지 -->
+                <!-- <div class="login__find--after text-center py-10">
+                <div class="bg-light rounded-lg p-5 common-text--16 text-muted">
+                  회원 이메일(<span class="text-color-1">hhy@********</span>)으로 정보가 발송되었습니다.<br>SMS를 확인하시기 바랍니다.
+                </div>
+                <button type="button" class="btn-type-01 w-100 mt-8">로그인</button>
+              </div> -->
+                <!-- E : 이메일 발송 완료 메시지 -->
+
+                <form name="signform" id="formInput" method="post" action="/member/find_idpw.html"
+                  enctype="multipart/form-data" class="mt-5">
+                  <div class="login__find login__find--before">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center">
+                        <div class="login__icon rounded-circle bg-color-1"><i class="xi-mail-o"></i></div>
+                        <p class="common-text--18 font-weight-medium ml-2">이메일 주소로 찾기</p>
+                      </div>
+                      <a href="javascript:void(0)" class="arrow-btn">
+                        <i class="xi-angle-down-thin"></i>
+                        <i class="xi-angle-up-thin"></i>
+                      </a>
+                    </div>
+                    <div class="find__input mt-5">
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="text" name="uname_1" id="uname_1" title="이름"
+                          placeholder="이름" required="" />
+                      </div>
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="text" name="uid" id="uid" title="아이디"
+                          placeholder="아이디" required="" />
+                      </div>
+                      <div class="login__input mb-3">
+                        <input class="input_for rounded-lg" type="tel" name="uptel" id="uptel" title="연락처"
+                          placeholder="이메일주소" required="" />
+                      </div>
+                      <button type="button" class="btn-type-01 w-100" id="idfind_result">확인</button>
+                    </div>
+                  </div>
+                </form>
+                <p class="common-text--16 text-muted mt-3 font-weight-light">* 회원가입 시 등록한 이름, 휴대폰번호, 이메일 정보를 입력해주세요.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+    $('.arrow-btn').on('click', function () {
+
+
+      if ($('.find__input').hasClass('active')) {
+        $(this).parents('.login__find').find($('.find__input')).removeClass('active');
+      } else {
+        $(this).parents('.login__find').find($('.find__input')).addClass('active');
+      }
+
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      } else {
+        $(this).addClass('active');
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: em(17);
+	font-weight: 300;
+	.home {
+		color: #333;
+		font-size: em(17);
+		letter-spacing: letterSpacing(-25);
+	}
+	.xi-angle-right-thin {
+		font-size: 10px;
+		padding: 0.9em 1em;
+		color: black;
+	}
+	.current {
+		font-size: em(17);
+		letter-spacing: letterSpacing(-25);
+		font-weight: 500;
+	}
+}

@@ -1,0 +1,63 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '1';
+  $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+            <div class="contents-body mt-10">
+              <div class="d-flex justify-content-start align-items-center pb-5">
+                <p class="common-text--18 font-weight-medium">나의 기업현황</p>
+              </div>
+
+              <div
+                class="common-text--16 text-center border-top border-bottom py-13 d-flex flex-column align-items-center text-muted">
+                <p class="mb-8">
+                  기업등록을 하시면 <span class="font-weight-medium text-gray-3">기업 홈페이지</span>를 개설하여<br
+                    class="d-none d-lg-block">
+                  <span class="font-weight-medium text-gray-3">제품 등록 및 광고, 홍보</span> 등 다양한 서비스를 이용하실 수 있습니다.
+                </p>
+                <a href="../member/join-business.html" class="btn-type-01 w-20">기업회원 전환</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+</body>
+
+</html>

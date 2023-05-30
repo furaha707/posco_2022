@@ -1,0 +1,121 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'service';
+    $P_dp2 = '1';
+    $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-20">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_1_href?>" class="current">
+            <?=$nav_service_1_1?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <div class="service-wrap">
+          <? include "./service_lnb.html" ?>
+          <div class="service-wrap__contents">
+            <p class="common-text--22 font-weight-bold pb-3 border-bottom2">1:1 문의</p>
+            <table class="table-form-01 border-bottom">
+              <colgroup>
+                <col width="13%">
+                <col width="*">
+              </colgroup>
+              <tr>
+                <th>문의유형 <span class="text-danger">*</span></th>
+                <td>
+                  <select name="" id="" class="border num-select input_30">
+                    <option value="">질문유형 선택</option>
+                    <option value="">회원</option>
+                    <option value="">기업</option>
+                    <option value="">제품</option>
+                    <option value="">기타</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>작성자 <span class="text-danger">*</span></th>
+                <td>홍길동</td>
+              </tr>
+              <tr>
+                <th>문의제목 <span class="text-danger">*</span></th>
+                <td>
+                  <input type="text" id="tit" name="tit" placeholder="제목을 입력해 주세요." class="input_80">
+                </td>
+              </tr>
+              <tr>
+                <th class="align-top">문의내용 <span class="text-danger">*</span></th>
+                <td><textarea name="inquiry" id="inquiry" cols="30" rows="5" placeholder="문의 내용을 작성해 주세요."
+                    class="p-5 input_80"></textarea></td>
+              </tr>
+              <tr>
+                <th>첨부파일</th>
+                <td>
+                  <div class="row no-gutters file-box w-72">
+                    <div class="col">
+                      <p class="file-box__text"></p>
+                    </div>
+                    <div class="col-auto position-relative ml-3">
+                      <span class="file-box__btn btn-type-03 px-5 h-100 rounded-0 py-0 d-flex">찾아보기</span>
+                      <input type="file" name="fileadd" id="" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="d-flex justify-content-center mt-10">
+              <button type="button" class="btn-type-01 w-15">문의하기</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+    $(document).ready(function () {
+      $('.qna-body').hide();
+
+      $(".qna-header .qna-header__tit").click(function () {
+        $(this).parent().next().slideToggle(300);
+        $(this).parents('.qna-wrapper').toggleClass('open');
+        $(".qna-header .qna-header__tit").not(this).parent().next().slideUp(300);
+        return false;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

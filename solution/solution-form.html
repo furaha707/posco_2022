@@ -1,0 +1,232 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = '3';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/solution.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section solution-form-page mt-10 mb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_3_href?>" class="current">
+            <?=$nav_3?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <h1 class="common-text--22 pb-5">구매/기술 문의 등록</h1>
+        <!-- S : 폼 영역 -->
+        <h6 class="common-text--20 text-gray-2 font-weight-medium text-center pb-3">프로젝트 정보를 입력해 주세요.</h6>
+        <form action="" class="border-top pt-3">
+          <table class="table-form-01 type-e">
+            <colgroup>
+              <col width="16%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="align-top">프로젝트명 <span class="text-danger">*</span></th>
+                <td>
+                  <div class="d-flex flex-column">
+                    <input type="text" name="title" id="title" title="제목" maxlength="200" class="input_for">
+                    <div class="text-color-1 common-text--14 pt-2">한 문장으로 프로젝트를 설명할 수 있도록 작성해주세요 (최대 20자)</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="align-top">프로젝트 유형 <span class="text-danger">*</span></th>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="pr-3 d-flex align-items-center">
+                      <input type="checkbox" name="info1" id="info1"><label for="info1" class="pl-1">컨설팅</label>
+                    </div>
+                    <div class="pr-3 d-flex align-items-center">
+                      <input type="checkbox" name="info2" id="info2"><label for="info2" class="pl-1">R&D</label>
+                    </div>
+                    <div class="pr-3 d-flex align-items-center">
+                      <input type="checkbox" name="info3" id="info3"><label for="info3" class="pl-1">OEM(+ODM)</label>
+                    </div>
+                    <div class="pr-3 d-flex align-items-center">
+                      <input type="checkbox" name="info4" id="info4"><label for="info4" class="pl-1">협업</label>
+                    </div>
+                    <div class="pr-3 d-flex align-items-center">
+                      <input type="checkbox" name="info5" id="info5"><label for="info5" class="pl-1">기타</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="align-top">납기일 <span class="text-danger">*</span></th>
+                <td>
+
+                  <input type="text" name="" id="" class="datepicker">
+
+                  <!-- js.html 하단에 입력 -->
+                  <script>
+                    $('.datepicker').datepicker({
+                      dateFormat: 'yy-mm-dd',
+                      prevText: '이전 달',
+                      nextText: '다음 달',
+                      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                      dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                      dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                      showMonthAfterYear: true,
+                      yearSuffix: '년'
+                    });
+                  </script>
+                  <div class="text-color-1 common-text--14 pt-2">한 문장으로 프로젝트를 설명할 수 있도록 작성해주세요 (최대 20자)</div>
+                  <div class="d-flex align-items-center pt-2">
+                    <input type="checkbox" name="info6" id="info6"><label for="info6" class="pl-1">납기일 협의 가능</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="align-top">추정 예산 범위 <span class="text-danger">*</span></th>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <span>최소</span>
+                    <div class="border pr-3 mx-3">
+                      <input type="number" class="price border-0" placeholder="숫자만 입력"
+                        onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};">
+                      원
+                    </div>
+                    <span>~ 최대</span>
+                    <div class="border pr-3 mx-3">
+                      <input type="number" class="price border-0" placeholder="숫자만 입력"
+                        onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};">
+                      원
+                    </div>
+                  </div>
+                  <div class="text-color-1 common-text--14 pt-2">추정 예산 범위를 작성해주세요. 예산 범위에 맞는 파트너를 매칭해드립니다. 최대 천억 단위(숫자
+                    12자리)까지 입력 가능합니다.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="align-top">최소생산량 <span class="text-danger">*</span></th>
+                <td>
+                  <input type="text" name="title" id="title" title="제목" maxlength="200" class="input_for">
+                  <div class="text-color-1 common-text--14 pt-2">수량, 총량, 금액 등으로 입력해 주세요.</div>
+                </td>
+              </tr>
+              <tr>
+                <th class="align-top">요청사항 <span class="text-danger">*</span></th>
+                <td>
+                  <textarea name="content" id="content" title="문의내용" class="area_for"></textarea>
+                  <div class="text-color-1 common-text--14 pt-2">요청사항을 자세히 입력해 주세요.</div>
+                </td>
+              </tr>
+              <tr>
+                <th class="align-top">첨부파일</th>
+                <td>
+                  <div class="row no-gutters file-box">
+                    <div class="col">
+                      <p class="file-box__text"></p>
+                    </div>
+                    <div class="col-auto position-relative ml-3">
+                      <span class="file-box__btn btn-type-03 px-5 h-100 rounded-0 py-0 d-flex">찾아보기</span>
+                      <input type="file" name="fileadd" id="" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <!-- E : 폼 영역 -->
+        <form action="" class="border-top pt-3 mt-3">
+          <table class="table-form-01 type-">
+            <colgroup>
+              <col width="16%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>작성자</th>
+                <td>홍길동</td>
+              </tr>
+              <tr>
+                <th>연락처</th>
+                <td><input type="text" name="link" id="link" title="링크" maxlength="200" class="input_for"
+                    placeholder="010-1234-5678"></td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td><input type="text" name="link" id="link" title="링크" maxlength="200" class="input_for"
+                    placeholder="gildong@abc.com"></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <!-- 신규로 등록하는 경우 노출 -->
+        <div class="d-flex justify-content-center mt-3 pt-5 border-top">
+          <button type="button" class="btn-type-01 w-15">등록</button>
+        </div>
+        <!-- 신규로 등록하는 경우 노출 -->
+
+        <!-- 수정하는 경우 노출 -->
+        <!-- <div class="d-flex justify-content-center mt-10">
+          <button type="button" class="btn-type-03 w-15 mr-5">취소</button>
+          <button type="button" class="btn-type-01 w-15">수정</button>
+        </div> -->
+        <!-- 수정하는 경우 노출 -->
+
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+  <script>
+
+    /*답글*/
+    $(document).ready(function () {
+      var post_li = $('.txt_post_wrap .post_list .post_li');
+      $(post_li).each(function () {
+        $(this).find('.btn_answer').on('click', function () {
+          $(this).parent().parent().parent().find('.answer_box').toggle();
+        })
+      });
+
+      $(".btn_modify").click(function () {
+        if ($(this).parent().parent().parent().parent().find('.modify_box').css('display') === 'none') {
+
+          $(this).parent().parent().parent().parent().find('.modify_box').show();
+
+          $(this).parent().parent().parent().parent().find('.des_txt').hide();
+          $(this).text("수정취소");
+
+        } else {
+
+
+          $(this).parent().parent().parent().parent().find('.modify_box').hide();
+          $(this).parent().parent().parent().parent().find('.des_txt').show();
+          $(this).text("수정");
+
+        }
+
+
+
+
+
+      })
+    });
+
+  </script>
+</body>
+
+</html>

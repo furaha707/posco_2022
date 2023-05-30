@@ -1,0 +1,106 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'mypage';
+    $P_dp2 = '2';
+    $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+            <div class="contents-body mt-10">
+              <div class="d-flex justify-content-start align-items-center pb-5">
+                <p class="common-text--18 font-weight-medium">나의 관심 기업</p>
+              </div>
+
+              <div
+                class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-end mb-3">
+                <p class="text-muted common-text--16">* 기업명을 클릭하시면 기업전용 홈페이지를 확인할 수 있습니다.</p>
+                <form class="company-search">
+                  <button type="button"> <i class="xi-search"></i></button>
+                  <input type="text" name="find_word" id="" class="w-100" placeholder="기업명을 입력하세요" autocomplete="off">
+                </form>
+              </div>
+              <!-- S : 목록 -->
+              <table class="table_board_for type_e">
+                <colgroup>
+                  <col width="15%">
+                  <col width="45%">
+                  <col width="20%">
+                  <col width="20%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>기업명</th>
+                    <th>날짜</th>
+                    <th>관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- S : 검색 결과가 없는 경우 노출 -->
+                  <!-- <tr>
+                    <td class="no_data" colspan="11">
+                      검색 조건에 맞는 결과가 없습니다.
+                    </td>
+                  </tr> -->
+                  <!-- E : 검색 결과가 없는 경우 노출 -->
+                  <tr>
+                    <td data-title="번호">2</td>
+                    <td data-title="기업명"><a href="../company-home/main.html"><u>(주)유재석아이엔씨</u></a></td>
+                    <td data-title="날짜">2022-01-01</td>
+                    <td data-title="관리"><a href="./mycompany__admin.html" class="badge w-50">삭제</a></td>
+                  </tr>
+                  <tr>
+                    <td data-title="번호">1</td>
+                    <td data-title="기업명"><a href="../company-home/main.html"><u>(주)매스티지</u></a></td>
+                    <td data-title="날짜">2022-01-20</td>
+                    <td data-title="관리"><a href="./mycompany__admin.html" class="badge w-50">삭제</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- E : 목록 -->
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

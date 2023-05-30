@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.header {
+	&.header--company {
+		&.fix {
+			.company-menu {
+				&__depth {
+					&#homepage {
+						border-bottom: 0;
+					}
+					&#product {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+		.nav {
+			position: relative;
+			&::before,
+			&::after {
+				display: none;
+			}
+			.depth-1 {
+				padding: 0 rem(50);
+			}
+		}
+		.company-menu {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			&__depth {
+				&#homepage {
+					background-color: #ffde00;
+					border-right: 1px solid #dedede;
+					display: flex;
+					align-items: center;
+					font-size: em(15);
+					font-weight: 500;
+					border-bottom: 1px solid #555;
+				}
+				&#product {
+					background-color: #f7f7f7;
+					border-right: 1px solid #dedede;
+					display: flex;
+					align-items: center;
+					font-size: em(15);
+					font-weight: 500;
+					border-bottom: 1px solid #555;
+				}
+				a {
+					display: block;
+					padding: 0 1.5rem;
+				}
+			}
+		}
+	}
+}

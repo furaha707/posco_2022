@@ -1,0 +1,160 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'findid';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_2_href?>" class="current">
+            <?=$nav_service_1_2?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <h1 class="popup__title font-weight-bold common-text--22 text-center pb-8 border-bottom2">광고 신청 및 결제 안내</h1>
+
+        <p class="common-text--18 font-weight-bold mt-5">광고 내용</p>
+        <div class="py-3 border-bottom">
+          <table class="table-form-01 type-d">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tr>
+              <th>광고 구분</th>
+              <td>메인 페이지 노출 광고</td>
+            </tr>
+            <tr>
+              <th>광고 영역</th>
+              <td>메인 최상단 배너</td>
+            </tr>
+            <tr>
+              <th>광고 기간</th>
+              <td>2주간, 2021-01-03 ~ 2021-01-16</td>
+            </tr>
+            <tr>
+              <th>광고 금액</th>
+              <td>0원 <span class="text-gray-9">(광고금액 : 000,000원 + 디자인 의뢰 협의 후 진행)</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <p class="common-text--18 font-weight-bold mt-5">신청자 정보</p>
+        <div class="py-3 border-bottom">
+          <table class="table-form-01 type-d">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tr>
+              <th>회사명(이름)</th>
+              <td>길동컴퍼니</td>
+            </tr>
+            <tr>
+              <th>담당자 이름</th>
+              <td>홍길동</td>
+            </tr>
+            <tr>
+              <th>담당자 이메일</th>
+              <td>gildong@abc.com</td>
+            </tr>
+            <tr>
+              <th>담당자 연락처</th>
+              <td>010-1234-5678</td>
+            </tr>
+          </table>
+        </div>
+
+        <p class="common-text--18 font-weight-bold mt-5">신청 내용</p>
+        <div class="py-3 border-bottom">
+          <table class="table-form-01 type-d">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tr>
+              <th>내용</th>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th class="align-top">첨부파일</th>
+              <td>
+                -
+              </td>
+            </tr>
+            <tr>
+              <th>키워드</th>
+              <td>기본형 (300,000원)</td>
+            </tr>
+            <tr>
+              <th>카테고리</th>
+              <td>기계가공</td>
+            </tr>
+            <tr>
+              <th>키워드</th>
+              <td>키워드1, 키워드2, 키워드3</td>
+            </tr>
+          </table>
+        </div>
+
+        <p class="common-text--18 font-weight-bold mt-5">세금계산서 발행 정보</p>
+        <div class="py-3 border-bottom">
+          <table class="table-form-01 type-d">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tr>
+              <th>사업자등록증</th>
+              <td>길동_사업자등록증.pdf</td>
+            </tr>
+            <tr>
+              <th>발행 이메일 주소</th>
+              <td>
+                cs@abc.com
+              </td>
+            </tr>
+            <tr>
+              <th>발행 연락처</th>
+              <td>010-9876-5432</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="board_btn_bx text_center mt-10">
+          <a href="../mypage/myactivity__ad.html" class="btn-type-03 w-15">마이페이지</a>
+          <a href="../main/main.html" class="btn-type-01 w-15 ml-3">홈</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+</body>
+
+</html>

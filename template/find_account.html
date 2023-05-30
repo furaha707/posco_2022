@@ -1,0 +1,141 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+		?>
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Sub visual -->
+    <? include "../include/sub-visual.html" ?>
+    <!-- E : Sub visual -->
+
+    <!-- S : Sub navigation -->
+    <? include "../include/sub-nav.html" ?>
+    <!-- E : Sub navigation -->
+
+    <!-- S : Main -->
+    <main class="main py-20" id="contents">
+      <!-- S : Section -->
+      <section class="section mb-15 pb-15 border-bottom">
+        <div class="container">
+          <!-- S : 탭 -->
+          <div class="tab tab--find" data-tab="true" data-tab-order="0" data-tab-active="on" data-tab-index="0" data-css="true">
+            <div class="tab-header" data-tab-header="">
+              <div class="tab-item">
+                <a class="link" data-tab-item="">아이디 찾기</a>
+              </div>
+              <div class="tab-item">
+                <a class="link" data-tab-item="">비밀번호 찾기</a>
+              </div>
+            </div>
+            <div class="tab-body" data-tab-body="">
+              <!-- S : 아이디 찾기 -->
+              <div class="tab-content" data-tab-content="">
+                <form action="">
+                  <div class="row">
+                    <div class="col-12">
+                      <input type="text" name="" id="" class="w-100" placeholder="가입시 등록한 이름을 입력해주세요.">
+                    </div>
+                    <div class="col-12 mt-2">
+                      <input type="email" name="" id="" class="w-100" placeholder="가입시 등록한 이메일을 입력해주세요.">
+                    </div>
+                    <div class="col-12 mt-2">
+                      <a href="#find_id" class="btn-type-01 w-100 popup-inline" onclick="">아이디 찾기</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- E : 아이디 찾기 -->
+              <!-- S : 비밀번호 찾기 -->
+              <div class="tab-content" data-tab-content="">
+                <form action="">
+                  <div class="row">
+                    <div class="col-12">
+                      <input type="text" name="" id="" class="w-100" placeholder="가입시 등록한 이름을 입력해주세요.">
+                    </div>
+                    <div class="col-12 mt-2">
+                      <input type="text" name="" id="" class="w-100" placeholder="가입시 등록한 아이디를 입력해주세요.">
+                    </div>
+                    <div class="col-12 mt-2">
+                      <input type="email" name="" id="" class="w-100" placeholder="가입시 등록한 이메일을 입력해주세요.">
+                    </div>
+                    <div class="col-12 mt-2">
+                      <a href="#find_pw" class="btn-type-01 w-100 popup-inline" onclick="">비밀번호 찾기</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- E : 비밀번호 찾기 -->
+            </div>
+          </div>
+          <!-- E : 탭 -->
+        </div>
+      </section>
+      <!-- E : Section -->
+
+      <!-- S : 아이디찾기 인라인 팝업 -->
+      <div id="find_id" class="popup popup--sm mfp-hide">
+        <div class="popup-header">
+          <h1 class="popup__title">아이디 찾기</h1>
+        </div>
+        <div class="popup-body">
+          <p class="text">고객님의 아이디는 <span class="font-weight-bold text-color-1">abcdef***</span> 입니다.</p>
+        </div>
+        <div class="popup-footer">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <a href="" class="btn-type-01 w-100">로그인하기</a>
+            </div>
+            <div class="col-12 col-md-6 mt-2 mt-md-0">
+              <a href="" class="btn-type-02 w-100">메인으로 이동</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- E : 아이디찾기 인라인 팝업 -->
+
+      <!-- S : 비밀번호찾기 인라인 팝업 -->
+      <div id="find_pw" class="popup popup--sm mfp-hide">
+        <div class="popup-header">
+          <h1 class="popup__title">비밀번호 찾기</h1>
+        </div>
+        <div class="popup-body">
+          <p class="text">고객님의 이메일로 <span class="font-weight-bold text-color-1">임시 비밀번호</span>가 발송되었습니다.</p>
+        </div>
+        <div class="popup-footer">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <a href="" class="btn-type-01 w-100">로그인하기</a>
+            </div>
+            <div class="col-12 col-md-6 mt-2 mt-md-0">
+              <a href="" class="btn-type-02 w-100">메인으로 이동</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- E : 비밀번호찾기 인라인 팝업 -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+
+    <? include "../include/js.html" ?>
+
+    <script>
+      $('.popup-inline').magnificPopup({
+        type:'inline',
+        midClick: true,
+        closeOnBgClick: false,
+        showCloseBtn: false
+      });
+    </script>
+  </body>
+</html>

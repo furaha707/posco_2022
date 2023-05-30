@@ -1,0 +1,60 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+		?>
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Sub visual -->
+    <? include "../include/sub-visual.html" ?>
+    <!-- E : Sub visual -->
+
+    <!-- S : Sub navigation -->
+    <? include "../include/sub-nav.html" ?>
+    <!-- E : Sub navigation -->
+
+    <!-- S : Main -->
+    <main class="main py-20" id="contents">
+      <!-- S : Section -->
+      <section class="section mb-15 pb-15 border-bottom">
+        <div class="container">
+          <div id="datepicker" class="datepicker--custom"></div>
+        </div>
+      </section>
+      <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+
+    <? include "../include/js.html" ?>
+
+    <script>
+      $('#datepicker').datepicker({
+        inline: true,
+        dateFormat: 'yy-mm-dd',
+        showOtherMonths: true,
+        showMonthAfterYear: true,
+        minDate: '0',
+        maxDate: '+60d',
+        yearSuffix: '년',
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        // beforeShowDay: ,
+        onSelect: function (dateText, inst) {
+          // 날짜 선택시 필요한 액션을 적어줌
+          $('#info1').val(dateText);
+          $('#info1_view').html(dateText);
+        },
+      });
+    </script>
+  </body>
+</html>

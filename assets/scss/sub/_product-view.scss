@@ -1,0 +1,800 @@
+@charset "UTF-8";
+
+.product-view-page {
+	.product-view-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		.product-view__img {
+			flex: 1 0 50%;
+			max-width: 50%;
+			.product-slider {
+				margin-bottom: 15px;
+				position: relative;
+
+				.swiper-button {
+					width: 100%;
+					height: 100%;
+					max-width: 3em;
+					max-height: 3em;
+					background-color: white;
+					border-radius: 50%;
+					top: 50%;
+					transform: translateY(-50%);
+					position: absolute;
+					z-index: 10;
+					box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+					font-size: em(15);
+					font-weight: bold;
+					&--prev {
+						left: -4%;
+					}
+					&--next {
+						right: -4%;
+					}
+				}
+				.img-bx {
+					@include img-to-bg(100%);
+				}
+				.slide-inner {
+					border-radius: 20px;
+					overflow: hidden;
+					box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+					margin: 0.45rem;
+					@include img-to-bg(100%);
+
+					&.no-shadow {
+						box-shadow: none;
+						border-radius: 0;
+					}
+				}
+			}
+			.product-thumbs-slider {
+				position: relative;
+				.swiper-slide {
+					position: relative;
+					@include img-to-bg(100%);
+
+					&-thumb-active::before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						border: 3px solid $color-1;
+						z-index: 10;
+					}
+				}
+			}
+			.img-bx {
+				@include img-to-bg(percentage(460/612));
+			}
+		}
+		.product-view__info {
+			flex: 1 1 auto;
+			width: 1%;
+			padding-left: 60px;
+			.product-badge {
+				display: inline-block;
+				background-color: #f7f7f7;
+				border-radius: 5px;
+				padding: 0.2em 0.5em;
+				font-size: em(15);
+				font-weight: 400;
+				margin: 0.3em 0;
+				&.product-badge1 {
+					color: #0d47a1;
+				}
+				&.product-badge2 {
+					color: #f0241b;
+				}
+				&.product-badge3 {
+					color: #448ccb;
+				}
+				&.product-badge4 {
+					color: #00695c;
+				}
+				&.product-badge5 {
+					color: #ff9800;
+				}
+			}
+			.table--st1 {
+				width: 100%;
+				table-layout: fixed;
+				th,
+				td {
+					padding: 0.4em;
+					text-align: left;
+					vertical-align: top;
+				}
+				th {
+					font-size: em(17);
+					font-weight: 500;
+				}
+				td {
+					font-size: em(17);
+					color: #777;
+					&.line1 {
+						@include text-truncate(1, 1.2);
+					}
+					&.line2 {
+						@include text-truncate(2, 1);
+					}
+				}
+			}
+		}
+		.des-btn {
+			background-color: white;
+			border: 1px solid #777;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.tel-bg {
+			background: url('../images/sub/tel-bg.jpg') no-repeat;
+			background-size: cover;
+			background-position: center right;
+		}
+
+		@include mdq-max(lg) {
+			flex-direction: column;
+			.product-view__img {
+				flex: 1 1 100%;
+				max-width: 100%;
+				.product-slider {
+					.swiper-button {
+						&--prev {
+							left: 0;
+						}
+						&--next {
+							right: 0;
+						}
+					}
+				}
+			}
+			.product-view__info {
+				width: 100%;
+				padding-left: 0;
+				margin-top: 3rem;
+				.product-title {
+					margin-bottom: 0.5rem;
+				}
+				.product-icon {
+					margin-bottom: 0.5rem;
+					.share {
+						width: 30px;
+						height: 30px;
+						line-height: 30px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	.product-thumbs-slider {
+		position: relative;
+		.swiper-slide {
+			position: relative;
+			@include img-to-bg(100%);
+		}
+	}
+	.product-thumbs-slider.metalmarket {
+		.swiper-container {
+			padding-top: 2rem;
+		}
+	}
+	.thumb-inner {
+		border-radius: 20px;
+		-webkit-box-shadow: 0 0 0.2rem rgb(0 0 0 / 25%);
+		box-shadow: 0 0 0.2rem rgb(0 0 0 / 25%);
+		display: block;
+		position: relative;
+		overflow: hidden;
+
+		&.swiper-slide-thumb-active {
+			transform: translateY(-10px);
+			transition: all 0.3s;
+		}
+	}
+	/* metal market 상품 이미지 리스트 */
+	.product-sm-wrap {
+		margin-top: 5rem;
+		.product-sm-inner {
+			border-radius: 20px;
+			box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+			@include img-to-bg(100%);
+		}
+	}
+	.product-content__tit {
+		border-bottom: 1px solid #000;
+	}
+	.line-7 {
+		@include text-truncate(7, 1.7);
+	}
+	.keyword-wrap {
+		.keyword-item {
+			border: 1px solid #ddd;
+			border-radius: 20px;
+			padding: 0.3em 1.5em;
+			text-align: center;
+			&:not(:last-of-type) {
+				margin-right: 0.5em;
+			}
+		}
+	}
+	.product-inquiry {
+		.inquiry__ico {
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			text-align: center;
+		}
+		.inquiry__tit {
+			font-size: em(17);
+			color: #333;
+			font-weight: 500;
+			letter-spacing: letterSpacing(-25);
+		}
+		.inquiry__txt {
+			font-size: em(17);
+			color: #666;
+			font-weight: 500;
+			letter-spacing: letterSpacing(-25);
+		}
+	}
+	/* 기업상세와 제품상세와 동일한 부분 */
+	.product-title-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.product-title {
+			font-size: em(26);
+			font-weight: 600;
+			line-height: 1.2;
+		}
+		.product-icon {
+			display: flex;
+			align-items: center;
+			position: relative;
+			.premium {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: em(16);
+				font-weight: 700;
+				background-color: #f0e641;
+				border-radius: 40px 40px 0px;
+				width: em(140);
+				padding: 0.5em;
+				img {
+					width: em(22);
+				}
+				@include mdq-max(lg) {
+					width: auto;
+					img {
+						width: em(18);
+					}
+				}
+			}
+
+			.progress {
+				font-size: em(16);
+				font-weight: 300;
+				background-color: #103074;
+				color: white;
+				text-align: center;
+				border-radius: 20px;
+				width: em(100);
+				padding: 0.5em 0;
+			}
+
+			.complete {
+				font-size: em(16);
+				font-weight: 300;
+				background-color: white;
+				color: #333;
+				text-align: center;
+				border-radius: 20px;
+				width: em(100);
+				padding: 0.5em 0;
+				border: 1px solid #333;
+			}
+
+			.waiting {
+				font-size: em(16);
+				font-weight: 300;
+				background-color: #39baa6;
+				color: white;
+				text-align: center;
+				border-radius: 20px;
+				width: em(100);
+				padding: 0.5em 0;
+			}
+
+			.share {
+				color: #666;
+				font-size: 25px;
+				border-radius: 50%;
+				width: 42px;
+				height: 42px;
+				line-height: 42px;
+				text-align: center;
+				border: 1px solid #ddd;
+				margin-left: 0.5em;
+				position: relative;
+				cursor: pointer;
+
+				@include mdq-max(lg) {
+					flex: 0 0 30px;
+					max-width: 30px;
+				}
+			}
+			.save {
+				color: #666;
+				font-size: 25px;
+				border-radius: 50%;
+				width: 42px;
+				height: 42px;
+				line-height: 42px;
+				text-align: center;
+				border: 1px solid #ddd;
+				margin-left: 0.9em;
+				position: relative;
+				cursor: pointer;
+			}
+			/* 링크 공유하기 팝업 */
+			.share-popup {
+				width: 350px;
+				box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+				position: absolute;
+				top: 55px;
+				left: 50%;
+				transform: translateX(-50%);
+				padding: rem(15);
+				background-color: #fff;
+				border-radius: 10px;
+				display: none;
+				.popup__title {
+					font-size: em(18);
+					letter-spacing: letterSpacing(-25);
+				}
+				.popup__icon {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.popup__img {
+						max-width: 48px;
+						width: 100%;
+						@include mdq-max(lg) {
+							max-width: 32px;
+						}
+					}
+					.popup__txt {
+						font-size: 15px;
+						color: #444;
+						letter-spacing: letterSpacing(-25);
+						@include mdq-max(lg) {
+							font-size: 13px;
+						}
+					}
+				}
+				.copylink {
+					position: relative;
+					margin: 0 auto;
+					display: flex;
+					input[type='text'] {
+						outline: none;
+						border: none;
+						height: 40px;
+						border: solid 1px #ddd;
+						background-color: #f9f9f9;
+						padding: 0 15px;
+					}
+					button[type='button'] {
+						width: 80px;
+						border: 1px solid #ddd;
+						margin-left: -1px;
+						height: 40px;
+					}
+				}
+				@media screen and (max-width: 1600px) {
+					left: auto;
+					right: 0;
+					transform: translateX(0);
+				}
+				@include mdq-max(md) {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
+.company-view-page {
+	.product-view-wrap {
+		display: flex;
+		.product-view__img {
+			flex: 1 0 50%;
+			max-width: 50%;
+			.product-slider {
+				margin-bottom: 15px;
+				position: relative;
+
+				.swiper-button {
+					width: 100%;
+					height: 100%;
+					max-width: 3em;
+					max-height: 3em;
+					background-color: white;
+					border-radius: 50%;
+					top: 50%;
+					transform: translateY(-50%);
+					position: absolute;
+					z-index: 10;
+					box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+					font-size: em(15);
+					font-weight: bold;
+					&--prev {
+						left: -4%;
+					}
+					&--next {
+						right: -4%;
+					}
+				}
+				.img-bx {
+					@include img-to-bg(100%);
+				}
+				.slide-inner {
+					border-radius: 20px;
+					overflow: hidden;
+					box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+					margin: 0.45rem;
+					@include img-to-bg(100%);
+				}
+			}
+			.product-thumbs-slider {
+				position: relative;
+				.swiper-slide {
+					position: relative;
+					&-thumb-active::before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						border: 3px solid $color-1;
+						z-index: 10;
+					}
+				}
+			}
+			.img-bx {
+				@include img-to-bg(percentage(460/612));
+			}
+		}
+		.product-view__info {
+			flex: 1 1 auto;
+			width: 1%;
+			padding-left: 60px;
+			.product-badge {
+				display: inline-block;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				padding: 0.2em 0.5em;
+				font-size: em(15);
+				font-weight: 400;
+				margin: 0.3em 0;
+				&.product-badge1 {
+					color: #0d47a1;
+				}
+				&.product-badge2 {
+					color: #f0241b;
+				}
+				&.product-badge3 {
+					color: #448ccb;
+				}
+				&.product-badge4 {
+					color: #00695c;
+				}
+				&.product-badge5 {
+					color: #ff9800;
+				}
+			}
+			.table--st1 {
+				width: 100%;
+				table-layout: fixed;
+				th,
+				td {
+					padding: 0.4em;
+					text-align: left;
+					vertical-align: top;
+				}
+				th {
+					font-size: em(17);
+					font-weight: 500;
+				}
+				td {
+					font-size: em(17);
+					color: #777;
+					&.line1 {
+						@include text-truncate(1, 1.2);
+					}
+					&.line2 {
+						@include text-truncate(2, 2);
+					}
+				}
+			}
+			.inquiry-popup {
+				&:hover {
+					background-color: #f7f7f7 !important;
+				}
+			}
+		}
+		.des-btn {
+			background-color: white;
+			border: 1px solid #777;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.tel-bg {
+			background: url('../images/sub/tel-bg.jpg') no-repeat;
+			background-size: cover;
+			background-position: center right;
+		}
+
+		@include mdq-max(lg) {
+			flex-direction: column;
+			.product-view__img {
+				flex: 1 1 100%;
+				max-width: 100%;
+				.product-slider {
+					.swiper-button {
+						&--prev {
+							left: 0;
+						}
+						&--next {
+							right: 0;
+						}
+					}
+				}
+			}
+			.product-view__info {
+				width: 100%;
+				padding-left: 0;
+				margin-top: 3rem;
+				.product-title {
+					margin-bottom: 0.5rem;
+				}
+				.product-icon {
+					margin-bottom: 0.5rem;
+					.share {
+						width: 30px;
+						height: 30px;
+						line-height: 30px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	/* metal market 상품 이미지 리스트 */
+	.product-sm-wrap {
+		margin-top: 5rem;
+		.product-sm-inner {
+			border-radius: 20px;
+			box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+			@include img-to-bg(100%);
+		}
+	}
+	.product-content__tit {
+		border-bottom: 1px solid #000;
+	}
+	.line-7 {
+		@include text-truncate(7, 1.7);
+	}
+	.keyword-wrap {
+		.keyword-item {
+			border: 1px solid #ddd;
+			border-radius: 20px;
+			padding: 0.3em 1.5em;
+			text-align: center;
+			&:not(:last-of-type) {
+				margin-right: 0.5em;
+			}
+		}
+	}
+	.product-inquiry {
+		.inquiry__ico {
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			text-align: center;
+		}
+		.inquiry__tit {
+			font-size: em(17);
+			color: #333;
+			font-weight: 500;
+			letter-spacing: letterSpacing(-25);
+		}
+		.inquiry__txt {
+			font-size: em(17);
+			color: #666;
+			font-weight: 500;
+			letter-spacing: letterSpacing(-25);
+		}
+	}
+	/* 기업상세와 제품상세와 동일한 부분 */
+	.product-title-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include mdq-max(lg) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.product-title {
+			font-size: em(26);
+			font-weight: 600;
+			line-height: 1.2;
+		}
+		.product-icon {
+			display: flex;
+			align-items: center;
+			position: relative;
+			@include mdq-max(lg) {
+				margin-top: 0.3em;
+			}
+			.premium {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: em(16);
+				font-weight: 700;
+				background-color: #f0e641;
+				border-radius: 40px 40px 0px;
+				width: em(140);
+				padding: 0.5em;
+				img {
+					width: em(22);
+				}
+				@include mdq-max(lg) {
+					img {
+						width: em(18);
+					}
+				}
+			}
+
+			.progress {
+				font-size: em(16);
+				font-weight: 300;
+				background-color: #39baa6;
+				color: white;
+				text-align: center;
+				border-radius: 20px;
+				width: em(100);
+				padding: 0.5em 0;
+			}
+			.share {
+				color: #666;
+				font-size: 25px;
+				border-radius: 50%;
+				width: 42px;
+				height: 42px;
+				line-height: 42px;
+				text-align: center;
+				border: 1px solid #ddd;
+				margin-left: 0.5em;
+				position: relative;
+				cursor: pointer;
+				@include mdq-max(lg) {
+					margin-left: 0.3em;
+				}
+			}
+			.save {
+				color: #666;
+				font-size: 25px;
+				border-radius: 50%;
+				width: 42px;
+				height: 42px;
+				line-height: 42px;
+				text-align: center;
+				border: 1px solid #ddd;
+				margin-left: 0.9em;
+				position: relative;
+				cursor: pointer;
+				@include mdq-max(lg) {
+					margin-left: 0.3em;
+				}
+			}
+			/* 링크 공유하기 팝업 */
+			.share-popup {
+				width: 350px;
+				box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+				position: absolute;
+				top: 90px;
+				left: 50%;
+				transform: translateX(-50%);
+				padding: rem(15);
+				background-color: #fff;
+				border-radius: 10px;
+				display: none;
+				.popup__title {
+					font-size: em(18);
+					letter-spacing: letterSpacing(-25);
+				}
+				.popup__icon {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.popup__img {
+						max-width: 48px;
+						width: 100%;
+						@include mdq-max(lg) {
+							max-width: 32px;
+						}
+					}
+					.popup__txt {
+						font-size: 15px;
+						color: #444;
+						letter-spacing: letterSpacing(-25);
+						@include mdq-max(lg) {
+							font-size: 13px;
+						}
+					}
+				}
+				.copylink {
+					position: relative;
+					margin: 0 auto;
+					display: flex;
+					input[type='text'] {
+						outline: none;
+						border: none;
+						height: 40px;
+						border: solid 1px #ddd;
+						background-color: #f9f9f9;
+						padding: 0 15px;
+					}
+					button[type='button'] {
+						width: 80px;
+						border: 1px solid #ddd;
+						margin-left: -1px;
+						height: 40px;
+					}
+				}
+				@media screen and (max-width: 1600px) {
+					left: auto;
+					right: 0;
+					transform: translateX(0);
+				}
+				@include mdq-max(md) {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
+//2022-06-24 수정
+.product-content {
+	.dec {
+		p,
+		span {
+			word-break: break-all;
+			font-size: 20px !important;
+
+			@include mdq-max(lg) {
+				font-size: 18px !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '4';
+  $P_dp3 = '2';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+            <div class="contents-body mt-10">
+              <p class="common-text--18 font-weight-medium text-left pb-5 border-bottom">회원탈퇴</p>
+
+              <div class="bg-light rounded-lg p-10 text-muted common-text--16 text-muted text-center my-5">
+                더 좋은 서비스를 제공하지 못하여 송구합니다.<br>
+                그동안 메탈플랫폼을 이용하시면서 <span class="text-color-1">불편했던 점이나 개선사항</span>을 알려주시면<br>
+                적극 반영하여 개선하도록 힘쓰겠습니다.
+              </div>
+
+
+              <div class="p-5 border-bottom">
+                <div class="common-text--15 font-weight-medium text-left pb-3">탈퇴 사유 (복수선택 가능)</div>
+                <div class="text-muted d-flex flex-wrap">
+                  <div>
+                    <input type="checkbox" id="yes" name="option" value="동의">
+                    <label for="yes" class="mb-1 mr-10">사용이 불편함</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="no" name="option" value="동의 안함" class="ml-0 ml-lg-10">
+                    <label for="no" class="mb-1 mr-10">다양한 정보 부족</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="no" name="option" value="동의 안함" class="ml-0 ml-lg-10">
+                    <label for="no" class="mb-1 mr-10">서비스 불만족</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="no" name="option" value="동의 안함" class="ml-0 ml-lg-10">
+                    <label for="no" class="mb-1">기타사유</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-5 border-bottom">
+                <div class="common-text--15 font-weight-medium text-left pb-3">추가 의견 (선택)</div>
+                <textarea name="opinion" id="opinion" cols="30" rows="10"
+                  placeholder="불편하셨던 점 또는 개선되었으면 하는 부분에 대한 소중한 의견 부탁드립니다." class="p-5"></textarea>
+              </div>
+
+              <div class="p-5">
+                <p class="text-left text-muted">회원 탈퇴 시 개인 정보와 작성된 게시글 및 활동 내역은 삭제되며, 삭제된 내역에 대해서는 복구가 불가능합니다.<br>
+                  광고 게재가 진행중인 경우 기한을 모두 진행하시기를 권장 드리며, 탈퇴 이후에는 보구가 될 수 없으니 유의하시기 바랍니다.</p>
+                <div class="text-gray-3 my-3">
+                  <input type="checkbox" id="no" name="option" value="동의 안함">
+                  <label for="no" class="mb-1"> 예, 개인 정보 삭제 및 광고 게재 삭제에 대하여 확인했으며, 동의합니다.</label>
+                </div>
+              </div>
+              <div class="bg-light rounded-lg p-8 text-muted common-text--16 d-flex justify-content-center">
+                <input type="text" id="pw" name="pw" placeholder="탈퇴하시려면 비밀번호를 입력해주세요." class="input_50 rounded-lg">
+              </div>
+
+            </div>
+
+            <div class="d-flex justify-content-center mt-10">
+              <button type="button" class="btn-type-02 w-20">취소</button>
+              <button type="button" class="btn-type-01 w-20 ml-3">탈퇴하기</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+</body>
+
+</html>

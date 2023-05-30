@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+// 버튼 공통 스타일
+[class*=' btn-type-'],
+[class^='btn-type-'] {
+	border: 0;
+	min-width: em(100);
+	align-items: center;
+	justify-content: center;
+	display: inline-flex;
+	font-size: rem(18);
+	padding: 0 2em;
+	vertical-align: middle;
+}
+
+// 버튼 클래스 구분자 $theme-colors 맵의 인덱스 번호로 부여
+@each $name, $color in $theme-colors {
+	$idx: index(($theme-colors), ($name $color)); // 인덱스 체크
+
+	.btn-type-0#{$idx} {
+		background-color: $color;
+		color: #fff;
+	}
+}
+
+.btn-type-01 {
+	display: inline-block;
+	border: 1px solid $color-1;
+	background-color: $color-1;
+	color: white;
+	border-radius: 5px;
+	padding: 0.8em 0;
+	font-size: em(16);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 500;
+	text-align: center;
+}
+
+.btn-type-02 {
+	display: inline-block;
+	border: 1px solid $color-1;
+	color: $color-1;
+	border-radius: 5px;
+	padding: 0.8em 0;
+	font-size: em(16);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 500;
+	text-align: center;
+	background-color: white;
+	&.favorite {
+		.xi-bookmark {
+			display: none;
+		}
+		&:hover {
+			border: 1px solid #f0241b;
+			color: #f0241b;
+		}
+		&.on {
+			border: 2px solid #f0241b;
+			color: #f0241b;
+			.xi-bookmark-o {
+				display: none;
+			}
+			.xi-bookmark {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.btn-type-03 {
+	display: inline-block;
+	border: 1px solid #666;
+	color: white;
+	border-radius: 5px;
+	padding: 0.8em 0;
+	font-size: em(16);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 500;
+	text-align: center;
+	background-color: #666;
+}
+
+.btn-type-04 {
+	display: inline-block;
+	border: 1px solid #39baa6;
+	color: #39baa6;
+	border-radius: 5px;
+	padding: 0.8em 0;
+	font-size: em(16);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 500;
+	text-align: center;
+	background-color: white;
+	&.favorite {
+		.xi-bookmark {
+			display: none;
+		}
+		&:hover {
+			border: 1px solid #f0241b;
+			color: #f0241b;
+		}
+		&.on {
+			border: 2px solid #f0241b;
+			color: #f0241b;
+			.xi-bookmark-o {
+				display: none;
+			}
+			.xi-bookmark {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.btn-type-05 {
+	display: inline-block;
+	border: 1px solid #39baa6;
+	color: white;
+	border-radius: 5px;
+	padding: 0.8em 0;
+	font-size: em(16);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 500;
+	text-align: center;
+	background-color: #39baa6;
+}
+
+.btn-type-06 {
+	display: inline-block;
+	border: 1px solid #666;
+	color: white;
+	font-size: em(15);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 300;
+	text-align: center;
+	background-color: #666;
+	display: flex;
+	//min-width: 10em;
+	height: 3.125rem;
+}
+
+.btn-type-07 {
+	display: inline-block;
+	border: 1px solid #dedede;
+	font-size: em(16);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 500;
+	text-align: center;
+	background-color: white;
+	display: flex;
+	min-width: 10em;
+	padding: 0.8em 0;
+	color: #666;
+}
+
+.btn-type-08 {
+	display: inline-block;
+	border: 1px solid #ff9900;
+	background-color: #ff9900;
+	color: white;
+	border-radius: 5px;
+	padding: 0.8em 0;
+	font-size: em(16);
+	letter-spacing: letterSpacing(-25);
+	font-weight: 500;
+	text-align: center;
+}
+
+.registration2 {
+	background-color: #046096;
+	color: white;
+	font-size: 1em;
+	letter-spacing: -0.025em;
+	border-radius: 5px;
+	padding: 0.6em 1.5em;
+	box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 13%) 0px 3px 6px;
+}
+
+///*상세보기 목록 버튼리스트*/
+.board_write_btn_bx {
+	position: relative;
+	text-align: right;
+	margin: 20px auto;
+	// a {
+	//   position: absolute;
+	//   top: 40px;
+	//   right: 0;
+	//   z-index: 2;
+
+	//   @include mdq-max(lg) {
+	//     position: static;
+	//     margin-top: 10px;
+	//     width: 100%;
+	//   }
+	// }
+}
+
+.board_view_btn_box {
+	margin: 40px auto;
+
+	@include mdq-max(lg) {
+		position: relative;
+
+		a {
+			min-width: 70px;
+			padding: 0 10px;
+
+			&:nth-child(2) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-width: 35px;
+			}
+
+			&:nth-child(3) {
+				position: absolute;
+				top: 0;
+				left: 60px;
+				min-width: 35px;
+			}
+
+			&:nth-child(4) {
+				position: absolute;
+				top: 0;
+				left: 120px;
+				min-width: 35px;
+			}
+		}
+	}
+}

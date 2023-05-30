@@ -1,0 +1,205 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'service';
+  $P_dp2 = '2';
+  $P_dp3 = '2';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_2_href?>" class="current">
+            <?=$nav_service_1_2?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+
+        <div class="service-wrap">
+          <? include "./service_lnb.html" ?>
+          <div class="service-wrap__contents">
+            <div class="common-text--22 font-weight-bold mb-5">자주 묻는 질문</div>
+            <div class="tab tab--box">
+              <div class="tab-header">
+                <div class="tab-item">
+                  <a class="link on">전체</a>
+                </div>
+                <div class="tab-item">
+                  <a class="link">회원</a>
+                </div>
+                <div class="tab-item">
+                  <a class="link">제품</a>
+                </div>
+                <div class="tab-item">
+                  <a class="link">홈페이지</a>
+                </div>
+                <div class="tab-item">
+                  <a class="link">기타</a>
+                </div>
+              </div>
+              <div class="qna type_c mt-10">
+                <ul>
+                  <li>
+                    <div class="qna-header">
+                      <a href="javascript:;" class="">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                          <span class="sort">[회원]</span>
+                          <span class="tit">질문 영역 입니다. 질문 영역 입니다.질문 영역 입니다.질문 영역 입니다.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="qna-body" style="display: none;">
+                      네, 가능합니다.<br>
+                      상세 답변 입니다.
+                    </div>
+                  </li>
+                  <li>
+                    <div class="qna-header">
+                      <a href="javascript:;" class="">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                          <span class="sort">[회원]</span>
+                          <span class="tit">질문 영역 입니다. 질문 영역 입니다.질문 영역 입니다.질문 영역 입니다.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="qna-body" style="display: none;">
+                      <p>
+                        네, 가능합니다.<br>
+                        상세 답변 입니다.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="qna-header">
+                      <a href="javascript:;" class="">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                          <span class="sort">[회원]</span>
+                          <span class="tit">질문 영역 입니다. 질문 영역 입니다.질문 영역 입니다.질문 영역 입니다.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="qna-body" style="display: none;">
+                      네, 가능합니다.<br>
+                      상세 답변 입니다.
+                    </div>
+                  </li>
+                  <li>
+                    <div class="qna-header">
+                      <a href="javascript:;" class="">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                          <span class="sort">[회원]</span>
+                          <span class="tit">질문 영역 입니다. 질문 영역 입니다.질문 영역 입니다.질문 영역 입니다.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="qna-body" style="display: none;">
+                      <p>
+                        네, 가능합니다.<br>
+                        상세 답변 입니다.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="qna-header">
+                      <a href="javascript:;" class="">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                          <span class="sort">[홈페이지]</span>
+                          <span class="tit">질문 영역 입니다. 질문 영역 입니다.질문 영역 입니다.질문 영역 입니다.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="qna-body" style="display: none;">
+                      네, 가능합니다.<br>
+                      상세 답변 입니다.
+                    </div>
+                  </li>
+                  <li>
+                    <div class="qna-header">
+                      <a href="javascript:;" class="">
+                        <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                          <span class="sort">[홈페이지]</span>
+                          <span class="tit">질문 영역 입니다. 질문 영역 입니다.질문 영역 입니다.질문 영역 입니다.</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="qna-body" style="display: none;">
+                      <p>
+                        네, 가능합니다.<br>
+                        상세 답변 입니다.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="paging-area">
+                <ul>
+                  <li>
+                    <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="active">1<span></span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">2<span></span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">3<span></span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="next"><span>다음으로</span></a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+    $('.qna-header').on('click', function () {
+      $(this).toggleClass('select');
+      if ($(this).siblings('.qna-body').is(':visible')) {
+        $(this).siblings('.qna-body').hide();
+      } else {
+        $(this).siblings('.qna-body').show();
+      }
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+//공통사용 텍스트 스타일 정의
+
+.common-title {
+	font-weight: 500;
+	letter-spacing: letterSpacing(-50);
+	// &--xl{
+	//   font-size: rem(1 * 2.5);
+	// }
+	// &--lg{
+	//   font-size: rem(1 * 2);
+	// }
+	// &--md{
+	//   font-size: rem(1 * 1.75);
+	// }
+	// &--sm{
+	//   font-size: rem(1 * 1.5);
+	// }
+	// &--xs{
+	//   font-size: rem(1 * 1.25);
+	// }
+
+	&--26 {
+		font-size: em(26);
+		line-height: 1.3;
+	}
+	&--20 {
+		font-size: em(20);
+	}
+}
+
+/* S : font-size */
+.common-text {
+	&--54 {
+		font-size: em(54);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--50 {
+		font-size: em(50);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--46 {
+		font-size: em(46);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--42 {
+		font-size: em(42);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--40 {
+		font-size: em(40);
+		letter-spacing: letterSpacing(-25);
+	}
+	&--36 {
+		font-size: em(36);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--34 {
+		font-size: em(34);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--32 {
+		font-size: em(32);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--30 {
+		font-size: em(30);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--28 {
+		font-size: em(28);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--26 {
+		font-size: em(26);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--24 {
+		font-size: em(24);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--22 {
+		font-size: em(22);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--20 {
+		font-size: em(20);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--18 {
+		font-size: em(18);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--16 {
+		font-size: em(16);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--15 {
+		font-size: em(15);
+		letter-spacing: letterSpacing(-25);
+	}
+
+	&--14 {
+		font-size: em(14);
+		letter-spacing: letterSpacing(-25);
+	}
+}
+/* E : font-size */

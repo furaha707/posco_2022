@@ -1,0 +1,88 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'findid';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/member.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section py-20">
+      <div class="container">
+        <div class="join__wrap text-center">
+          <div class="join__inner1">
+            <p class="common-text--40 font-weight-medium mb-3">회원가입</p>
+            <p class="common-text--18 mb-10 text-muted font-weight-light">환영합니다!<br>회원가입 후 다양한 혜택을 받아보세요.</p>
+            <!-- S :  -->
+
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <div class="join__item py-16 px-8 mb-10 mb-lg-0">
+                  <p class="join__icon"><img src="../assets/images/icon/phone-big.png" alt="휴대폰"></p>
+                  <p class="common-text--20 font-weight-medium mt-5">휴대폰 인증</p>
+                  <p class="common-text--16 text-muted mt-2">고객님 명의의 휴대폰으로 인증</p>
+                  <div class="d-flex justify-content-center mt-10">
+                    <button type="button" class="btn-type-07 rounded-lg w-50">인증하기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="join__item py-16 px-8">
+                  <p class="join__icon"><img src="../assets/images/icon/mail-big.png" alt="이메일"></p>
+                  <p class="common-text--20 font-weight-medium mt-5">이메일 인증</p>
+                  <p class="common-text--16 text-muted mt-2">고객님 이메일로 인증</p>
+                  <div class="d-flex justify-content-center mt-10">
+                    <a href="./join-email.html" class="btn-type-01 rounded-lg w-50">인증하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-light py-10 mt-10">
+              <p class="common-text--16 font-weight-medium">회원가입 후 <span class="text-color-1">기업회원</span>으로 전환하시면 추가 혜택을
+                받으실 수 있습니다.</p>
+              <ul class="bullet-list bullet-list--txt d-flex justify-content-center text-muted common-text--16 mt-3">
+                <li class="item px-5" data-bullet="·"><a href="">기업 및 제품 홍보</a></li>
+                <li class="item px-5" data-bullet="·"><a href="">제품 등록 및 판매</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+    $('.arrow-btn').on('click', function () {
+
+
+      if ($('.find__input').hasClass('active')) {
+        $(this).parents('.login__find').find($('.find__input')).removeClass('active');
+      } else {
+        $(this).parents('.login__find').find($('.find__input')).addClass('active');
+      }
+
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      } else {
+        $(this).addClass('active');
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>

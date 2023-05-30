@@ -1,0 +1,204 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '3';
+  $P_dp3 = '6';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+            <div class="contents-body mt-10">
+              <div class="d-flex justify-content-start align-items-center pb-5 border-bottom">
+                <p class="common-text--18 font-weight-medium">광고 신청 관리 상세</p>
+              </div>
+            </div>
+
+            <div class="py-5">
+              <p class="common-text--16 font-weight-medium pb-3">광고 내용</p>
+              <table class="table-form-01 type_a">
+                <colgroup>
+                  <col width="15%">
+                  <col width="35%">
+                  <col width="15%">
+                  <col width="35%">
+                </colgroup>
+                <tr>
+                  <th>접수번호</th>
+                  <td>ID20220117-000000</td>
+                  <th>신청일</th>
+                  <td>2022-01-17 10:20:00</td>
+                </tr>
+                <tr>
+                  <th>광고구분</th>
+                  <td>메인 페이지 노출 광고</td>
+                  <th>광고영역</th>
+                  <td>메인 최상단 배너</td>
+                </tr>
+                <tr>
+                  <th>일수</th>
+                  <td>2주</td>
+                  <th>이용기간</th>
+                  <td>2022.01.24 - 2022.02.06</td>
+                </tr>
+                <tr>
+                  <th>결제금액</th>
+                  <td colspan="3">500,000원 (광고 신청 500,000원 + 디자인 의뢰 0원)</td>
+                </tr>
+                <tr>
+                  <th>결제수단</th>
+                  <td colspan="3">무통장입금</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="py-5">
+              <p class="common-text--16 font-weight-medium pb-3">신청자 정보</p>
+              <table class="table-form-01 type_a">
+                <colgroup>
+                  <col width="15%">
+                  <col width="35%">
+                  <col width="15%">
+                  <col width="35%">
+                </colgroup>
+                <tr>
+                  <th>회사명(이름)</th>
+                  <td>길동컴퍼니</td>
+                  <th>담당자 이름</th>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <th>담당자 이메일</th>
+                  <td>gildong@abc.com</td>
+                  <th>담당자 연락처</th>
+                  <td>010-1234-5678</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="py-5">
+              <p class="common-text--16 font-weight-medium pb-3">결제 정보</p>
+              <table class="table-form-01 type_a">
+                <colgroup>
+                  <col width="15%">
+                  <col width="35%">
+                  <col width="15%">
+                  <col width="35%">
+                </colgroup>
+                <tr>
+                  <th>입금자명</th>
+                  <td>길동컴퍼니</td>
+                  <th>입금날짜</th>
+                  <td>2022-01-17</td>
+                </tr>
+                <tr>
+                  <th>상태</th>
+                  <td>결제완료</td>
+                  <th>계좌번호</th>
+                  <td>우리은행 123-4567-4567 메탈플랫폼</td>
+                </tr>
+                <tr>
+                  <th>영수증</th>
+                  <td colspan="3">세금계산서 발행</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="py-5">
+              <p class="common-text--16 font-weight-medium pb-3">세금계산서 발행 정보</p>
+              <table class="table-form-01 type_a">
+                <colgroup>
+                  <col width="15%">
+                  <col width="35%">
+                  <col width="15%">
+                  <col width="35%">
+                </colgroup>
+                <tr>
+                  <th>사업자 등록증</th>
+                  <td colspan="3"><u>첨부파일.pdf</u></td>
+                </tr>
+                <tr>
+                  <th>발행 이메일 주소</th>
+                  <td>gildong@abc.com</td>
+                  <th>발행연락처</th>
+                  <td>010-1234-5678</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="py-5">
+              <p class="common-text--16 font-weight-medium pb-3">신청내용</p>
+              <table class="table-form-01 type_a">
+                <colgroup>
+                  <col width="15%">
+                  <col width="35%">
+                  <col width="15%">
+                  <col width="35%">
+                </colgroup>
+                <tr>
+                  <th>승인여부</th>
+                  <td colspan="3">승인</td>
+                </tr>
+                <tr>
+                  <th>카테고리</th>
+                  <td colspan="3">카테고리명</td>
+                </tr>
+                <tr>
+                  <th>내용</th>
+                  <td colspan="3">광고 신청 내용</td>
+                </tr>
+                <tr>
+                  <th>첨부파일</th>
+                  <td colspan="3"><u>첨부파일.pdf</u></td>
+                </tr>
+                <tr>
+                  <th>키워드</th>
+                  <td colspan="3">키워드1, 키워드2, 키워드3</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-end mt-10">
+              <a href="./myactivity__ad.html" class="btn-type-01 w-15">목록</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

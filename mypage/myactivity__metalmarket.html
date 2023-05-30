@@ -1,0 +1,310 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '3';
+  $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+
+            <div class="contents-body mt-10">
+              <div class="d-flex justify-content-start align-items-center pb-5">
+                <p class="common-text--18 font-weight-medium">Metal Market</p>
+              </div>
+
+              <!-- S : tab -->
+              <div class='tab tab--box' data-tab='true' data-tab-order='0' data-tab-active='on' data-tab-index='0'
+                data-css='true'>
+                <div class="tab-header" data-tab-header="">
+                  <div class="tab-item">
+                    <a class="link on" data-tab-item="">전체</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">원료/광석/스크랩</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">조강/주조/단조</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">봉/형강</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">강관류</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">기계가공</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">도금/표면처리/코팅</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">열처리</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">용접/접합</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">3D Printing</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">제조 부원료</a>
+                  </div>
+                  <div class="tab-item">
+                    <a class="link" data-tab-item="">기타</a>
+                  </div>
+
+                </div>
+                <form class="filter-wrap">
+                  <select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+                    <option value="">시/도</option>
+                    <option value="">군포시</option>
+                    <option value="">성남시</option>
+                    <option value="">안양시</option>
+                    <option value="">서울특별시</option>
+                    <option value="">대전광역시</option>
+                  </select>
+                  <select name="area2" id="area2" class="rounded-sm border area-select mr-2">
+                    <option value="">시/구/군</option>
+                    <option value="">All</option>
+                    <option value="">San Antonio</option>
+                    <option value="">Valparaiso</option>
+                    <option value="">Lirquen</option>
+                  </select>
+                  <div class="search-area mr-2">
+                    <button type="button" class="search__btn"> <i class="xi-search"></i></button>
+                    <input type="text" name="find_word" id="" class="search__txt2 w-100 h-100"
+                      placeholder="기업명, 제품명으로 검색하세요">
+                  </div>
+                  <select name="count" id="count" class="rounded-sm border num-select">
+                    <option value="">20개씩 보기</option>
+                    <option value="">40개씩 보기</option>
+                    <option value="">100개씩 보기</option>
+                  </select>
+                </form>
+                <div class='tab-body' data-tab-body=''>
+                  <div class='tab-content' data-tab-content=''>
+                    <div class="product-list product-list-page mt-5 py-5">
+                      <p class="common-text--16">총 <span class="text-color-1">1</span>건</p>
+                      <div class="row">
+                        <div class="product-list__item px-4">
+                          <div class="inner">
+                            <a href="./myactivity__metalmarket-view.html" class="img-bx">
+                              <img src="../assets/images/sub/metal1.jpg" alt="">
+                              <div class="badges badge-waiting">대기중</div>
+                            </a>
+                            <p class="tit-bx2">
+                              <a href="./myactivity__metalmarket-view.html">
+                                마켓에 등록한 제목이 노출됩니다.
+                              </a>
+                            </p>
+                            <div class="txt-bx">
+                              <a href="./myactivity__metalmarket-view.html">
+                                <table class="product-table">
+                                  <colgroup>
+                                    <col width="30%">
+                                    <col width="70%;">
+                                  </colgroup>
+                                  <tr>
+                                    <th class="product-left">제품명</th>
+                                    <td class="product-des">제품명을 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">용도</th>
+                                    <td class="product-des">사용용도를 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">가격</th>
+                                    <td class="product-des">가격을 노출합니다.</td>
+                                  </tr>
+                                </table>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-list__item px-4">
+                          <div class="inner">
+                            <a href="./myactivity__metalmarket-view.html" class="img-bx">
+                              <img src="../assets/images/sub/metal2.jpg" alt="">
+                              <div class="badges badge-proceed">진행중</div>
+                            </a>
+                            <p class="tit-bx2">
+                              <a href="./myactivity__metalmarket-view.html">
+                                마켓에 등록한 제목이 노출됩니다.
+                              </a>
+                            </p>
+                            <div class="txt-bx">
+                              <a href="./myactivity__metalmarket-view.html">
+                                <table class="product-table">
+                                  <colgroup>
+                                    <col width="30%">
+                                    <col width="70%;">
+                                  </colgroup>
+                                  <tr>
+                                    <th class="product-left">제품명</th>
+                                    <td class="product-des">제품명을 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">용도</th>
+                                    <td class="product-des">사용용도를 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">가격</th>
+                                    <td class="product-des">가격을 노출합니다.</td>
+                                  </tr>
+                                </table>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-list__item px-4">
+                          <div class="inner">
+                            <a href="./myactivity__metalmarket-view.html" class="img-bx">
+                              <img src="../assets/images/sub/metal3.jpg" alt="">
+                              <div class="badges badge-complete">완료</div>
+                            </a>
+                            <p class="tit-bx2">
+                              <a href="./myactivity__metalmarket-view.html">
+                                마켓에 등록한 제목이 노출됩니다.
+                              </a>
+                            </p>
+                            <div class="txt-bx">
+                              <a href="./myactivity__metalmarket-view.html">
+                                <table class="product-table">
+                                  <colgroup>
+                                    <col width="30%">
+                                    <col width="70%;">
+                                  </colgroup>
+                                  <tr>
+                                    <th class="product-left">제품명</th>
+                                    <td class="product-des">제품명을 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">용도</th>
+                                    <td class="product-des">사용용도를 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">가격</th>
+                                    <td class="product-des">가격을 노출합니다.</td>
+                                  </tr>
+                                </table>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-list__item px-4">
+                          <div class="inner">
+                            <a href="./myactivity__metalmarket-view.html" class="img-bx">
+                              <img src="../assets/images/sub/metal4.jpg" alt="">
+                            </a>
+                            <p class="tit-bx2">
+                              <a href="./myactivity__metalmarket-view.html">
+                                마켓에 등록한 제목이 노출됩니다.
+                              </a>
+                            </p>
+                            <div class="txt-bx">
+                              <a href="./myactivity__metalmarket-view.html">
+                                <table class="product-table">
+                                  <colgroup>
+                                    <col width="30%">
+                                    <col width="70%;">
+                                  </colgroup>
+                                  <tr>
+                                    <th class="product-left">제품명</th>
+                                    <td class="product-des">제품명을 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">용도</th>
+                                    <td class="product-des">사용용도를 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">가격</th>
+                                    <td class="product-des">가격을 노출합니다.</td>
+                                  </tr>
+                                </table>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-list__item px-4">
+                          <div class="inner">
+                            <a href="./myactivity__metalmarket-view.html" class="img-bx">
+                              <img src="../assets/images/sub/metal5.jpg" alt="">
+                            </a>
+                            <p class="tit-bx2">
+                              <a href="./myactivity__metalmarket-view.html">
+                                마켓에 등록한 제목이 노출됩니다.
+                              </a>
+                            </p>
+                            <div class="txt-bx">
+                              <a href="./myactivity__metalmarket-view.html">
+                                <table class="product-table">
+                                  <colgroup>
+                                    <col width="30%">
+                                    <col width="70%;">
+                                  </colgroup>
+                                  <tr>
+                                    <th class="product-left">제품명</th>
+                                    <td class="product-des">제품명을 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">용도</th>
+                                    <td class="product-des">사용용도를 노출합니다.</td>
+                                  </tr>
+                                  <tr>
+                                    <th class="product-left">가격</th>
+                                    <td class="product-des">가격을 노출합니다.</td>
+                                  </tr>
+                                </table>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- E : tab -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

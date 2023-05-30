@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+@import 'mixins';
+
+@import 'sub/breadcrumbs';
+@import 'sub/product-list';
+@import 'sub/product-view';
+@import 'sub/product-tab';
+@import 'sub/filter';
+
+.market-form-page {
+	.market-form {
+		max-width: 820px;
+		margin: 0 auto;
+	}
+	.table-form-01 {
+		border-top: 2px solid #dedede;
+		border-bottom: 1px solid #dedede;
+	}
+	.plus-btn {
+		border: 1px solid #333;
+		padding: 0.5em 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

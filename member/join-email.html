@@ -1,0 +1,52 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'login';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/member.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section py-20">
+      <div class="container">
+        <div class="login__wrap text-center">
+          <p class="common-text--40 font-weight-medium mb-3">회원가입</p>
+
+          <p class="common-text--20 font-weight-medium text-left mb-3">이메일 인증</p>
+          <div class="login__input mb-3">
+            <input class="input_for rounded-lg" type="text" name="uname_1" id="uname_1" title="이름" placeholder="이름"
+              required="" />
+          </div>
+          <div class="login__input mb-3">
+            <input class="input_for rounded-lg" type="tel" name="uptel" id="uptel" title="연락처"
+              placeholder="이메일 (아이디@도메인)" required="" />
+          </div>
+
+          <div class="my-5">
+            <button type="button" class="btn-type-01 w-100" id="loginSubmit">인증번호 요청</button>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <input class="input_for rounded-lg" type="number" name="check" id="check" title="인증번호" placeholder="인증번호 입력"
+              onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" required="" />
+            <button type="button" class="btn-type-03 ml-3">확인</button>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+</body>
+
+</html>

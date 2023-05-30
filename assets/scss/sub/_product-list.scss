@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+.product-list-page {
+	.swiper-slide {
+		.product-list__item {
+			flex: 1 1 auto;
+			max-width: none;
+		}
+	}
+
+	.swiper-button {
+		width: 100%;
+		height: 100%;
+		max-width: 3em;
+		max-height: 3em;
+		background-color: white;
+		border-radius: 50%;
+		top: 43%;
+		position: absolute;
+		z-index: 10;
+		box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+		font-size: em(15);
+		&--prev {
+			left: -2%;
+		}
+		&--next {
+			right: -2%;
+		}
+	}
+	.registration {
+		background-color: #103074;
+		color: white;
+		font-size: em(16);
+		letter-spacing: letterSpacing(-25);
+		border-radius: 5px;
+		padding: 0.6em 1.5em;
+		box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 13%) 0px 3px 6px;
+	}
+	.product-list {
+		&__title {
+			font-size: em(26);
+			font-weight: 700;
+			letter-spacing: letterSpacing(-25);
+		}
+		&__more {
+			font-size: em(15);
+			font-weight: 400;
+			letter-spacing: letterSpacing(-25);
+			color: #777;
+			white-space: nowrap;
+		}
+		&__item {
+			margin-top: 2.5em;
+			flex: 0 0 20%;
+			max-width: 20%;
+
+			@include mdq-max(lg) {
+				flex: 0 0 33.33%;
+				max-width: 33.33%;
+			}
+
+			@include mdq-max(sm) {
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+
+			.tit-bx {
+				font-size: em(19);
+				font-weight: 500;
+				letter-spacing: letterSpacing(-25);
+				margin-bottom: 0.8em;
+			}
+			.tit-bx2 {
+				font-size: em(17);
+				font-weight: 500;
+				letter-spacing: letterSpacing(-25);
+				margin-bottom: 0.8em;
+				@include text-truncate(1, 1);
+			}
+			.img-bx {
+				border-radius: rem(15);
+				margin-bottom: 1.2em;
+				position: relative;
+				box-shadow: 0 0 14px rgba($black, 0.16);
+				@include img-to-bg(100%);
+
+				.badges {
+					position: absolute;
+					top: 3%;
+					left: 3%;
+					width: 44px;
+					height: 44px;
+					line-height: 44px;
+					border-radius: 50%;
+					font-size: 11px;
+					text-align: center;
+					&.badge-proceed {
+						background-color: #103074;
+						color: white;
+					}
+					&.badge-complete {
+						background-color: white;
+						color: #333;
+					}
+					&.badge-waiting {
+						background-color: #f0241b;
+						color: white;
+					}
+				}
+			}
+			.txt-bx {
+				.product-table {
+					width: 100%;
+					table-layout: fixed;
+					th,
+					td {
+						padding: 2px 4px;
+						text-align: left;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					th {
+						font-weight: 500;
+					}
+				}
+				.product-name {
+					font-size: em(17);
+					font-weight: 500;
+					letter-spacing: letterSpacing(-25);
+					margin-bottom: 0.3em;
+				}
+				.product-left {
+					font-size: em(13);
+					font-weight: 400;
+					letter-spacing: letterSpacing(-30);
+					line-height: (20/15);
+					color: #333;
+				}
+				.product-des {
+					font-size: em(13);
+					font-weight: 400;
+					letter-spacing: letterSpacing(-30);
+					line-height: (20/15);
+					color: #555;
+				}
+			}
+
+			.inner {
+				transition: transform 0.3s ease;
+				padding: 0 5px;
+				&:hover {
+					transform: translateY(-10px);
+					.txt-bx {
+						color: $color-1;
+					}
+				}
+			}
+		}
+	}
+}

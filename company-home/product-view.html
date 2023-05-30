@@ -1,0 +1,313 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+	<?
+    $P_dp1 = 'company';
+		$P_dp2 = '2';
+    include "../include/meta.html" 
+    ?>
+	<link rel="stylesheet" href="../assets/css/product.min.css" />
+	<link rel="stylesheet" href="../assets/css/company-home.min.css" />
+</head>
+
+<body class="sub-body company-home">
+	<? include "header.html" ?>
+
+	<main class="main sub-main pt-0" id="contents">
+		<section class="section product-view-page">
+			<div class="container">
+				<!-- S : breadcrumbs -->
+				<div class="breadcrumbs my-8">
+					<a href="" class="home">홈</a>
+					<i class="xi-angle-right-thin"></i>
+					<a href="<?=$nav_5_href?>" class="current">
+						<?=$nav_5?>
+					</a>
+				</div>
+				<!-- E : breadcrumbs -->
+				<div class="product-view-wrap">
+					<div class="product-view__img">
+						<div class="product-slider">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="swiper-button swiper-button--prev xi-angle-left-thin" title="prev"></button>
+							<button type="button" class="swiper-button swiper-button--next xi-angle-right-thin" title="next"></button>
+						</div>
+						<div class="product-thumbs-slider">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img-bx">
+											<img src="../images/board/no_img.jpg" alt="product image" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-view__info">
+						<a href="" class="company-link text-color-1 common-text--18 font-weight-medium">기업명 <i
+								class="xi-external-link"></i></a>
+						<div class="product-title-wrap mb-7">
+							<h1 class="product-title">제품명을 노출합니다</h1>
+							<div class="product-icon">
+								<div class="premium"><img src="../assets/images/icon/premium.png" alt="프리미엄" /> <span
+										class="pl-2">프리미엄</span></div>
+								<div class="share"><i class="xi-share-alt-o"></i></div>
+								<!-- S : share-popup -->
+								<div class="share-popup">
+									<div class="share__head d-flex justify-content-between align-items-center">
+										<h1 class="popup__title font-weight-medium text-gray-2 text-left">공유하기</h1>
+										<a class="xi-close" href="javascript:void(0)" id="close"></a>
+									</div>
+									<div class="share__body pt-4 d-flex justify-content-around">
+										<div class="popup__icon">
+											<img src="../assets/images/icon/ico-facebook.png" alt="페이스북" class="popup__img">
+											<span class="popup__txt">페이스북</span>
+										</div>
+										<div class="popup__icon">
+											<img src="../assets/images/icon/ico-kakao.png" alt="카카오톡" class="popup__img">
+											<span class="popup__txt">카카오톡</span>
+										</div>
+										<div class="popup__icon">
+											<img src="../assets/images/icon/ico-blog.png" alt="블로그" class="popup__img">
+											<span class="popup__txt">블로그</span>
+										</div>
+									</div>
+									<div class="copylink pt-3">
+										<input type="text" class="w-100">
+										<button type="button">복사</button>
+									</div>
+								</div>
+								<!-- E : share-popup -->
+							</div>
+						</div>
+						<div class="my-5 py-3 border-top">
+							<div class="product-badge">원료/광석/스크랩</div>
+							<table class="table table--st1">
+								<colgroup>
+									<col width="150px" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>두께</th>
+										<td>기업회원이 등록한 제품 두께 출력</td>
+									</tr>
+									<tr>
+										<th>폭</th>
+										<td>기업회원이 등록한 제품 폭 출력</td>
+									</tr>
+									<tr>
+										<th>제조사</th>
+										<td>기업회원이 등록한 제품 제조사 출력</td>
+									</tr>
+									<tr>
+										<th>판매지역</th>
+										<td>기업회원이 등록한 제품 판매지역 출력</td>
+									</tr>
+									<tr>
+										<th>단가 (원/Kg당)</th>
+										<td>기업회원이 등록한 제품 단가 출력</td>
+									</tr>
+									<tr>
+										<th>총 판매 양</th>
+										<td>기업회원이 등록한 제품 총 판매 양 출력</td>
+									</tr>
+									<tr>
+										<th>제품 설명</th>
+										<td>기업회원이 등록한 제품에 대한 설명을 출력합니다. 기업회원이 등록한 제품에 대한 설명을 출력합니다. 기업회원이 등록한 제품에 대한 설명을 출력합니다. 기업회원이 등록한
+											제품에 대한 설명을 출력합니다. 기업회원이 등록한 제품에 대한 설명을 출력합니다. 기업회원이 등록한 제품에 대한 설명을 출력합니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="row mx-n1 my-5">
+							<div class="col-6 px-1">
+								<button type="button" class="w-100 h-100 py-3 btn-type-02"><i class="xi-bookmark-o"></i> 관심제품
+									등록</button>
+							</div>
+							<div class="col-6 px-1">
+								<a href="" class="w-100 py-3 btn-type-01">판매기업 다른 제품 보기</a>
+							</div>
+						</div>
+
+						<div class="bg-light rounded-lg p-6">
+							<p class="common-text--18 pb-5 text-color-1 font-weight-medium">제품문의</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div>
+									<p class="common-text--20 font-weight-bold">기업명</p>
+									<p class="common-text--20 font-weight-medium">02-1234-5678</p>
+								</div>
+
+								<!-- 
+										로그인전 /pop/inquiry.html
+										로그인후 /pop/inquiry-login.html
+									-->
+								<a href="../pop/inquiry-login.html" class="des-btn popup-link"><img
+										src="../assets/images/icon/detail.png" alt="전문보기" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-content mt-20" id="product-detail">
+					<p class="product-content__tit common-text--22 font-weight-medium pb-4">제품 상세정보</p>
+					<div class="py-8">
+						<!--
+									TODO:
+									개발작업 시 아래 div.text-center.py-15.bg-light 태그 전체 삭제해주세요!
+								-->
+						<div class="text-center py-15 bg-light text-gray-6 common-text--sm font-weight-light">상품설명정보에 등록한 이미지 또는 텍스트
+							전체 노출</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-end border-top pt-7">
+					<a href="./product.html" class="btn-type-01 w-15">목록</a>
+				</div>
+
+				<!-- 기업회원일 경우만 노출 -->
+				<!-- <div class="d-flex justify-content-center mt-5">
+					<button type="button" class="btn-type-03 w-15 mr-3">삭제</button>
+					<button type="button" class="btn-type-01 w-15">수정</button>
+				</div> -->
+				<!-- 기업회원일 경우만 노출 -->
+
+			</div>
+		</section>
+	</main>
+
+	<? include "../include/footer.html" ?>
+	<? include "../include/js.html" ?>
+
+	<script>
+		var prodThumbSwiper = new Swiper('.product-thumbs-slider .swiper-container', {
+			slidesPerView: 4,
+			spaceBetween: 15,
+			freeMode: true,
+			watchSlidesProgress: true,
+			speed: 300,
+			autoHeight: true,
+		});
+		var prodSwiper = new Swiper('.product-slider .swiper-container', {
+			slidesPerView: 1,
+			speed: 300,
+			thumbs: {
+				swiper: prodThumbSwiper,
+			},
+			navigation: {
+				prevEl: '.product-slider .swiper-button--prev',
+				nextEl: '.product-slider .swiper-button--next',
+			},
+			autoHeight: true,
+		});
+
+		$('.share').on('click', function () {
+			$('.share-popup').show();
+		});
+
+		$('#close').on('click', function () {
+			$('.share-popup').hide();
+		});
+
+			// $('.review-list__item .more-btn').on('click', function () {
+			//   if ($(this).parents('.review-list__item').hasClass('active')) {
+			//     $(this).parents('.review-list__item').removeClass('active');
+			//     $(this).text('더보기');
+			//   } else {
+			//     $(this).parents('.review-list__item').addClass('active');
+			//     $(this).text('닫기');
+			//   }
+			// });
+
+			// $('.tab--product .tab-item .link').on('click', function (e) {
+			//   var linkName = $(this).attr('href'),
+			//     linkPos = $(linkName).offset().top,
+			//     headerH = $('.header').outerHeight();
+
+			//   e.preventDefault();
+			//   $('html, body').animate({ scrollTop: linkPos - headerH - 10 }, 600);
+			// });
+
+			// function calcHeight() {
+			// 	var the_height = document.getElementById('frame_01').contentWindow.document.body.scrollHeight;
+
+			// 	document.getElementById('frame_01').height = the_height;
+
+			// 	document.getElementById('frame_01').style.overflow = 'hidden';
+			// }
+	</script>
+</body>
+
+</html>

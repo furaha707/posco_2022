@@ -1,0 +1,142 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'service';
+  $P_dp2 = '2';
+  $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_2_href?>" class="current">
+            <?=$nav_service_1_2?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <div class="service-wrap">
+          <? include "./service_lnb.html" ?>
+          <div class="service-wrap__contents">
+
+            <!-- S : filter -->
+            <div class="d-flex justify-content-between align-items-center mb-5">
+              <div class="common-text--22 font-weight-bold">공지사항</div>
+              <form class="filter-wrap">
+                <select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+                  <option value="">제목</option>
+                  <option value="">내용</option>
+                  <option value="">제목+내용</option>
+                </select>
+                <div class="search-area">
+                  <button type="button" class="search__btn"> <i class="xi-search"></i></button>
+                  <input type="text" name="find_word" id="" class="search__txt w-100 h-100" placeholder="검색어를 입력하세요">
+                </div>
+              </form>
+            </div>
+            <!-- E : filter -->
+
+            <!-- S : 목록 -->
+            <table class="table_board_for type_a">
+              <caption><span class="hidden">일반 게시판 입니다.</span></caption>
+              <colgroup>
+                <col width="8%">
+                <col width="*%;">
+                <col width="15%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    번호
+                  </th>
+                  <th scope="col">
+                    제목
+                  </th>
+                  <th scope="col">
+                    등록일
+                  </th>
+                </tr>
+              </thead>
+              <!-- end 상단 출력인 경우 사용  -->
+              <tbody>
+                <!-- S : 등록된 게시물이 없는 경우 노출 -->
+                <tr>
+                  <td class="no_data" colspan="3">
+                    등록된 게시물이 없습니다.
+                  </td>
+                </tr>
+                <!-- E : 등록된 게시물이 없는 경우 노출 -->
+                <tr class="">
+                  <td>
+                    <i class="xi-volume-up" title="공지"></i>
+                  </td>
+                  <td class="text_left">
+                    <a href="./notice-view.html"> 공지사항 </a>
+                  </td>
+                  <td>
+                    2017-09-09
+                  </td>
+                </tr>
+                <tr class="">
+                  <td>
+                    20
+                  </td>
+                  <td class="text_left">
+                    <a href="./notice-view.html"> 제목이 노출 됩니다. <span class="text-danger common-text--12">NEW</span></a>
+                  </td>
+                  <td>
+                    2017-09-09
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- E : 목록 -->
+
+            <!-- S : 페이징 -->
+            <div class="paging-area">
+              <ul>
+                <li><a href="javascript:;" class="prev-first"><span>맨앞으로</span></a></li>
+                <li><a href="javascript:;" class="prev"><span>이전으로</span></a></li>
+                <li><a href="javascript:;" class="active">1<span></span></a></li>
+                <li><a href="javascript:;">2<span></span></a></li>
+                <li><a href="javascript:;">3<span></span></a></li>
+                <li><a href="javascript:;" class="next"><span>다음으로</span></a></li>
+                <li><a href="javascript:;" class="next-last"><span>맨뒤로</span></a></li>
+              </ul>
+            </div>
+            <!-- E : 페이징 -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+
+</body>
+
+</html>

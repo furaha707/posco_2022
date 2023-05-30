@@ -1,0 +1,282 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'findid';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_2_href?>" class="current">
+            <?=$nav_service_1_2?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <div class="d-flex justify-content-start align-items-end">
+          <p class="common-text--22 font-weight-bold pb-3 border-bottom2 w-100">광고 신청</p>
+        </div>
+
+        <p class="common-text--18 font-weight-bold mt-5">광고 내용</p>
+        <div class="border-bottom py-3">
+          <table class="table-form-01 type_b">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>광고 영역</th>
+                <td>
+                  <select name="area1" id="area1" class="rounded-sm border w-30 mr-2">
+                    <option value="">메인 최상단 배너</option>
+                    <option value="">오늘의 기업 배너</option>
+                    <option value="">좌측 날개 배너</option>
+                    <option value="">우측 날개 배너</option>
+                    <option value="">메인 하단 배너</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>광고 기간</th>
+                <td>
+                  <div class="d-flex align-items-center w-100 w-lg-50">
+                    <select name="area1" id="area1" class="rounded-sm border area-select mr-2 w-40">
+                      <option value="">2주</option>
+                      <option value="">3주</option>
+                      <option value="">4주</option>
+                      <option value="">1개월</option>
+                    </select>
+                    <input type="text" name="" id="" class="datepicker input_30" placeholder="2021-12-01">
+                    <!-- js.html 하단에 입력 -->
+                    <script>
+                      $('.datepicker').datepicker({
+                        dateFormat: 'yy-mm-dd',
+                        prevText: '이전 달',
+                        nextText: '다음 달',
+                        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                        showMonthAfterYear: true,
+                        yearSuffix: '년'
+                      });
+                    </script>
+                    <span class="px-3">~</span>
+                    <input type="text" name="" id="" class="datepicker input_30" placeholder="2021-12-01">
+                    <!-- js.html 하단에 입력 -->
+                    <script>
+                      $('.datepicker').datepicker({
+                        dateFormat: 'yy-mm-dd',
+                        prevText: '이전 달',
+                        nextText: '다음 달',
+                        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                        showMonthAfterYear: true,
+                        yearSuffix: '년'
+                      });
+                    </script>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>광고 금액</th>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="border pr-3">
+                      <input type="text" class="border-0"
+                        onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};">
+                      원
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="common-text--18 font-weight-bold mt-5">신청자 정보</p>
+        <div class="border-bottom py-3">
+          <table class="table-form-01 type_b">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>회사명(이름) <span class="text-danger">*</span></th>
+                <td>
+                  <input type="text" name="name" id="name" title="이름" class="input_30" placeholder="길동컴퍼니">
+                </td>
+              </tr>
+              <tr>
+                <th>담당자 이름 <span class="text-danger">*</span></th>
+                <td>
+                  <input type="text" name="pw" id="pw" title="비밀번호" class="input_30" placeholder="홍길동">
+                </td>
+              </tr>
+              <tr>
+                <th>담당자 이메일 <span class="text-danger">*</span></th>
+                <td>
+                  <input type="text" name="email" id="email" title="이메일" value="" class="input_30" chk="email_check"
+                    placeholder="@ 포함해서 입력 (aaa@aaa.co.kr)">
+                </td>
+              </tr>
+              <tr>
+                <th>담당자 연락처 <span class="text-danger">*</span></th>
+                <td>
+                  <input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_30"
+                    onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};"
+                    placeholder="- 없이 숫자만 입력 (0101234567)">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="common-text--18 font-weight-bold mt-5">신청 내용</p>
+        <div class="border-bottom py-3 w-100 w-lg-80">
+          <table class="table-form-01 type_b">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="align-top">내용 </th>
+                <td>
+                  <textarea name="content" id="content" title="문의내용" class="input_for p-2"
+                    placeholder="문의 내용을 작성해 주세요."></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th>제품 URL</th>
+                <td>
+                  <input type="text" name="url" id="url" title="제품url" class="input_for">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="common-text--18 font-weight-bold mt-5">세금계산서 발행 정보</p>
+        <div class="border-bottom py-3">
+          <table class="table-form-01 type_b">
+            <colgroup>
+              <col width="15%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>
+                  사업자 등록증 <span class="text-danger">*</span>
+                </th>
+                <td>
+                  <div class="row no-gutters file-box w-76">
+                    <div class="col">
+                      <p class="file-box__text"></p>
+                    </div>
+                    <div class="col-auto position-relative">
+                      <span class="file-box__btn px-5 btn-type-06 h-100 ml-3">찾아보기</span>
+                      <input type="file" name="fileadd" id="" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>발행 이메일 주소 <span class="text-danger">*</span></th>
+                <td>
+                  <input type="text" name="email" id="email" title="이메일" value="" class="input_30" chk="email_check"
+                    placeholder="@ 포함해서 입력 (aaa@aaa.co.kr)">
+                </td>
+              </tr>
+              <tr>
+                <th>발행 연락처 <span class="text-danger">*</span></th>
+                <td>
+                  <input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_30"
+                    onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};"
+                    placeholder="- 없이 숫자만 입력 (0101234567)">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  자동입력<br class="d-none d-sm-block d-lg-none">방지코드 <span class="text-danger">*</span>
+                </th>
+                <td>
+                  <input type="hidden" maxlength="100" name="code_org" id="code_org" value="753035">
+                  <span class="code">753035</span>
+                  <input type="text" name="imagecode" placeholder="자동입력방지 코드" id="imagecode" title="자동입력방지 코드"
+                    class="input_15">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+        <div class="text-left py-5">
+          <input type="radio" id="agree" name="agree" value="개인정보 수집 동의">
+          <label for="agree" class="mb-1 font-weight-medium">개인정보 수집 동의</label>
+          <p class="pl-5 text-muted">입력하신 담당자 정보, 회사정보에 들어가는 작성자, 이메일, 연락처는 문의내역 확인 및 관리를 위하여 수집됩니다.<br>※ 동의하지 않으신 경우
+            문의등록이 제한 됩니다.
+          </p>
+        </div>
+
+        <div class="board_btn_bx text_center mt_30">
+          <button type="button" value="취소" class="btn-type-03 w-15">취소
+            <button type="button" value="신청하기" class="btn-type-01 w-15 ml-3">신청하기
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+    $(document).ready(function () {
+      $('.qna-body').hide();
+
+      $(".qna-header .qna-header__tit").click(function () {
+        $(this).parent().next().slideToggle(300);
+        $(this).parents('.qna-wrapper').toggleClass('open');
+        $(".qna-header .qna-header__tit").not(this).parent().next().slideUp(300);
+        return false;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

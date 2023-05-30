@@ -1,0 +1,33 @@
+<ul class="nav-list nav-list--depth1">
+	<li class="nav-list__item depth-1">
+		<a href="../company-home/main.html" class="link">HOME</a>
+	</li>
+	<li class="nav-list__item depth-1">
+		<a href="../company-home/company-info.html" class="link">
+			<?=$nav_company_1?>
+		</a>
+	</li>
+	<li class="nav-list__item depth-1 depth--menu">
+		<a href="../company-home/product.html" class="link">
+			<?=$nav_company_2?>
+			<i class="xi xi-caret-down-min ml-2"></i>
+		</a>
+	</li>
+</ul>
+<!-- 기업회원일 경우에만 노출 -->
+<ul class="company-menu d-flex">
+	<li class="company-menu__depth" id="homepage">
+		<!-- 홈페이지 관리페이지로 이동 -->
+		<a href="<?=$nav_company_3_href?>" class="link">
+			<i class="xi-cog mr-2"></i>
+			<?=$nav_company_3?>
+		</a>
+	</li>
+	<li class="company-menu__depth" id="product">
+		<a href="<?=$nav_company_4_href?>" class="link">
+			<i class="xi-pen-o mr-2"></i>
+			<?=$nav_company_4?>
+		</a>
+	</li>
+</ul>
+<!-- 기업회원일 경우에만 노출 -->

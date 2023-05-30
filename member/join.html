@@ -1,0 +1,194 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    $P_dp1 = 'findid';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/member.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section py-20">
+      <div class="container join__wrap text-center">
+        <div class="join__inner1">
+          <p class="common-text--40 font-weight-medium mb-3">회원가입</p>
+          <!-- S :  -->
+          <form action="">
+            <table class="table-form-01 type_join">
+              <colgroup>
+                <col class="w_150">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>이름</th>
+                  <td>
+                    홍길동
+                  </td>
+                </tr>
+                <tr>
+                  <th>휴대폰번호</th>
+                  <td>
+                    010-1234-5678
+                  </td>
+                </tr>
+                <tr>
+                  <th>이메일</th>
+                  <td>
+                    <input type="text" id="uemail" name="uemail" class="input_for" placeholder="아이디@도메인으로 입력">
+                  </td>
+                </tr>
+                <tr>
+                  <th>아이디</th>
+                  <td>
+                    <div class="d-flex">
+                      <input type="text" id="uid" name="uid" class="input_for" placeholder="공백 없는 영문/숫자 포함 6~20자">
+                      <button type="button" class="table-btn-01">아이디 중복 확인</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>비밀번호</th>
+                  <td>
+                    <input type="text" id="upw" name="upw" class="input_for"
+                      placeholder="공백 없는 영문대소문자/숫자/특수문자 포함 6~15자">
+                  </td>
+                </tr>
+                <tr>
+                  <th>비밀번호 확인</th>
+                  <td>
+                    <input type="text" id="upw2" name="upw2" class="input_for" placeholder="비밀번호 확인">
+                  </td>
+                </tr>
+                <tr>
+                  <th>닉네임</th>
+                  <td>
+                    <div class="d-flex">
+                      <input type="text" id="nickname" name="nickname" class="input_for"
+                        placeholder="한글 3글자 / 영문 5글자 이상">
+                      <button type="button" class="table-btn-01">닉네임 중복 확인</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>사업분야 선택</th>
+                  <td>
+                    <a href="../pop/business.html" class="select-btn d-block bg-color-1 color-white popup-link ">사업분야
+                      선택 <i class="xi-plus"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+
+
+          <div class="d-flex align-items-center mt-10 pb-2 common-text--18 font-weight-medium">
+            <input type="checkbox" id="agree1" name="agree1">
+            <label for="agree1" class="ml-2">전체 약관동의</label>
+          </div>
+          <div class="qna type_a">
+            <ul>
+              <li class="qna-wrapper">
+                <div class="qna-header">
+                  <div class="tit d-flex align-items-center">
+                    <input type="checkbox" id="agree2" name="agree2">
+                    <label for="agree2" class="ml-2">[필수] 회원가입을 위한 약관 동의</label>
+                    <span class="text-danger">*</span>
+                  </div>
+                  <a href="javascript:;" class="qna-header__tit">
+                    <i class="xi-angle-down"></i>
+                    <i class="xi-angle-up"></i>
+                  </a>
+                </div>
+                <div class="qna-body" style="display: none;">
+                  <div>
+                    <input type="checkbox" id="check1" name="check1">
+                    <label for="check1" class="ml-2">회원약관</label>
+                    <a href="../pop/term.html" class="popup-link text-muted">[보기]</a>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="check2" name="check2">
+                    <label for="check2" class="ml-2">개인정보 수집 및 이용정책</label>
+                    <a href="../pop/privacy.html" class="popup-link text-muted">[보기]</a>
+                  </div>
+                </div>
+              </li>
+              <li class="qna-wrapper">
+                <div class="qna-header">
+                  <div class="tit d-flex align-items-center">
+                    <input type="checkbox" id="agree3" name="agree3">
+                    <label for="agree3" class="ml-2">[선택] 마케팅 활용 정보 수집 및 이용 동의</label>
+                  </div>
+                  <a href="javascript:;" class="qna-header__tit">
+                    <i class="xi-angle-down"></i>
+                    <i class="xi-angle-up"></i>
+                  </a>
+                </div>
+                <div class="qna-body" style="display: none;">
+                  <table class="qna-table">
+                    <tr>
+                      <th>목적</th>
+                      <td>
+                        정보 제공 및 혜택안내
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>항목</th>
+                      <td>
+                        <div>
+                          <input type="checkbox" id="agree4" name="agree4">
+                          <label for="agree4" class="ml-2">연락처(SMS 수신)</label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="agree5" name="agree5">
+                          <label for="agree5" class="ml-2">이메일(이메일 수신)</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>보유기간</th>
+                      <td>회원탈퇴 후 5일까지</td>
+                    </tr>
+                  </table>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-10">
+            <button type="button" class="btn-type-01 px-10">가입하기</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+    $(document).ready(function () {
+      $('.qna-body').hide();
+
+      $(".qna-header .qna-header__tit").click(function () {
+        $(this).parent().next().slideToggle(300);
+        $(this).parents('.qna-wrapper').toggleClass('open');
+        $(".qna-header .qna-header__tit").not(this).parent().next().slideUp(300);
+        return false;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

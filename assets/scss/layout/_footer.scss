@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+.footer {
+	background: white;
+	.footer-top-wrap {
+		border-top: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		.footer-notice {
+			.notice__tit {
+				font-size: em(19);
+				letter-spacing: letterSpacing(-25);
+				font-weight: bold;
+			}
+			.notice__txt {
+				font-size: em(15);
+				letter-spacing: letterSpacing(-25);
+				font-weight: regular;
+				color: #333;
+				.date {
+					font-size: em(13);
+					letter-spacing: letterSpacing(-25);
+					color: #888;
+				}
+			}
+		}
+	}
+
+	.footer-btm-wrap {
+		padding: 2em 0;
+		font-size: em(13);
+		letter-spacing: letterSpacing(-25);
+		color: #888;
+	}
+	.info__logo {
+		width: em(240);
+	}
+	.info__list li {
+		position: relative;
+		display: inline-block;
+		padding: 0 0.8em;
+		white-space: nowrap;
+		&:not(:first-of-type):after {
+			content: '';
+			left: -1px;
+			height: 0.8em;
+			top: 50%;
+			margin-top: -0.4em;
+			position: absolute;
+			border-left: 1px solid lighten(#999, 10%);
+		}
+		&.xs-bar {
+			&:after {
+				@media screen and (max-width: 512px) {
+					border: none;
+				}
+			}
+		}
+		&.xxs-bar {
+			&:after {
+				@media screen and (max-width: 378px) {
+					border: none;
+				}
+			}
+		}
+	}
+	.footer-contact {
+		.contact__tit {
+			font-size: em(22);
+			letter-spacing: letterSpacing(-25);
+			color: #333;
+			font-weight: bold;
+		}
+		.contact__tel {
+			color: $color-1;
+			font-size: em(32);
+			letter-spacing: letterSpacing(-25);
+			font-weight: bold;
+		}
+		.contact__link {
+			.contact__link-list a {
+				border: 1px solid #ddd;
+				padding: 0.2em 0.4em;
+				color: #333;
+			}
+		}
+	}
+	.footer-list {
+		.list__txt {
+			position: relative;
+			display: inline-block;
+			padding: 0 0.8em;
+			font-size: em(15);
+			&:not(:first-of-type):after {
+				content: '';
+				left: -1px;
+				height: 0.8em;
+				top: 50%;
+				margin-top: -0.4em;
+				position: absolute;
+				border-left: 1px solid lighten(#999, 10%);
+			}
+		}
+		.list__sns {
+			width: em(26);
+			&:nth-last-of-type() {
+				width: em(29);
+			}
+		}
+	}
+}

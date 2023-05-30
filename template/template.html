@@ -1,0 +1,432 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/main.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main py-20" id="contents">
+			<!-- S : Section -->
+
+			<section class="section mb-15 pb-15 border-bottom">
+				<div class="container">
+					<h2 class="mb-5">데이트피커</h2>
+
+					<input type="text" name="" id="" class="datepicker" />
+
+					<script>
+						$('.datepicker').datepicker({
+							dateFormat: 'yy-mm-dd',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+							showMonthAfterYear: true,
+							yearSuffix: '년',
+						});
+					</script>
+
+					<div class="mt-5 mb-2">
+						<button type="button" onclick="copyToCode('code1')" class="d-inline-block py-2 px-10 bg-color-2 text-white">코드복사</button>
+					</div>
+					<code class="d-block border p-5 code1 bg-gray-e">
+						&lt;input type="text" name="" id="" class="datepicker"&gt;<br /><br />
+
+						<!-- js.html 하단에 입력 -->
+						&lt;script&gt;<br />
+						&emsp;$('.datepicker').datepicker({<br />
+						&emsp;&emsp;dateFormat: 'yy-mm-dd',<br />
+						&emsp;&emsp;prevText: '이전 달',<br />
+						&emsp;&emsp;nextText: '다음 달',<br />
+						&emsp;&emsp;monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],<br />
+						&emsp;&emsp;monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],<br />
+						&emsp;&emsp;dayNames: ['일', '월', '화', '수', '목', '금', '토'],<br />
+						&emsp;&emsp;dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],<br />
+						&emsp;&emsp;dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],<br />
+						&emsp;&emsp;showMonthAfterYear: true,<br />
+						&emsp;&emsp;yearSuffix: '년'<br />
+						&emsp;});<br />
+						&lt;/script&gt;
+					</code>
+				</div>
+			</section>
+
+			<section class="section mb-15 pb-15 border-bottom">
+				<div class="container">
+					<!-- 
+            tab.js 설명
+
+            * 모든 스크립트는 data 값으로만 컨트롤 됩니다.
+            * 모든 클래스는 스타일 요소로만 사용됩니다.
+            * 'data-tab' 속성을 제외한 모든 데이터 속성은 선언하지 않을 경우 자동으로 기본값을 가집니다.
+            * 데이터값의 구성과 기본값은 아래와 같습니다.
+              1. data-tab="true"
+                - 탭의 활성화 여부입니다. 값이 false로 지정될 때에만 적용되지 않습니다.
+              2. data-tab-active="on"
+                - 탭의 활성화 클래스 네이밍입니다.
+              3. data-tab-index="0"
+                - 탭의 초기 인덱스 값입니다.
+                - 페이지 접속 시 첫번째 탭 이외의 탭이 활성화되어야 할 때 사용합니다.
+              4. data-tab-mode="js"
+                - 기존의 data-css 속성을 변경했습니다.
+                - data-mode 속성으로 js와 css로 나누어집니다.
+                - css로 선언 시 활성화 클래스만 적용됩니다. ( css로 컨트롤이 필요한 경우 사용합니다. )
+                - 단, js로 선언한다고 하여 활성화 클래스가 안붙는 것은 아닙니다.
+                - js로 선언 시 기존 방식대로 스크립트가 자동 적용됩니다.
+              5. data-tab-header
+                - 기존과 동일하게 탭 헤더 엘리먼트입니다.
+              6. data-tab-item
+                - 기존과 동일하게 탭 아이템 엘리먼트입니다.
+                - 기존과 변경된 점은 반드시 예제와 동일하게 .tab-item의 자식요소로 구성할 필요가 없습니다.
+                - data-tab-header의 자식요소이던 손자요소이던 동일 선상의 요소로만 구성하면 됩니다.
+                - 기존과 변경된 점은 tab-item에 번호 부여시 tab-content에는 별도의 번호를 부여하지 않아도 인덱스값으로 적용됩니다.
+                - 반드시 tab-content가 tab-body의 자식요소로 구성됨에 따라 변경하였습니다.
+              7. data-tab-body
+                - 기존과 동일하게 탭 바디 엘리먼트입니다.
+              8. data-tab-content
+                - 기존과 동일하게 탭 컨텐트 엘리먼트입니다.
+                - 기존과 변경된 점은 반드시 data-tab-body의 자식요소로 구성되어야합니다.
+                - 이는 탭 안의 탭이 중첩되는 경우를 지원하기 위해서 
+           -->
+					<div class="tab tab--box" data-tab="true" data-tab-active="on" data-tab-index="0" data-tab-mode="js">
+						<div class="tab-header mb-4" data-tab-header="">
+							<div class="tab-item">
+								<a class="link" data-tab-item="">Tab Item 1</a>
+							</div>
+							<div class="tab-item">
+								<a class="link" data-tab-item="">Tab Item 2</a>
+							</div>
+							<div class="tab-item">
+								<a class="link" data-tab-item="">Tab Item 3</a>
+							</div>
+						</div>
+						<div class="tab-body" data-tab-body="">
+							<div class="tab-content" data-tab-content="">
+								<div class="tab tab--border" data-tab="true" data-tab-order="1" data-tab-active="on" data-tab-index="0" data-tab-mode="js">
+									<div class="tab-header" data-tab-header="">
+										<div class="tab-item">
+											<a class="link on" data-tab-item="">Tab Item 1-1</a>
+										</div>
+										<div class="tab-item">
+											<a class="link" data-tab-item="">Tab Item 1-2</a>
+										</div>
+										<div class="tab-item">
+											<a class="link" data-tab-item="">Tab Item 1-3</a>
+										</div>
+									</div>
+									<div class="tab-body" data-tab-body="">
+										<div class="tab-content" data-tab-content="">Tab Content 1-1</div>
+										<div class="tab-content" data-tab-content="">Tab Content 1-2</div>
+										<div class="tab-content" data-tab-content="">Tab Content 1-3</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-content" data-tab-content="">Tab Content 2</div>
+							<div class="tab-content" data-tab-content="">Tab Content 3</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section -->
+			<!-- S : Section -->
+			<section class="section mb-15 pb-15 border-bottom">
+				<div class="container">
+					<h5>image</h5>
+					<ul class="bullet-list bullet-list--image">
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+					</ul>
+					<h5>disc</h5>
+					<ul class="bullet-list bullet-list--disc">
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+					</ul>
+					<h5>txt</h5>
+					<ul class="bullet-list bullet-list--txt">
+						<li data-bullet="☆" class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+						<li data-bullet="★" class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+					</ul>
+					<h5>circle</h5>
+					<ul class="bullet-list bullet-list--circle">
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+					</ul>
+					<h5>square</h5>
+					<ul class="bullet-list bullet-list--square">
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+					</ul>
+					<h5>decimal</h5>
+					<ul class="bullet-list bullet-list--decimal">
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+						<li class="item">bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test bullet list test</li>
+					</ul>
+				</div>
+			</section>
+			<!-- E : Section -->
+			<!-- S : Section -->
+			<section class="section mb-15 pb-15 border-bottom">
+				<div class="container">
+					<div class="row-scrollwrap" data-show="800">
+						<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+						<div class="row-scrollwrap__scroll">
+							<div class="row-scrollwrap__content">
+								<!-- S: 스크롤 할 컨텐츠 -->
+								<div class="bg-light p-5 border border-dark">
+									<h4>row-scrollwrap</h4>
+									이 컨텐츠의 min-width는 800px입니다.
+								</div>
+								<!-- E: 스크롤 할 컨텐츠 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section -->
+
+			<!-- S : Section -->
+			<section class="section mb-15 pb-15 border-bottom">
+				<div class="container">
+					<h5 class="mb-5">label 태그로 감싼 checkbox, radio 버튼</h5>
+
+					<form action="">
+						<div>
+							<label class="input-label input-label--radio">
+								<input type="radio" name="radio" id="radio_1" required />
+								<span class="input-label__txt">동의</span>
+							</label>
+							<label class="input-label input-label--radio ml-5">
+								<input type="radio" name="radio" id="radio_2" required />
+								<span class="input-label__txt">거부</span>
+							</label>
+						</div>
+
+						<div class="mt-10">
+							<label class="input-label input-label--checkbox">
+								<input type="checkbox" name="checkbox1" class="all-check" required />
+								<span class="input-label__txt">모두체크</span>
+							</label>
+							<label class="input-label input-label--checkbox ml-5">
+								<input type="checkbox" name="checkbox1" class="check" required />
+								<span class="input-label__txt">체크1</span>
+							</label>
+							<label class="input-label input-label--checkbox ml-5">
+								<input type="checkbox" name="checkbox2" class="check" required />
+								<span class="input-label__txt">체크2</span>
+							</label>
+							<label class="input-label input-label--checkbox ml-5">
+								<input type="checkbox" name="checkbox3" class="check" required />
+								<span class="input-label__txt">체크3</span>
+							</label>
+							<label class="input-label input-label--checkbox ml-5">
+								<input type="checkbox" name="checkbox4" class="check" required />
+								<span class="input-label__txt">체크4</span>
+							</label>
+						</div>
+
+						<h5 class="mb-5">radio 버튼 박스형태</h5>
+						<div class="row no-gutters">
+							<div class="col-3">
+								<label class="input-label input-label--box w-100">
+									<input type="radio" name="type" id="type_1" checked />
+									<span class="input-label__txt">
+										단말기 분야<br />
+										(네비게이션/로봇/가전/앱 등)
+									</span>
+								</label>
+							</div>
+							<div class="col-3">
+								<label class="input-label input-label--box w-100">
+									<input type="radio" name="type" id="type_2" />
+									<span class="input-label__txt">방송용/ 음성홈페이지/ 관공서 분야</span>
+								</label>
+							</div>
+							<div class="col-3">
+								<label class="input-label input-label--box w-100">
+									<input type="radio" name="type" id="type_3" />
+									<span class="input-label__txt">
+										ARS/CTI 분야<br />
+										(네비게이션/로봇/가전/앱 등)
+									</span>
+								</label>
+							</div>
+							<div class="col-3">
+								<label class="input-label input-label--box w-100">
+									<input type="radio" name="type" id="type_4" />
+									<span class="input-label__txt">
+										기타<br />
+										(음성인식 회의록/초중고/홍보영상 등)
+									</span>
+								</label>
+							</div>
+						</div>
+
+						<button type="submit" class="mt-8 d-inline-flex bg-color-1 text-white px-8 py-4">제출</button>
+					</form>
+				</div>
+			</section>
+			<!-- E : Section -->
+
+			<!-- S : Section -->
+			<section class="section mb-15 pb-15 border-bottom">
+				<div class="container">
+					<!-- 하단 스크립트 참고 -->
+					<h5 class="mb-5">파일 다중선택</h5>
+
+					<label class="file-label">
+						<input type="file" name="bf_file[]" id="bf_file" onchange="onchangeUpload(event);" multiple />
+						<span class="file-label__btn">파일선택</span>
+					</label>
+
+					<button type="button" class="file-reset btn-type-03" onclick="fileReset();">초기화</button>
+
+					<div id="file-preview" class="mt-3 p-3 border">
+						<p class="file-preview__txt common-txt--xs">파일을 추가하세요.</p>
+						<div class="file-preview__list"></div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section -->
+			<!-- S : Section -->
+			<section class="section mb-15 pb-15 border-bottom">
+				<div class="container">
+					<!-- 하단 스크립트 찹고 -->
+					<h5 class="mb-5">파일 선택 추가/삭제</h5>
+
+					<table class="table-form-01" style="max-width: 800px">
+						<tr>
+							<th style="width: 10em">
+								파일첨부
+								<button type="button" class="add-file ml-2 d-inline-flex badge text-white bg-color-2">추가</button>
+							</th>
+							<td>
+								<div class="file-box-wrap">
+									<div class="input_wrap file_box my-2">
+										<p></p>
+										<span class="btn_type_file">파일선택</span>
+										<input type="file" name="in_file[]" />
+									</div>
+								</div>
+
+								<!-- 2021-11-29 ysb : 파일첨부 구조 변경 -->
+								<div class="row no-gutters file-box">
+									<div class="col">
+										<p class="file-box__text"></p>
+									</div>
+									<div class="col-auto position-relative">
+										<span class="file-box__btn btn-type-01 px-5 h-100">파일선택</span>
+										<input type="file" name="fileadd" id="" />
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+
+		<script>
+			//파일 다중선택
+			function onchangeUpload(event) {
+				if (event.target.files.length > 0) {
+					var fileview = '';
+					for (var i = 0, m = event.target.files.length; i < m; i++) {
+						var file = event.target.files[i],
+							fileview = fileview + '<p class="file-item">' + file.name + '</p>';
+					}
+
+					$('#file-preview').addClass('file-add');
+					$('#file-preview .file-preview__list').empty().append(fileview).addClass('file-add');
+				}
+			}
+
+			function fileReset() {
+				$('#bf_file').val('');
+				$('#file-preview').removeClass('file-add');
+				$('#file-preview .file-item').remove();
+			}
+		</script>
+
+		<script type="text/javascript">
+			//파일 선택 추가/삭제
+			var cnt = 1;
+			$(document).on('click', '.add-file', function () {
+				if (cnt > 4) {
+					alert('5개까지만 첨부가능합니다.');
+				} else {
+					var fileDiv = '<div class="d-flex align-items-center file_box_wrap"><div class="input_wrap file_box my-2" style="width: calc(100% - 4em);">\n' + '\t\t<p></p>\n' + '\t\t<span class="btn_type_file">파일선택</span>\n' + '\t\t<input type="file" name="in_file[]" />\n' + '\t</div><button type="button" class="btn_type_delete flex-shrink-0 ml-2 d-inline-flex badge bg-light border" onclick="$(this).parent().remove();cnt--;">삭제</button></div>';
+					$('.file-box-wrap').append(fileDiv);
+					cnt++;
+				}
+
+				$('.file_box > input').on('change', function () {
+					var tmp = $(this).val().replace(/^.*\\/, '');
+					$(this).siblings('p').text(tmp);
+					$(this).siblings('p').addClass('on');
+				});
+			});
+		</script>
+
+		<script>
+			(function () {
+				/* 전체 체크 */
+				$('.all-check').on('change', function () {
+					var state = $(this).prop('checked');
+
+					state ? $('.check').prop('checked', true) : $('.check').prop('checked', false);
+				});
+
+				/* 개별 체크 */
+				$('.check').on('change', function () {
+					/* 체크박스 상태값 변수 */
+					var state;
+
+					$('.check').each(function (index, elem) {
+						state = $(this).prop('checked'); /* 변수에 체크박스 true/false 저장 */
+
+						if (state) {
+							state = true;
+						} else {
+							state = false;
+							return false; /* state가 false인 경우 반복문 중단 */
+						}
+					});
+
+					/* 개별 체크박스 체크 상태값에 따라 전체 체크에도 활성/비활성 */
+					if (state) {
+						$('.all-check').prop('checked', true);
+					} else {
+						$('.all-check').prop('checked', false);
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>

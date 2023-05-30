@@ -1,0 +1,190 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '3';
+  $P_dp3 = '2';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+            <div class="contents-body mt-10">
+              <div class="d-flex justify-content-start align-items-center pb-5">
+                <p class="common-text--18 font-weight-medium">구매/기술 문의</p>
+              </div>
+
+              <!-- S : tab -->
+              <div class='tab tab--box'>
+                <div class='tab-header'>
+                  <div class='tab-item'>
+                    <a class='link on'>내가 쓴 구매/기술 문의</a>
+                  </div>
+                  <div class='tab-item'>
+                    <a class='link'>내가 쓴 댓글</a>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-end pt-2 pb-5">
+                  <p class="font-weight-bold">총 <span class="text-color-1">2,341</span>건</p>
+                  <!-- S : filter -->
+                  <div class="filter-wrap">
+                    <select name="area1" id="area1" class="rounded-sm border area-select mr-2">
+                      <option value="">제목</option>
+                      <option value="">내용</option>
+                      <option value="">제목+내용</option>
+                    </select>
+                    <form class="search-area mr-2">
+                      <button type="button" class="search__btn"> <i class="xi-search"></i></button>
+                      <input type="text" name="find_word" id="" class="search__txt w-100 h-100"
+                        placeholder="검색어를 입력하세요">
+                    </form>
+                  </div>
+                  <!-- E : filter -->
+                </div>
+                <table class="table_board_for qna_type_a text_center">
+                  <colgroup>
+                    <col width="10%">
+                    <col width="14%;">
+                    <col width="48%;">
+                    <col width="14%;">
+                    <col width="12%;">
+                    <col width="10%;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <th>카테고리</th>
+                      <th>제목</th>
+                      <th>작성자</th>
+                      <th>등록일</th>
+                      <th>조회수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- S : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                    <tr>
+                      <td class="no_data" colspan="6">검색조건에 맞는 게시물이 없습니다.</td>
+                    </tr>
+                    <!-- E : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                    <tr>
+                      <td>2511</td>
+                      <td class="text-color-blue">[철강 재료]</td>
+                      <td class="text_left"><a href="../inquiry/inquiry-view.html">철강재료 기술/구매 문의 제목이 노출됩니다 <span
+                            class="text-color-1">(1)</span></a></td>
+                      <td class="text_left">닉네임1 <img src="../assets/images/icon/diamond.png" alt="다이아몬드"></td>
+                      <td class="text_left">2018.04.25</td>
+                      <td class="text_left">200</td>
+                    </tr>
+                    <tr>
+                      <td>1682</td>
+                      <td class="text-color-blue">[철강 재료]</td>
+                      <td class="text_left"><a href="../inquiry/inquiry-view.html">철강재료 기술/구매 문의 제목이 노출됩니다</a></td>
+                      <td class="text_left">닉네임2 <img src="../assets/images/icon/gold.png" alt="골드"></td>
+                      <td class="text_left">2018.04.25</td>
+                      <td class="text_left">200</td>
+                    </tr>
+                    <tr>
+                      <td>980</td>
+                      <td class="text-color-blue">[비철 금속]</td>
+                      <td class="text_left"><a href="../inquiry/inquiry-view.html">비철 금속 기술/구매 문의 제목이 노출됩니다</a></td>
+                      <td class="text_left">닉네임3 <img src="../assets/images/icon/silver.png" alt="실버"></td>
+                      <td class="text_left">2018.04.25</td>
+                      <td class="text_left">200</td>
+                    </tr>
+                    <tr>
+                      <td>221</td>
+                      <td class="text-color-blue">[기타]</td>
+                      <td class="text_left"><a href="../inquiry/inquiry-view.html">기타 기술/구매 문의 제목이 노출됩니다</a></td>
+                      <td class="text_left">닉네임1 <img src="../assets/images/icon/bronze.png" alt="브론즈"></td>
+                      <td class="text_left">2018.04.25</td>
+                      <td class="text_left">200</td>
+                    </tr>
+                    <tr>
+                      <td>198</td>
+                      <td class="text-color-blue">[설비·공정 기술]</td>
+                      <td class="text_left"><a href="../inquiry/inquiry-view.html">철강재료 기술/구매 문의 제목이 노출됩니다</a></td>
+                      <td class="text_left">닉네임5 <img src="../assets/images/icon/sprout.png" alt="새싹"></td>
+                      <td class="text_left">2018.04.25</td>
+                      <td class="text_left">200</td>
+                    </tr>
+                    <tr>
+                      <td>140</td>
+                      <td class="text-color-blue">[비철 금속]</td>
+                      <td class="text_left"><a href="../inquiry/inquiry-view.html">철강재료 기술/구매 문의 제목이 노출됩니다</a></td>
+                      <td class="text_left">닉네임6</td>
+                      <td class="text_left">2018.04.25</td>
+                      <td class="text_left">200</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- 10개 넘어갈 경우 페이징 처리 -->
+                <!-- <div class="paging-area mt-0">
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="active">1<span></span></a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">2<span></span></a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">3<span></span></a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="next"><span>다음으로</span></a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+                        </li>
+                      </ul>
+                    </div> -->
+                <!-- 10개 넘어갈 경우 페이징 처리 -->
+              </div>
+              <!-- E : tab -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

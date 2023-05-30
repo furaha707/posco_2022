@@ -1,0 +1,291 @@
+/* Made by Masstige */
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.0625em;
+  font-weight: 300;
+}
+.breadcrumbs .home {
+  color: #333;
+  font-size: 1.0625em;
+  letter-spacing: -0.025em;
+}
+.breadcrumbs .xi-angle-right-thin {
+  font-size: 10px;
+  padding: 0.9em 1em;
+  color: black;
+}
+.breadcrumbs .current {
+  font-size: 1.0625em;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+.filter-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.filter-wrap .area-select {
+  width: 160px;
+  color: #666;
+  font-size: 0.9375em;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-top: 1em;
+}
+.filter-wrap .search-area {
+  border-radius: 0.2rem;
+  width: 22rem;
+  position: relative;
+  border: 1px solid #ddd;
+  margin-top: 1em;
+  height: 3.125rem;
+}
+.filter-wrap .search-area .search__btn {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.filter-wrap .search-area .search__btn .xi-search {
+  font-size: 20px;
+  color: #666;
+}
+.filter-wrap .search-area .search__txt2 {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 60px;
+  font-size: 0.9375em;
+  font-weight: 500;
+  color: #666;
+}
+.filter-wrap .num-select {
+  width: 140px;
+  color: #666;
+  font-size: 0.9375em;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-top: 1em;
+}
+@media all and (max-width: 1024px) {
+  .filter-wrap {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .filter-wrap#mypage-filter {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .filter-wrap .area-select {
+    max-width: 50%;
+    width: 100%;
+    margin-right: 0 !important;
+  }
+  .filter-wrap .num-select {
+    max-width: 100%;
+    width: 100%;
+  }
+  .filter-wrap .search-area {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0 !important;
+  }
+}
+
+/* S : font-size */
+.common-text--54 {
+  font-size: 3.375em;
+  letter-spacing: -0.025em;
+}
+.common-text--50 {
+  font-size: 3.125em;
+  letter-spacing: -0.025em;
+}
+.common-text--46 {
+  font-size: 2.875em;
+  letter-spacing: -0.025em;
+}
+.common-text--42 {
+  font-size: 2.625em;
+  letter-spacing: -0.025em;
+}
+.common-text--40 {
+  font-size: 2.5em;
+  letter-spacing: -0.025em;
+}
+.common-text--36 {
+  font-size: 2.25em;
+  letter-spacing: -0.025em;
+}
+.common-text--34 {
+  font-size: 2.125em;
+  letter-spacing: -0.025em;
+}
+.common-text--32 {
+  font-size: 2em;
+  letter-spacing: -0.025em;
+}
+.common-text--30 {
+  font-size: 1.875em;
+  letter-spacing: -0.025em;
+}
+.common-text--28 {
+  font-size: 1.75em;
+  letter-spacing: -0.025em;
+}
+.common-text--26 {
+  font-size: 1.625em;
+  letter-spacing: -0.025em;
+}
+.common-text--24 {
+  font-size: 1.5em;
+  letter-spacing: -0.025em;
+}
+.common-text--22 {
+  font-size: 1.375em;
+  letter-spacing: -0.025em;
+}
+.common-text--20 {
+  font-size: 1.25em;
+  letter-spacing: -0.025em;
+}
+.common-text--18 {
+  font-size: 1.125em;
+  letter-spacing: -0.025em;
+}
+.common-text--16 {
+  font-size: 1em;
+  letter-spacing: -0.025em;
+}
+.common-text--14 {
+  font-size: 0.875em;
+  letter-spacing: -0.025em;
+}
+
+/* E : font-size */
+.solution-page .solution-wrap {
+  background-color: #f7f7f7;
+}
+.solution-page .solution-wrap .solution-item {
+  width: 100%;
+  position: relative;
+}
+.solution-page .solution-wrap .solution-item:nth-child(1):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #dedede;
+  width: 1px;
+  height: 200px;
+}
+@media all and (max-width: 1024px) {
+  .solution-page .solution-wrap .solution-item:nth-child(1):after {
+    display: none;
+  }
+}
+.solution-page .solution-wrap .solution-item .solution-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.solution-page .solution-wrap .solution-item .solution-inner .solution-item_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.solution-page .solution-wrap .solution-item .solution-inner .solution-item_img img {
+  width: 4.375em;
+}
+@media all and (max-width: 1024px) {
+  .solution-page .solution-wrap .solution-item .solution-inner .solution-item_img {
+    width: 80px;
+    height: 80px;
+  }
+  .solution-page .solution-wrap .solution-item .solution-inner .solution-item_img img {
+    width: 3.125em;
+  }
+}
+.solution-page .solution-wrap .solution-item .solution-inner .solution-item_btn {
+  margin-top: 1.5em;
+}
+.solution-page .ad-wrap {
+  border-radius: 30px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.solution-page .ad-wrap::after {
+  content: "";
+  display: block;
+  padding-bottom: 30.7692307692%;
+}
+.solution-page .ad-wrap > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  max-width: none;
+  max-height: none;
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
+}
+@media all and (max-width: 1024px) {
+  .solution-page .ad-wrap {
+    border-radius: 15px;
+  }
+}
+
+.solution-form-page .table-form-01 {
+  width: 80%;
+}
+@media all and (max-width: 1024px) {
+  .solution-form-page .table-form-01 {
+    width: 100%;
+  }
+}
+.solution-form-page .table-form-01 .datepicker {
+  background: url("../images/icon/i_calendar.png") no-repeat;
+  background-position: 95% center;
+}

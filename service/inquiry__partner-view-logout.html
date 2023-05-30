@@ -1,0 +1,204 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'service';
+  $P_dp2 = '1';
+  $P_dp3 = '2';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_2_href?>" class="current">
+            <?=$nav_service_1_2?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <div class="service-wrap">
+          <? include "./service_lnb.html" ?>
+          <div class="service-wrap__contents">
+
+            <div class="d-flex justify-content-start align-items-end">
+              <p class="common-text--22 font-weight-bold pb-3">제휴문의</p>
+            </div>
+            <div class="bg-light border p-7 text-center common-text--18 text-muted">
+              회원은 <span class="text-color-1"><a href="">로그인</a></span> 후, 작성해 주세요.
+            </div>
+
+            <p class="common-text--18 font-weight-bold mt-5">담당자 정보</p>
+            <div class="border-bottom py-3">
+              <table class="table-form-01 type_b">
+                <colgroup>
+                  <col width="15%">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>담당자명 <span class="text-danger">*</span></th>
+                    <td>
+                      <input type="text" name="name" id="name" title="이름" class="input_30" placeholder="이름을 입력해 주세요.">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>비밀번호 <span class="text-danger">*</span></th>
+                    <td>
+                      <input type="text" name="pw" id="pw" title="비밀번호" class="input_30" placeholder="비밀번호를 입력해 주세요.">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>담당자 연락처 <span class="text-danger">*</span></th>
+                    <td>
+                      <input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_30"
+                        onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};"
+                        placeholder="- 없이 숫자만 입력 (0101234567)">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>담당자 이메일 <span class="text-danger">*</span></th>
+                    <td>
+                      <input type="text" name="email" id="email" title="이메일" value="" class="input_30" chk="email_check"
+                        placeholder="@ 포함해서 입력 (aaa@aaa.co.kr)">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="common-text--18 font-weight-bold mt-5">회사 정보</p>
+            <div class="border-bottom py-3">
+              <table class="table-form-01 type_b">
+                <colgroup>
+                  <col width="15%">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>회사명 <span class="text-danger">*</span></th>
+                    <td>
+                      <input type="text" name="name" id="name" title="이름" class="input_30" placeholder="회사명을 입력해 주세요.">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>회사 홈페이지 <span class="text-danger">*</span></th>
+                    <td>
+                      <input type="text" name="pw" id="pw" title="비밀번호" class="input_30"
+                        placeholder="예: www.metalhub.co.kr">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="common-text--18 font-weight-bold mt-5">문의 내용</p>
+            <div class="border-bottom py-3">
+              <table class="table-form-01 type_b">
+                <colgroup>
+                  <col width="15%">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>제목 <span class="text-danger">*</span></th>
+                    <td>
+                      <input type="text" name="name" id="name" title="이름" class="input_80" placeholder="제목을 입력해 주세요.">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="align-top">내용 <span class="text-danger">*</span></th>
+                    <td>
+                      <textarea name="content" id="content" title="문의내용" class="input_80 p-2"
+                        placeholder="문의 내용을 작성해 주세요."></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>첨부파일 <span class="text-danger">*</span></th>
+                    <td>
+                      <div class="row no-gutters file-box w-76">
+                        <div class="col">
+                          <p class="file-box__text"></p>
+                        </div>
+                        <div class="col-auto position-relative">
+                          <span class="file-box__btn px-5 btn-type-06 h-100 ml-3">파일첨부</span>
+                          <input type="file" name="fileadd" id="" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      자동입력<br class="d-none d-sm-block d-lg-none">방지코드 <span class="text-danger">*</span>
+                    </th>
+                    <td>
+                      <input type="hidden" maxlength="100" name="code_org" id="code_org" value="753035">
+                      <span class="code">753035</span>
+                      <input type="text" name="imagecode" placeholder="자동입력방지 코드" id="imagecode" title="자동입력방지 코드"
+                        class="input_15">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="text-left py-5">
+              <input type="radio" id="agree" name="agree" value="개인정보 수집 동의">
+              <label for="agree" class="mb-1">개인정보 수집 동의</label>
+              <p class="pl-5 text-muted">입력하신 담당자 정보, 회사정보에 들어가는 작성자, 이메일, 연락처는 문의내역 확인 및 관리를 위하여 수집됩니다.<br>※ 동의하지 않으신
+                경우
+                문의등록이 제한 됩니다.
+              </p>
+            </div>
+
+            <div class="board_btn_bx text_center mt_30">
+              <button type="button" value="취소" class="btn-type-03 w-15">취소
+                <button type="button" value="문의하기 " class="btn-type-01 w-15 ml-3">문의하기
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+    $(document).ready(function () {
+      $('.qna-body').hide();
+
+      $(".qna-header .qna-header__tit").click(function () {
+        $(this).parent().next().slideToggle(300);
+        $(this).parents('.qna-wrapper').toggleClass('open');
+        $(".qna-header .qna-header__tit").not(this).parent().next().slideUp(300);
+        return false;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<ul class="skip">
+	<li><a class="link" href="#contents">본문내용 바로가기</a></li>
+	<li><a class="link" href="#header">헤더 바로가기</a></li>
+	<li><a class="link" href="#footer">푸터 바로가기</a></li>
+</ul>
+
+<header id="header" class="header">
+	<a href="" class="topbanner-wrap">
+		<img src="../assets/images/main/top-banner.jpg" alt="그랜드 오픈" />
+		<div class="container">
+			<div class="topbanner-close">
+				<button type="button"><i class="xi-close-thin"></i></button>
+			</div>
+			<div class="topbanner-control d-flex align-items-center">
+				<input type="checkbox" id="scales" name="scales" />
+				<label for="scales">1일간 열지 않음</label>
+			</div>
+		</div>
+	</a>
+
+	<div class="header-top-wrap">
+		<div class="container d-flex align-items-center justify-content-center justify-content-lg-between h-100">
+			<a href="../main/main.html" class="logo" title="메인으로">
+				<!-- 배너사이즈 1920*200 -->
+				<img src="../assets/images/main/main-logo.png" alt="<?=$SS[sitename]?>" />
+			</a>
+			<div class="search-area">
+				<form class="search-form">
+					<button type="button" class="search__btn"><i class="xi-search"></i></button>
+					<input type="text" name="find_word" id="" class="search__txt w-100" placeholder="기업명, 제품명으로 검색하세요" autocomplete="off" />
+				</form>
+				<div class="position-absolute search-open">
+					<div class="common-text--16 font-weight-medium pb-2">최근검색어</div>
+					<ul class="search-recent d-flex justify-content-start">
+						<li class="search-recent__list"><a href="">금속</a></li>
+						<li class="search-recent__list"><a href="">플라스틱</a></li>
+					</ul>
+					<div class="common-text--16 font-weight-medium mt-5 pb-2">추천검색어</div>
+					<ul class="search-recommend d-flex flex-wrap justify-content-start">
+						<li class="search-recommend__list"><a href="">자동차</a></li>
+						<li class="search-recommend__list"><a href="">세라믹</a></li>
+						<li class="search-recommend__list"><a href="">가전</a></li>
+					</ul>
+				</div>
+			</div>
+			<ul class="login-item d-flex">
+				<li class="login__list"><a href="../member/login.html">로그인</a></li>
+				<li class="login__list"><a href="../member/join-before.html">회원가입</a></li>
+				<li class="login__list"><a href="../mypage/index.html">마이페이지</a></li>
+				<li class="login__list">
+					<a href="<?=$nav_service_href?>"><?=$nav_service?></a>
+				</li>
+			</ul>
+			<div class="ad-item">
+				<a href="" class="d-flex align-items-end">
+					<img src="../assets/images/main/ad-ico.png" alt="광고" class="ad__img" />
+					<p class="px-2"><span class="ad__txt1">기업추천서비스</span><br /><span class="ad__txt2">광고신청!</span></p>
+					<span class="ad__arrow mb-1"><i class="xi-angle-right-thin"></i></span>
+				</a>
+			</div>
+		</div>
+		<button class="nav-mobile__btn" type="button">
+			<i class="xi-bars"></i>
+		</button>
+	</div>
+	<div class="header-btm-wrap">
+		<div class="header-gnb__fix">
+			<div class="container pr-17 pr-lg-6 d-flex align-items-center justify-content-center justify-content-lg-between position-relative">
+				<a href="../pop/menu.html" class="menu-item d-flex align-items-center popup-link"><i class="xi-bars"></i><span class="menu__txt pl-3">전체 메뉴</span></a>
+				<nav class="nav px-0 px-lg-10">
+					<? include "../include/nav.html" ?>
+				</nav>
+				<div class="solution__txt">
+					<a href="../solution/solution.html">금속 기술 솔루션 <img src="../assets/images/icon/monitor.png" alt="아이콘" class="solution__img ml-2" /></a>
+
+					<div class="solution__side">컨설팅 / R&D / OEM / 프로젝트 의뢰</div>
+				</div>
+				<a href="javascript:void(0)" class="mobile-more d-flex d-lg-none"><i class="xi-plus"></i></a>
+			</div>
+		</div>
+	</div>
+	<!-- 1024 이하만 노출 -->
+	<div class="header-ad-wrap p-10">
+		<a href="" class="ad-item1 border rounded-lg p-3 mb-3">
+			<img src="../assets/images/main/ad-ico.png" alt="광고" class="ad__img mr-3 mr-xs-5" />
+			<p class="px-2 font-weight-bold common-text--16 mr-3 mr-xs-5">광고신청! (기업추천서비스)</p>
+			<span class="ad__arrow"><i class="xi-angle-right-thin"></i></span>
+		</a>
+		<a href="../solution/solution.html" class="ad-item2 border rounded-lg p-3"
+			><img src="../assets/images/icon/monitor-white.png" alt="아이콘" class="solution__img mr-3 mr-xs-5" />
+			<div class="d-flex flex-column mr-3 mr-xs-5">
+				금속 기술 솔루션
+				<span>(컨설팅 / R&D / OEM / 프로젝트 의뢰)</span>
+			</div>
+			<span class="ad__arrow"><i class="xi-angle-right-thin"></i></span>
+		</a>
+	</div>
+
+	<div class="nav__bg">
+		<div class="container">
+			<div class="classify-wrap pt-10">
+				<div class="classify-box">
+					<div class="classify-box__tit">재료별</div>
+					<div class="d-flex flex-wrap w-100">
+						<ul class="classify-box__sort">
+							<li class="sort-item">
+								<a href="">철강 재료</a>
+								<ul class="sort-item__list bullet-list bullet-list--txt bullet-type--disc">
+									<li class="item" data-bullet="·"><a href="">탄소강</a></li>
+									<li class="item" data-bullet="·"><a href="">스테인리스</a></li>
+									<li class="item" data-bullet="·"><a href="">기타 합금강/합금철</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="classify-box__sort">
+							<li class="sort-item">
+								<a href="">비철 재료</a>
+								<ul class="sort-item__list bullet-list bullet-list--txt bullet-type--disc">
+									<li class="item" data-bullet="·"><a href="">알루미늄계</a></li>
+									<li class="item" data-bullet="·"><a href="">동계</a></li>
+									<li class="item" data-bullet="·"><a href="">마그네슘계</a></li>
+									<li class="item" data-bullet="·"><a href="">티타늄계</a></li>
+									<li class="item" data-bullet="·"><a href="">아연/니켈/주석</a></li>
+									<li class="item" data-bullet="·"><a href="">기타 금속</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="classify-box__sort">
+							<li class="sort-item">
+								<a href="">희소금속</a>
+								<ul class="sort-item__list bullet-list bullet-list--txt bullet-type--disc">
+									<li class="item" data-bullet="·"><a href="">희소금속</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="classify-box__sort">
+							<li class="sort-item">
+								<a href="">분말금속</a>
+								<ul class="sort-item__list bullet-list bullet-list--txt bullet-type--disc">
+									<li class="item" data-bullet="·"><a href="">분말금속</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="classify-box__sort">
+							<li class="sort-item">
+								<a href="">플라스틱/세라믹</a>
+								<ul class="sort-item__list bullet-list bullet-list--txt bullet-type--disc">
+									<li class="item" data-bullet="·"><a href="">플라스틱</a></li>
+									<li class="item" data-bullet="·"><a href="">세라믹</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="classify-box__sort"></ul>
+					</div>
+				</div>
+				<div class="classify-box">
+					<div class="classify-box__tit">공정/형태별</div>
+					<div class="w-100">
+						<div class="d-flex flex-wrap w-100">
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">원료/광석/스크랩</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">조강/주조/단조</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">봉 · 형강</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">강관류</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">기계가공</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">도금/표면처리/코팅</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">열처리</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">용접/접합</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">3D Printing</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">제조 부원료</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">기타 공정/형태</a></li>
+							</ul>
+							<ul class="classify-box__sort"></ul>
+						</div>
+					</div>
+				</div>
+				<div class="classify-box">
+					<div class="classify-box__tit">산업별</div>
+					<div class="w-100">
+						<div class="d-flex flex-wrap w-100">
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">자동차</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">조선/에너지</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">건축자재</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">기계/엔지니어링</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">가전/가구</a></li>
+							</ul>
+							<ul class="classify-box__sort">
+								<li class="sort-item"><a href="">기타산업</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- S : mobile navigation -->
+<? include "../include/aside.html" ?>
+<!-- E : mobile navigation -->
+
+<!-- S : loading image -->
+<div class="loading-image">
+	<img src="../assets/images/icon/loading.svg" alt="loading" />
+</div>
+<!-- E : loading image -->

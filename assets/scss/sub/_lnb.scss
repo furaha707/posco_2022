@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.mypage-wrap__menu {
+	flex: 0 0 15%;
+	max-width: 15%;
+	.menu-header {
+		font-size: em(20);
+		font-weight: bold;
+		padding-bottom: 1em;
+		border-bottom: 1px solid #ddd;
+	}
+	.menu-body {
+		&__wrap {
+			padding: 1em 0.5em;
+			border-bottom: 1px solid #ddd;
+			.menu-body__item {
+				.menu-body__list {
+					font-size: em(15) !important;
+					color: #666;
+					font-weight: 400;
+					padding-top: 0.6em;
+					padding-left: 0.8em;
+					padding-right: 0.8em;
+					a {
+						display: block;
+						&.on {
+							color: $color-1;
+						}
+					}
+					&.hover {
+						a {
+							color: $color-1;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include mdq-max(lg) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		.menu-header {
+			display: none;
+		}
+		.menu-body {
+			margin-top: 3rem;
+			&__wrap {
+				border-bottom: none;
+				.menu-body__item {
+					display: flex;
+					flex-wrap: wrap;
+					border-top: 1px solid #333;
+					border-bottom: 1px solid #dedede;
+					margin-bottom: -1px;
+					margin-top: 0.5em;
+					.menu-body__list {
+						flex: 0 0 50%;
+						max-width: 50%;
+						border-right: 1px solid #dedede;
+						border-bottom: 1px solid #dedede;
+						margin-left: -1px;
+						margin-bottom: -1px;
+						padding: 0.8em !important;
+						position: relative;
+						&:after {
+							content: '';
+							width: 8px; /* 사이즈 */
+							height: 8px; /* 사이즈 */
+							border-top: 1px solid $color-1; /* 선 두께 */
+							border-right: 1px solid $color-1; /* 선 두께 */
+							display: inline-block;
+							transform: rotate(45deg);
+							position: absolute;
+							right: 13px;
+							top: 15px;
+						}
+						&:nth-of-type(2n) {
+							border-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,212 @@
+/* Made by Masstige */
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.0625em;
+  font-weight: 300;
+}
+.breadcrumbs .home {
+  color: #333;
+  font-size: 1.0625em;
+  letter-spacing: -0.025em;
+}
+.breadcrumbs .xi-angle-right-thin {
+  font-size: 10px;
+  padding: 0.9em 1em;
+  color: black;
+}
+.breadcrumbs .current {
+  font-size: 1.0625em;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+/* S : font-size */
+.common-text--54 {
+  font-size: 3.375em;
+  letter-spacing: -0.025em;
+}
+.common-text--50 {
+  font-size: 3.125em;
+  letter-spacing: -0.025em;
+}
+.common-text--46 {
+  font-size: 2.875em;
+  letter-spacing: -0.025em;
+}
+.common-text--42 {
+  font-size: 2.625em;
+  letter-spacing: -0.025em;
+}
+.common-text--40 {
+  font-size: 2.5em;
+  letter-spacing: -0.025em;
+}
+.common-text--36 {
+  font-size: 2.25em;
+  letter-spacing: -0.025em;
+}
+.common-text--34 {
+  font-size: 2.125em;
+  letter-spacing: -0.025em;
+}
+.common-text--32 {
+  font-size: 2em;
+  letter-spacing: -0.025em;
+}
+.common-text--30 {
+  font-size: 1.875em;
+  letter-spacing: -0.025em;
+}
+.common-text--28 {
+  font-size: 1.75em;
+  letter-spacing: -0.025em;
+}
+.common-text--26 {
+  font-size: 1.625em;
+  letter-spacing: -0.025em;
+}
+.common-text--24 {
+  font-size: 1.5em;
+  letter-spacing: -0.025em;
+}
+.common-text--22 {
+  font-size: 1.375em;
+  letter-spacing: -0.025em;
+}
+.common-text--20 {
+  font-size: 1.25em;
+  letter-spacing: -0.025em;
+}
+.common-text--18 {
+  font-size: 1.125em;
+  letter-spacing: -0.025em;
+}
+.common-text--16 {
+  font-size: 1em;
+  letter-spacing: -0.025em;
+}
+.common-text--14 {
+  font-size: 0.875em;
+  letter-spacing: -0.025em;
+}
+
+/* E : font-size */
+.about-page .tab-header {
+  border-bottom: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+.about-page .tab-header .tab-item {
+  min-width: 10em;
+  width: 100%;
+  max-width: 10em;
+}
+.about-page .tab-header .tab-item:not(:last-of-type) {
+  padding-right: 1em;
+}
+.about-page .tab-header .tab-item .link {
+  border-radius: 30px;
+  color: #666;
+  border-color: #dedede;
+}
+.about-page .tab-header .tab-item .link.on {
+  background-color: #1597e5;
+  color: white;
+  font-weight: 500;
+  border-color: #1597e5;
+}
+.about-page .tab-body .img-bx {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.about-page .tab-body .img-bx::after {
+  content: "";
+  display: block;
+  padding-bottom: 31.746031746%;
+}
+.about-page .tab-body .img-bx > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  max-width: none;
+  max-height: none;
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
+}
+.about-page .tab-body .img-bx .banner-txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.about-page .tab-body .img-bx .banner-txt .banner-img {
+  width: 7.5625em;
+}
+.about-page .tab-body .txt-bx {
+  line-height: 1.9;
+}
+.about-page .tab-body .map-img {
+  border-bottom: 1px solid #ddd;
+  height: 24em;
+  position: relative;
+  overflow: hidden;
+}
+.about-page .tab-body .map-img .map-content {
+  position: absolute;
+  z-index: 18;
+}
+.about-page .tab-body .map-txt {
+  position: relative;
+  height: 10em;
+}
+.about-page .tab-body .map-txt .tit {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 116px;
+  height: 68px;
+  border-radius: 100px 100px 0 0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid white;
+  text-align: center;
+  background-color: white;
+  top: -68px;
+  z-index: 20;
+}
+.about-page .tab-body .map-txt .des {
+  font-size: 1.125em;
+  letter-spacing: -0.025em;
+  font-weight: 300;
+  color: #666;
+}
+.about-page .tab-body .map-txt .des .des-blue {
+  color: #0855b5;
+  font-weight: bold;
+  font-size: 1.125em;
+}
+.about-page .tab-body .map-txt .bar {
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #dedede;
+}

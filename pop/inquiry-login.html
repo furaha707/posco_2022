@@ -1,0 +1,49 @@
+<div class="popup popup--lg inquiry">
+  <div class="popup-head">
+    <h1 class="popup__title font-weight-medium text-gray-2 text-center pb-5">문의하기</h1>
+  </div>
+  <div class="popup-body py-3">
+    <table class="table-form-01 type-b">
+      <colgroup>
+        <col width="13%">
+        <col width="*">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>작성자 <span class="necessary">*</span></th>
+          <td>
+            <input type="text" name="uname" id="uname" title="작성자" maxlength="200" class="input_for">
+          </td>
+        </tr>
+        <tr>
+          <th>이메일<span class="necessary">*</span></th>
+          <td>
+            <input type="text" name="email" id="email" title="이메일" value="" chk="email_check"
+              placeholder="@ 포함해서 입력 (aaa@aaa.co.kr)" class="input_for">
+          </td>
+        </tr>
+        <tr>
+          <th>연락처<span class="necessary">*</span></th>
+          <td>
+            <input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_for"
+              onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};"
+              placeholder="- 없이 숫자만 입력 (0101234567)">
+          </td>
+        </tr>
+        <th>내용 <span class="necessary">*</span></th>
+        <td>
+          <textarea name="content" id="content" title="문의내용" class="area_for"></textarea>
+        </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p class="pl-5 common-text--16">· 등록된 문의는 마이페이지>나의활동>보낸 문의에서 확인하실 수 있습니다.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="board_btn_bx text_center py-8">
+    <input type="submit" value="등록" class="btn-type-01 w-20">
+  </div>
+</div>

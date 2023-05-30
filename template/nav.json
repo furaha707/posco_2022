@@ -1,0 +1,24 @@
+[
+  {
+    "name": "About",
+    "url": "../about/news.html",
+    "depth2": [
+      {
+        "name": "NEWS",
+        "url": "../about/news.html"
+      },
+      {
+        "name": "오시는 길",
+        "url": "../about/location.html"
+      }
+    ]
+  },
+  {
+    "name": "Cloud Service",
+    "url": "../cloud/pljec.html",
+    "depth2": {
+      "PLJEC Cloud": "../cloud/pljec.html",
+      "HR Cloud": "../cloud/hr.html"
+    }
+  }
+]

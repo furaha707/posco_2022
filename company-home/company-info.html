@@ -1,0 +1,195 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+	<?
+    $P_dp1 = 'company';
+		$P_dp2 = '1';
+    include "../include/meta.html" 
+    ?>
+	<link rel="stylesheet" href="../assets/css/product.min.css" />
+	<link rel="stylesheet" href="../assets/css/company-home.min.css" />
+</head>
+
+<body class="sub-body company-home">
+	<? include "header.html" ?>
+
+	<main class="main sub-main pt-0" id="contents">
+		<section class="section product-view-page pb-30">
+			<div class="container">
+				<!-- S : breadcrumbs -->
+				<div class="breadcrumbs my-8">
+					<a href="" class="home">홈</a>
+					<i class="xi-angle-right-thin"></i>
+					<a href="" class="current">
+						<?=${nav_.$P_dp1._.$P_dp2}?>
+					</a>
+				</div>
+				<!-- E : breadcrumbs -->
+
+				<div class="product-title-wrap pb-5 mb-9 border-bottom">
+					<h1 class="product-title">기업명을 노출합니다</h1>
+					<div class="product-icon">
+						<div class="premium"><img src="../assets/images/icon/premium.png" alt="프리미엄" /> <span
+								class="pl-2">프리미엄</span></div>
+						<div class="save"><i class="xi-bookmark-o"></i></div>
+						<div class="share"><i class="xi-share-alt-o"></i></div>
+						<!-- S : share-popup -->
+						<div class="share-popup">
+							<div class="share__head d-flex justify-content-between align-items-center">
+								<h1 class="popup__title font-weight-medium text-gray-2 text-left">공유하기</h1>
+								<a class="xi-close" href="javascript:void(0)" id="close"></a>
+							</div>
+							<div class="share__body pt-4 d-flex justify-content-around">
+								<div class="popup__icon">
+									<img src="../assets/images/icon/ico-facebook.png" alt="페이스북" class="popup__img">
+									<span class="popup__txt">페이스북</span>
+								</div>
+								<div class="popup__icon">
+									<img src="../assets/images/icon/ico-kakao.png" alt="카카오톡" class="popup__img">
+									<span class="popup__txt">카카오톡</span>
+								</div>
+								<div class="popup__icon">
+									<img src="../assets/images/icon/ico-blog.png" alt="블로그" class="popup__img">
+									<span class="popup__txt">블로그</span>
+								</div>
+							</div>
+							<div class="copylink pt-3">
+								<input type="text" class="w-100">
+								<button type="button">복사</button>
+							</div>
+						</div>
+						<!-- E : share-popup -->
+					</div>
+				</div>
+
+				<div class="product-view-wrap">
+					<div class="product-view__img">
+						<div class="img-bx">
+							<img src="../assets/images/sub/no-img.jpg" alt="" />
+						</div>
+					</div>
+					<div class="product-view__info">
+						<div>
+							<div class="product-badge product-badge1">제조</div>
+							<div class="product-badge product-badge2">도소매</div>
+							<div class="product-badge product-badge3">서비스</div>
+							<div class="product-badge product-badge4">비즈니스</div>
+							<div class="product-badge product-badge5">유형</div>
+							<table class="table table--st1">
+								<colgroup>
+									<col width="150px" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>사업영역</th>
+										<td class="line2">기업회원이 등록한 부가정보 사업영역(50자) 출력</td>
+									</tr>
+									<tr>
+										<th>주요제품</th>
+										<td class="line1">기업회원이 등록한 부가정보 주요제품(20자) 출력</td>
+									</tr>
+									<tr>
+										<th>사업분야</th>
+										<td>기업회원이 등록한 기업정보 사업분야 출력</td>
+									</tr>
+									<tr>
+										<th>주소</th>
+										<td>기업회원이 등록한 기업정보 주소 출력</td>
+									</tr>
+									<tr>
+										<th>홈페이지</th>
+										<td>www.abc.com</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="row mx-n1 my-5">
+							<div class="col-6 px-1">
+								<a href="../company-home/main.html" target="_blank" class="w-100 py-3 btn-type-01"><i
+										class="xi-home-o"></i> 기업 홈페이지 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="product-content mt-20 mb-10 col" id="product-detail">
+						<p class="product-content__tit common-text--22 font-weight-medium pb-4">기업 소개</p>
+						<div class="py-8">
+							<div class="line-7 text-gray-6 common-text--18 font-weight-regular">기업회원이 등록한 부가정보의 기업소개 300자의 내용이 출력되는
+								영역입니다. 본사는 30여 년간 최상의 품질로 끊임없는 기술 개발을 실천하고 있으며 고객님이 원하는 최상의 제품을 제공하고자 안전하고 확실한 품질경영을 고수하며 항상 고객님이 만족할
+								때까지 노력하며 최선을 다하겠습니다. 기업회원이 등록한 부가정보의 기업소개 300자의 내용이 출력되는 영역입니다. 본사는 30여 년간 최상의 품질로 끊임없는 기술 개발을 실천하고 있으며
+								고객님이 원하는 최상의 제품을 제공하고자 안전하고 확실한 품질경영을 고수하며 항상 고객님이 만족할 때까지 노력하며 최선을 다하겠습니다.</div>
+						</div>
+					</div>
+					<div class="product-content mt-20 mb-10 col" id="product-detail">
+						<div class="product-content__tit d-flex justify-content-between align-items-center pb-4">
+							<p class="common-text--22 font-weight-medium">제품소개</p>
+							<a href="" class="text-muted common-text--14">더보기 <i class="xi-angle-right-thin"></i></a>
+						</div>
+						<div class="py-8 row justify-content-between">
+							<a href="" class="product-content__bx col">
+								<div class="img-bx">
+									<img src="../images/board/no_img.jpg" alt="" />
+								</div>
+								<div class="txt-bx text-center font-weight-medium common-text--16 pt-3">제품명을 출력합니다.</div>
+							</a>
+							<a href="" class="product-content__bx col">
+								<div class="img-bx">
+									<img src="../images/board/no_img.jpg" alt="" />
+								</div>
+								<div class="txt-bx text-center font-weight-medium common-text--16 pt-3">제품명을 출력합니다.</div>
+							</a>
+							<a href="" class="product-content__bx col">
+								<div class="img-bx">
+									<img src="../images/board/no_img.jpg" alt="" />
+								</div>
+								<div class="txt-bx text-center font-weight-medium common-text--16 pt-3">제품명을 출력합니다.</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-inquiry bg-light rounded-lg py-15 px-10 text-center">
+					<p class="text-color-1 common-text--20 font-weight-medium pb-5">문의하기</p>
+					<div class="d-flex justify-content-center">
+						<div class="d-flex align-items-center mr-18">
+							<span class="inquiry__ico rounded-circle bg-color-1 mr-2"><i class="bi-telephone text-white"></i></span>
+							<span class="inquiry__tit mr-3">회사 전화</span>
+							<span class="inquiry__txt">02-1234-5678</span>
+						</div>
+						<div class="d-flex align-items-center mr-18">
+							<span class="inquiry__ico rounded-circle bg-color-1 mr-2"><i class="xi-print text-white"></i></span>
+							<span class="inquiry__tit mr-3">회사 팩스</span>
+							<span class="inquiry__txt">02-1234-5678</span>
+						</div>
+						<div class="d-flex align-items-center">
+							<span class="inquiry__ico rounded-circle bg-color-1 mr-2"><i class="xi-mail-o text-white"></i></span>
+							<span class="inquiry__tit mr-3">회사 이메일</span>
+							<span class="inquiry__txt">123@abc.com</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<? include "../include/footer.html" ?>
+	<? include "../include/js.html" ?>
+
+	<script>
+		$('.share').on('click', function () {
+			$('.share-popup').show();
+		});
+
+		$('#close').on('click', function () {
+			$('.share-popup').hide();
+		});
+	</script>
+</body>
+
+</html>

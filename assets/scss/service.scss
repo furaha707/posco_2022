@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+@import 'mixins';
+@import 'sub/breadcrumbs';
+@import 'sub/lnb-service';
+@import 'sub/category';
+@import 'sub/filter';
+
+.service-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	&__contents {
+		flex: 1 1 auto;
+		width: 1%;
+		padding-left: 3.75em;
+
+		.table_board_for {
+			td {
+				color: #666;
+				font-size: em(16);
+			}
+		}
+
+		.table-form-01 {
+			.datepicker {
+				background: url(../images/icon/i_calendar.png) no-repeat;
+				background-position: 95% center;
+			}
+			td {
+				color: #666;
+			}
+		}
+	}
+	@include mdq-max(lg) {
+		flex-direction: column-reverse;
+		&__contents {
+			flex: 1 1 100%;
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+}
+
+.ad-wrap {
+	.ad-tit {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1em;
+		.num-wrap {
+			position: relative;
+			.number {
+				position: absolute;
+				top: 50%;
+				left: 45%;
+				transform: translate(-50%, -50%);
+				color: white;
+			}
+		}
+		.title {
+			font-size: em(18);
+			font-weight: 500;
+			padding-left: 0.5em;
+			letter-spacing: letterSpacing(-20);
+		}
+	}
+	.ad-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&_left {
+			flex: 0 0 470px;
+			max-width: 470px;
+		}
+		&_right {
+			flex: 1 1 auto;
+			width: 1%;
+			padding-left: 2.8em;
+			.tit {
+				font-size: em(16);
+				font-weight: 500;
+				letter-spacing: letterSpacing(-20);
+			}
+			.txt {
+				font-size: em(16);
+				font-weight: 400;
+				letter-spacing: letterSpacing(-20);
+				color: #666;
+				padding-top: 0.5em;
+			}
+			.pay-inner {
+				position: relative;
+				width: 100%;
+				&_left {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 4%;
+					font-size: em(14);
+					font-weight: 500;
+					text-align: center;
+					letter-spacing: letterSpacing(-20);
+				}
+				input[type='text'] {
+					background-color: #f7f7f7;
+					padding: 1.4em 0;
+					padding-left: 5em;
+					padding-right: 0.5em;
+					color: $color-1;
+					font-size: em(23);
+					font-weight: 700;
+					text-align: right;
+
+					&::placeholder {
+						color: $color-1;
+						padding-left: 5em;
+						padding-right: 1em;
+					}
+					&.ver2 {
+						&::placeholder {
+							color: #ff9900 !important;
+						}
+					}
+				}
+				@include mdq-max(sm) {
+					input[type='text'] {
+						padding: 1em 0;
+						font-size: em(16);
+						// padding-left: 4em;
+						// padding-right: 0.2em;
+						&::placeholder {
+							color: $color-1;
+						}
+					}
+				}
+			}
+			button {
+				font-weight: 400;
+			}
+		}
+		@include mdq-max(lg) {
+			flex-direction: column;
+			align-items: flex-start;
+			&_left {
+				flex: 1 1 100%;
+				max-width: 100%;
+			}
+			&_right {
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
+}

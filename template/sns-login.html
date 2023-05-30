@@ -1,0 +1,155 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = '1';
+    $P_dp2 = '1';
+    include "../include/meta.html";
+
+    $Memberinfo[kakaoid] = '1'; //연동된 경우 노출을 위한 변수입니다
+
+		?>
+    <link rel="stylesheet" href="../assets/css/main.min.css" />
+  </head>
+  <body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Sub visual -->
+    <? include "../include/sub-visual.html" ?>
+    <!-- E : Sub visual -->
+
+    <!-- S : Sub navigation -->
+    <? include "../include/sub-nav.html" ?>
+    <!-- E : Sub navigation -->
+
+    <!-- S : Main -->
+    <main class="main py-20" id="contents">
+      <!-- S : Section -->
+      <section class="section mb-15 pb-15 border-bottom">
+        <div class="container">
+          <div class="login-area">
+            <div class="text-center mb-6">
+              <p class="font-weight-light text-gray-3">SNS 계정으로 간편하게 로그인 하세요.</p>
+            </div>
+            <!-- S: SNS계정으로 로그인 -->
+            <div class="sns-login">
+              <div class="item">
+                <a href="#none" class="sns-login__btn bg--facebook">
+                  <i class="icon">
+                    <img src="../assets/images/icon/icon_facebook.svg" alt="" />
+                  </i>
+                  FACEBOOK 로그인
+                </a>
+              </div>
+              <div class="item">
+                <a href="#none" class="sns-login__btn bg--naver">
+                  <i class="icon">
+                    <img src="../assets/images/icon/icon_naver.svg" alt="" />
+                  </i>
+                  네이버 로그인
+                </a>
+              </div>
+              <div class="item">
+                <a href="#none" class="sns-login__btn bg--kakao">
+                  <i class="icon">
+                    <img src="../assets/images/icon/icon_kakao.svg" alt="" />
+                  </i>
+                  카카오 로그인
+                </a>
+              </div>
+            </div>
+            <!-- E: SNS계정으로 로그인 -->
+          </div>
+        </div>
+      </section>
+      <!-- E : Section -->
+      <!-- S : Section -->
+      <section class="section mb-15 pb-15 border-bottom">
+        <div class="container">
+          <!-- S : 마이페이지(정보수정) > SNS 계정 연동관리 -->
+
+          <h2 class="common-title mb-8">SNS 계정 연동관리</h2>
+          <div class="sns-login-management">
+            <dl class="item">
+              <dt class="bg--facebook sns-login-management__sns">
+                <i class="icon">
+                  <img src="../assets/images/icon/icon_facebook.svg" alt="" />
+                </i>
+              </dt>
+              <dd class="sns-login-management__state">
+                <?if(!$Memberinfo[facebookid]){?>
+                연결된 정보가 없습니다.
+                <?}else{?>
+                <?=$Memberinfo[facebookid_regdate]?>
+                <span class="d-block d-sm-inline"> 연결 완료 되었습니다.</span>
+                <?}?>
+              </dd>
+              <dd class="sns-login-management__btn">
+                <?if($Memberinfo[facebookid]){?>
+                <button type="button" class="btn bg-gray-6 text-white" onclick="snsdelete('Facebook','<?=$passwordinput?>');">연결해제</button>
+                <?}else{?>
+                <button type="button" class="btn bg-color-1" onClick="window.open('<?=$kakaoLoginUrl1;?>', 'login_popup', 'width=430,height=590,scrollbar=yes');">연결하기</button>
+                <?}?>
+              </dd>
+            </dl>
+
+            <dl class="item">
+              <dt class="bg--naver sns-login-management__sns">
+                <i class="icon">
+                  <img src="../assets/images/icon/icon_naver.svg" alt="" />
+                </i>
+              </dt>
+              <dd class="sns-login-management__state">
+                <?if(!$Memberinfo[naverid]){?>
+                연결된 정보가 없습니다.
+                <?}else{?>
+                <?=$Memberinfo[naverid_regdate]?>
+                <span class="d-block d-sm-inline"> 연결 완료 되었습니다.</span>
+                <?}?>
+              </dd>
+              <dd class="sns-login-management__btn">
+                <?if($Memberinfo[naverid]){?>
+                <button type="button" class="btn bg-gray-6 text-white" onclick="snsdelete('Kakao','<?=$passwordinput?>');">연결해제</button>
+                <?}else{?>
+                <button type="button" class="btn bg-color-1" onclick="alert('네아로 신청해서 정보를 알려주세요.')" onClick="window.open('<?=$naverLoginUrl1;?>', 'login_popup', 'width=430,height=590,scrollbar=yes');">연결하기</button>
+                <?}?>
+              </dd>
+            </dl>
+            <dl class="item">
+              <dt class="bg--kakao sns-login-management__sns">
+                <i class="icon">
+                  <img src="../assets/images/icon/icon_kakao.svg" alt="" />
+                </i>
+              </dt>
+              <dd class="sns-login-management__state">
+                <?if(!$Memberinfo[kakaoid]){?>
+                연결된 정보가 없습니다.
+                <?}else{?>
+                <?=$Memberinfo[kakaoid_regdate]?>
+                <span class="d-block d-sm-inline"> 연결 완료 되었습니다.</span>
+                <?}?>
+              </dd>
+              <dd class="sns-login-management__btn">
+                <?if($Memberinfo[kakaoid]){?>
+                <button type="button" class="btn bg-dark" onclick="snsdelete('Kakao','<?=$passwordinput?>');">연결해제</button>
+                <?}else{?>
+                <button type="button" class="btn bg-color-1" onClick="window.open('<?=$kakaoLoginUrl1;?>', 'login_popup', 'width=430,height=590,scrollbar=yes');">연결하기</button>
+                <?}?>
+              </dd>
+            </dl>
+          </div>
+          <!-- E : 마이페이지(정보수정) > SNS 계정 연동관리 -->
+        </div>
+      </section>
+      <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+
+    <? include "../include/js.html" ?>
+  </body>
+</html>

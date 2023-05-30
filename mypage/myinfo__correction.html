@@ -1,0 +1,68 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'mypage';
+  $P_dp2 = '4';
+  $P_dp3 = '1';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/mypage.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section mb-40">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="./mypage__index.html" class="current">
+            마이페이지
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+        <div class="mypage-wrap">
+          <? include "../mypage/mypage_lnb.html" ?>
+          <div class="mypage-wrap__contents">
+            <div class="contents-header">
+              <? include "../mypage/mypage_header.html" ?>
+            </div>
+            <div class="contents-body mt-10">
+              <div class="d-flex justify-content-start align-items-center pb-5 border-bottom">
+                <p class="common-text--18 font-weight-medium">회원정보 수정</p>
+              </div>
+
+              <div class="container d-flex justify-content-center">
+                <div class="text-center bg-light rounded-lg w-100 w-lg-50 py-10 px-20 mt-10">
+                  <p class="common-text--24 font-weight-medium mb-3">로그인</p>
+                  <div class="login__input my-5 font-weight-medium">
+                    로그인 아이디 : gildong
+                  </div>
+                  <input class="input_for rounded-lg" type="text" name="upw" id="upw" title="비밀번호" placeholder="비밀번호"
+                    required="" />
+                  <p class="common-text--14 text-muted mt-3">회원님의 정보를 보호하기 위해 재로그인이 필요합니다.</p>
+                  <div class="my-8">
+                    <button type="button" class="btn-type-01 w-100" id="check">확인</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+</body>
+
+</html>

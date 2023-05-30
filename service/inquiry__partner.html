@@ -1,0 +1,157 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'service';
+  $P_dp2 = '1';
+  $P_dp3 = '2';
+    include "../include/meta.html" 
+    ?>
+  <link rel="stylesheet" href="../assets/css/service.min.css" />
+</head>
+
+<body class="sub-body">
+  <? include "../include/header.html" ?>
+
+  <main class="main sub-main" id="contents">
+    <section class="section pb-30">
+      <div class="container">
+        <!-- S : breadcrumbs -->
+        <div class="breadcrumbs my-8">
+          <a href="../main/main.html" class="home">홈</a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_href?>">
+            <?=$nav_service?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_href?>">
+            <?=$nav_service_1?>
+          </a>
+          <i class="xi-angle-right-thin"></i>
+          <a href="<?=$nav_service_1_2_href?>" class="current">
+            <?=$nav_service_1_2?>
+          </a>
+        </div>
+        <!-- E : breadcrumbs -->
+
+        <div class="service-wrap">
+          <? include "./service_lnb.html" ?>
+          <div class="service-wrap__contents">
+
+            <div class="d-flex justify-content-between align-items-end mb-5">
+              <p class="common-text--22 font-weight-bold pb-3">제휴문의</p>
+              <a href="./inquiry__partner-view-login.html" class="btn-type-01 w-12">제휴문의 등록</a>
+            </div>
+            <table class="table_board_for">
+              <colgroup>
+                <col width="60%;">
+                <col width="20%;">
+                <col width="10%;">
+                <col width="10%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>답변상태</th>
+                  <th>등록일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- S : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                <tr>
+                  <td class="no_data" colspan="6">검색조건에 맞는 게시물이 없습니다.</td>
+                </tr>
+                <!-- E : 검색조건에 맞는 게시물이 없는 경우 노출 -->
+                <tr>
+                  <td class="text_left">
+                    <!-- 회원이 클릭하면 바로 상세페이지로 연결 -->
+                    <a href="./inquiry__partner-view.html">
+                      <i class="xi-lock-o mx-5"></i>
+                      [제휴문의] 제휴 문의 드립니다.
+                    </a>
+                    <!-- 비회원이 클릭하면 [비회원 문의조회] 팝업이 열림 -->
+                    <!-- <a href="../pop/inquire.html " class="popup-link">
+                      <i class="xi-lock-o mx-5"></i>
+                      [제휴문의] 제휴 문의 드립니다.
+                    </a> -->
+                  </td>
+                  <td>유*석 (비회원)</td>
+                  <td>답변대기</td>
+                  <td>2021.10.28</td>
+                </tr>
+                <tr>
+                  <td class="text_left">
+                    <!-- 회원이 클릭하면 바로 상세페이지로 연결 -->
+                    <a href="./inquiry__partner-view.html">
+                      <i class="xi-lock-o mx-5"></i>
+                      [제휴문의] 제휴 문의 드립니다.
+                    </a>
+                    <!-- 비회원이 클릭하면 [비회원 문의조회] 팝업이 열림 -->
+                    <!-- <a href="../pop/inquire.html " class="popup-link">
+                      <i class="xi-lock-o mx-5"></i>
+                      [제휴문의] 제휴 문의 드립니다.
+                    </a> -->
+                  </td>
+                  <td>유*석 (회원)</td>
+                  <td class="text-color-1">답변완료</td>
+                  <td>2021.10.28</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="paging-area mt-20">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="prev"><span>이전으로</span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="active">1<span></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;">2<span></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;">3<span></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="next"><span>다음으로</span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/quick.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+    $(document).ready(function () {
+      $('.qna-body').hide();
+
+      $(".qna-header .qna-header__tit").click(function () {
+        $(this).parent().next().slideToggle(300);
+        $(this).parents('.qna-wrapper').toggleClass('open');
+        $(".qna-header .qna-header__tit").not(this).parent().next().slideUp(300);
+        return false;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

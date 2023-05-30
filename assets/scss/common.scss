@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Utilities
+@import 'utilities';
+
+// Font-face
+@import 'font-face';
+
+// Reset
+@import 'reset';
+
+// Library
+@import 'library';
+
+// Layout
+@import 'layout';
+
+// Components
+@import 'components';
+
+// Grid
+@import 'grid';
+
+// Board Template
+//@import 'board';
+
+// Board Template Old Version
+@import 'board.old';
+//@import 'board/common';
+
+//메탈카텟 카테고리 갯수 주가로 인한 css
+.metal-category {
+	.tab-header {
+		flex-wrap: wrap;
+		.tab-item {
+			width: 8.33%;
+			.link {
+				border-bottom: 1px solid #ccc;
+				white-space: normal;
+				white-space: -webkit-normal;
+				&.on {
+					background-color: $color-1;
+					color: white;
+					border: 1px solid $color-1;
+					margin-right: -1px;
+					box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+				}
+			}
+			@include mdq-max(xl) {
+				width: 25%;
+			}
+		}
+	}
+}
