@@ -117,5 +117,6 @@ $nav_policy_1_href = "../policy/privacy.html";
 $nav_policy_2_href = "../policy/term.html";
 $nav_policy_3_href = "../policy/email-security.html";
 
+ini_set("display_errors",0);
 
 ?>
